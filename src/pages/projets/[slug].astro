@@ -1,0 +1,45 @@
+---
+import type { GetStaticPaths } from "astro";
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+export const getStaticPaths = (async () => {
+  const projects = await getCollection("projects");
+
+  return projects.map((p) => ({
+    params: { slug: p.slug },
+    props: p,
+  }));
+}) satisfies GetStaticPaths;
+
+const { data, render } = Astro.props;
+const { title, date, thumbnail, altText, gallery, vimeo } = data;
+const { Content } = await render();
+---
+
+<Base>
+  <a href="/">retour</a>
+  <h1>{title}</h1>
+  <p>{date.getFullYear()}</p>
+  <Image src={thumbnail} alt={altText ?? ""} />
+  {
+    vimeo && (
+      <p>
+        <a href={vimeo}>La vidéo</a>
+      </p>
+    )
+  }
+  <Content />
+
+  {
+    gallery && gallery.length > 0 && (
+      <ul>
+        {gallery.map((img) => (
+          <li>
+            <Image src={img} alt="" />
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</Base>

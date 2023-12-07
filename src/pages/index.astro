@@ -1,16 +1,22 @@
 ---
-
+import Base from "../layouts/Base.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base>
+  <h1>Le site à Rafiki</h1>
+  <ul>
+    {
+      projects.map((el) => (
+        <li>
+          <a href={`projets/${el.slug}`}>
+            <h2>{el.data.title}</h2>
+            <Image src={el.data.thumbnail} alt="" />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Base>
