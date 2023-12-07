@@ -20,10 +20,12 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+      - name: create env file
+        run: |
+          touch .env
+          echo TINA_CLIENT_ID=${{ secrets.TINA_CLIENT_ID }} >> .env
+          echo TINA_TOKEN=${{ secrets.TINA_TOKEN }} >> .env
       - name: Install, build, and upload your site
-        env:
-          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID}}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN}}
         uses: withastro/action@v1
         # with:
         # path: . # The root location of your Astro project inside the repository. (optional)
