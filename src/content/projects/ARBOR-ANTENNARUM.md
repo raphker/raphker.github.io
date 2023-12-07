@@ -5,8 +5,8 @@ thumbnail: /src/content/assets/arbor1.jpg
 legend: 'Antennes métalliques, dispositif électronique, moteurs, cuivre.'
 vimeo: 'https://vimeo.com/538379979'
 gallery:
-  - /src/content/assets/arbor2.jpg
   - /src/content/assets/arbor3.jpg
+  - /src/content/assets/arbor2.jpg
   - /src/content/assets/arbor4.jpg
 ---
 
