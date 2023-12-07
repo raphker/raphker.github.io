@@ -11,12 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: create env file
-        run: |
-          touch .env
-          echo TINA_CLIENT_ID=${{ secrets.TINA_CLIENT_ID }} >> .env
-          echo TINA_TOKEN=${{ secrets.TINA_TOKEN }} >> .env
-
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -29,14 +23,15 @@ jobs:
       - name: build
         env:
           BASE_PATH: "/${{ github.event.repository.name }}"
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: |
           npm run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
         with:
-          # this should match the `pages` option in your adapter-static options
-          path: "build/"
+          path: "dist/"
 
   deploy:
     needs: build_site
