@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        {% for item in collections.page | filterCollectionLang(page.lang) %}
+            <li>
+                <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url else "false"}}>{{item.data.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

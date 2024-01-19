@@ -1,5 +1,6 @@
 ---
-layout: base
+tags: page
+layout: works
 title: Works
 ---
 

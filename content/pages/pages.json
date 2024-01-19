@@ -1,4 +1,0 @@
-{
-  "tags": "pages",
-  "permalink": "{{ title | slugify}}/index.html"
-}

@@ -1,0 +1,7 @@
+<ul>
+    {% for work in collections.works | filterCollectionLang(page.lang)%}
+        <li>
+            <a href="{{ work.url }}">{{work.data.title}}</a>
+        </li>
+    {% endfor %}
+</ul>

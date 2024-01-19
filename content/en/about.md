@@ -1,6 +1,7 @@
 ---
+tags: page
 layout: base
-title: caca
+title: About
 ---
 
 # About
