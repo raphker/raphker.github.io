@@ -5,4 +5,9 @@ const processJsConfig = require("./config/scripts.config.js");
 module.exports = function (config) {
   processCssConfig(config);
   processJsConfig(config);
+  return {
+    dir: {
+      layouts: "_layouts",
+    },
+  };
 };

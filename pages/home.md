@@ -1,5 +1,5 @@
 ---
-layout: layouts/home
+layout: home
 permalink: "/"
 ---
 

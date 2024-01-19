@@ -1,6 +1,6 @@
 ---
 title: truc
-layout: "layouts/base"
+layout: base
 ---
 
 # Bug Antenna

@@ -1,6 +1,6 @@
 ---
 title: Bug Antenna
-layout: "layouts/base"
+layout: base
 ---
 
 # Bug Antenna

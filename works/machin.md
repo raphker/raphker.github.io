@@ -1,6 +1,6 @@
 ---
 title: éiter ààà Si 1-(
-layout: "layouts/base"
+layout: base
 ---
 
 # Bug Antenna
