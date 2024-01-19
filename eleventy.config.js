@@ -7,7 +7,9 @@ module.exports = function (config) {
   processJsConfig(config);
   return {
     dir: {
-      layouts: "_layouts",
+      layouts: "../layouts",
+      includes: "../includes",
+      input: "content",
     },
   };
 };

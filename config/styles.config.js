@@ -7,7 +7,7 @@ module.exports = function (config) {
   config.addExtension("css", {
     outputFileExtension: "css",
     compile: async function (_inputContent, inputPath) {
-      if (inputPath !== "./styles/index.css") {
+      if (inputPath !== "./content/styles/index.css") {
         return;
       }
       let targets = browserslistToTargets(browserslist("> 0.2% and not dead"));
