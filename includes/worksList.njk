@@ -1,7 +1,11 @@
 <ul>
-    {% for work in collections.works | filterCollectionLang(page.lang)%}
+    {% for work in collections.works | favor_lang %}
         <li>
-            <a href="{{ work.url }}">{{work.data.title}}</a>
+            <a href="{{ work.url }}">{{work.data.title}}
+                {% if work.isFallback %}
+                    <sup>{{work.data.lang}}</sup>
+                {% endif %}
+            </a>
         </li>
     {% endfor %}
 </ul>

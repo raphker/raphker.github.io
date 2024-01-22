@@ -5,11 +5,6 @@ const i18nConfig = require("./eleventy.config.i18n.js");
 /** @param {import('@11ty/eleventy').UserConfig} config */
 module.exports = function (config) {
   i18nConfig(config);
-  config.addGlobalData("permalink", () => {
-    return (data) => {
-      data.page.filePathStem.replace("fr/", "");
-    };
-  });
   processCssConfig(config);
   processJsConfig(config);
 
@@ -17,6 +12,7 @@ module.exports = function (config) {
     dir: {
       layouts: "../layouts",
       includes: "../includes",
+      data: "../data",
       input: "content",
     },
 
