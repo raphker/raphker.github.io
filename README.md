@@ -7,25 +7,25 @@ Avant de commencer le développement, assurez-vous d'avoir les outils suivants i
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en) (inclut npm, le gestionnaire de paquets Node.js)
 
-**Cloner le dépôt** :
+#### Cloner le dépôt :
 
 ```bash
 git clone https://github.com/achtaitaipai/raphker.git my-site-name
 ```
 
-**Naviguer dans le dossier** :
+#### Naviguer dans le dossier :
 
 ```bash
 cd my-site-name
 ```
 
-**Installer les dépendances** :
+#### Installer les dépendances :
 
 ```bash
 npm install
 ```
 
-**Exécuter Eleventy** :
+#### Exécuter Eleventy :
 
 Construire un livrable :
 
