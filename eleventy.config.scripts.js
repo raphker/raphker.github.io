@@ -2,15 +2,12 @@ const esbuild = require("esbuild");
 
 /** @param {import('@11ty/eleventy').UserConfig} config */
 module.exports = function (config) {
-  config.addTemplateFormats("js");
+  config.addTemplateFormats("ts");
 
-  config.addExtension("js", {
+  config.addExtension("ts", {
+    outputFileExtension: "ts",
     outputFileExtension: "js",
-    compile: async (content, path) => {
-      if (path !== "./content/scripts/index.js") {
-        return;
-      }
-
+    compile: async (_, path) => {
       return async () => {
         let output = await esbuild.build({
           target: "es2020",

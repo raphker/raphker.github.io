@@ -15,6 +15,7 @@
     "@11ty/eleventy": "^2.0.1",
     "browserslist": "^4.22.2",
     "esbuild": "^0.19.11",
-    "lightningcss": "^1.23.0"
+    "lightningcss": "^1.23.0",
+    "typescript": "^5.3.3"
   }
 }
