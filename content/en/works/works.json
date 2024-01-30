@@ -1,3 +1,5 @@
 {
-  "tags": "works"
+  "tags": "works",
+  "layout": "base",
+  "current": "works"
 }

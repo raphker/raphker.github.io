@@ -2,7 +2,7 @@
     <ul>
         {% for item in collections.page | favor_lang %}
             <li>
-                <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url else "false"}}>{{item.data.title}}</a>
+                <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url or current == item.fileSlug else "false" }}>{{item.data.title}} </a>
             </li>
         {% endfor %}
     </ul>
