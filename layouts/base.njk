@@ -14,7 +14,17 @@
                 <a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}">{{link.label}}</a>
             {% endfor %}
         </header>
-        {% include "navigation.njk" %}
+        <nav>
+            <ul>
+                {% for item in collections.page | favor_lang %}
+                    <li>
+                        <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url or current == item.fileSlug else "false" }}>{{item.data.title}} </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+
         {{ content | safe }}
     </body>
     <script src="/scripts/index.js"></script>
