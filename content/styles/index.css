@@ -2,10 +2,34 @@ body {
   color: black;
 }
 
+p:has(img) {
+  --modifier: calc((30rem - 100%) * 999);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  max-width: 70vw;
+  margin-inline: auto;
+  margin-block: 0;
+  & > picture {
+    flex-basis: max(var(--modifier), 0px);
+    aspect-ratio: var(--ratio);
+    flex-grow: calc(var(--ratio));
+  }
+  & img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  & + & {
+    margin-block-start: 0.3rem;
+  }
+}
+
 a:not([class]) {
   color: inherit;
+  text-decoration: none;
 }
 
 a[aria-current="page"] {
-  color: red;
+  font-weight: bold;
 }

@@ -17,7 +17,9 @@
     "browserslist": "^4.22.2",
     "esbuild": "^0.19.11",
     "lightningcss": "^1.23.0",
-    "markdown-it-image-figures": "^2.1.1",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@fontsource/titillium-web": "^5.0.18"
   }
 }
