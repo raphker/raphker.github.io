@@ -1,7 +1,7 @@
 ---
 tags: page
 layout: base
-title: À propos
+title: Infos
 ---
 
-# A propos
+# Infos

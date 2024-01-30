@@ -1,0 +1,11 @@
+<ul>
+    {% for project in collections.projects | favor_lang %}
+        <li>
+            <a href="{{ project.url }}">{{project.data.title}}
+                {% if project.isFallback %}
+                    <sup>{{project.data.lang}}</sup>
+                {% endif %}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,7 +1,7 @@
 ---
 tags: page
 layout: base
-title: "News"
+title: Expositions
 ---
 
-# News
+# Expositions

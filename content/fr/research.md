@@ -1,7 +1,7 @@
 ---
 tags: page
 layout: base
-title: Recherches
+title: Recherche
 ---
 
 # Research
