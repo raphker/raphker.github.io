@@ -1,0 +1,31 @@
+:root {
+  --font-base: "Titillium", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+
+  --surface: #f8f9fa;
+  --text: #212529;
+
+  --main-width: clamp(min(30rem, 100% - var(--space-xs)), 75vw, 90rem);
+
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  --fs--2: clamp(0.7813rem, 0.7932rem + -0.0154vi, 0.7901rem);
+  --fs--1: clamp(0.8889rem, 0.872rem + 0.0845vi, 0.9375rem);
+  --fs-0: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
+  --fs-1: clamp(1.125rem, 1.0467rem + 0.3913vi, 1.35rem);
+  --fs-2: clamp(1.2656rem, 1.1424rem + 0.6163vi, 1.62rem);
+  --fs-3: clamp(1.4238rem, 1.2429rem + 0.9046vi, 1.944rem);
+  --fs-4: clamp(1.6018rem, 1.3475rem + 1.2713vi, 2.3328rem);
+  --fs-5: clamp(1.802rem, 1.4551rem + 1.7345vi, 2.7994rem);
+
+  --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087vi, 0.3125rem);
+  --space-2xs: clamp(0.5rem, 0.4783rem + 0.1087vi, 0.5625rem);
+  --space-xs: clamp(0.75rem, 0.7065rem + 0.2174vi, 0.875rem);
+  --space-s: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
+  --space-m: clamp(1.5rem, 1.4348rem + 0.3261vi, 1.6875rem);
+  --space-l: clamp(2rem, 1.913rem + 0.4348vi, 2.25rem);
+  --space-xl: clamp(3rem, 2.8696rem + 0.6522vi, 3.375rem);
+  --space-2xl: clamp(4rem, 3.8261rem + 0.8696vi, 4.5rem);
+  --space-3xl: clamp(6rem, 5.7391rem + 1.3043vi, 6.75rem);
+}

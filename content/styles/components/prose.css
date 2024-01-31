@@ -1,0 +1,31 @@
+.prose {
+  & p {
+    max-width: 75ch;
+  }
+}
+
+.prose p:has(img) {
+  --threshold: 40rem;
+  --gap: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  max-width: 100%;
+  margin-inline: auto;
+  margin-block: 0;
+  & > picture {
+    flex-basis: max((var(--threshold) - 100%) * 999, 0px);
+    aspect-ratio: var(--ratio);
+    flex-grow: calc(var(--ratio));
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  & img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  & + & {
+    margin-block-start: var(--gap);
+  }
+}

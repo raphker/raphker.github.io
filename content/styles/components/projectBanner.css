@@ -1,0 +1,33 @@
+.projectBanner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  margin-block: var(--space-l);
+  --flow-space: var(--space-l);
+}
+
+.projectBanner_cartel {
+  flex-basis: 25rem;
+  flex-grow: 1;
+  --flow-space: var(--space-3xs);
+}
+
+.projectBanner_description {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
+.projectBanner_title {
+  font-size: var(--fs-2);
+  font-weight: 600;
+}
+
+.projectBanner_date {
+  /* font-size: var(--fs-1); */
+  font-weight: 600;
+}
+
+.projectBanner_legend {
+  font-weight: 300;
+}

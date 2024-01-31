@@ -1,21 +1,24 @@
 const Image = require("@11ty/eleventy-img");
+const path = require("path");
 
 /** @param {import('@11ty/eleventy').UserConfig} config */
 module.exports = function (config) {
-  config.addShortcode("image", async function (src, alt) {
-    let metadata = await Image(src, {
-      width: 800,
+  config.addShortcode("image", async (src, alt) => {
+    // remove "/", if existing, from the start of the filePath
+    const imgPath = src.replace(/^\//, "");
+    const imageMetadata = await Image(imgPath, {
+      widths: ["auto"],
       formats: ["webp", "jpeg"],
-      outputDir: "./_site/img/",
+      outputDir: path.join(config.dir.output, "img"),
+      urlPath: "/img",
     });
 
-    let imageAttributes = {
+    const imageAttributes = {
       alt,
       loading: "lazy",
       decoding: "async",
     };
 
-    // You bet we throw an error on a missing alt (alt="" works okay)
-    return Image.generateHTML(metadata, imageAttributes);
+    return Image.generateHTML(imageMetadata, imageAttributes);
   });
 };

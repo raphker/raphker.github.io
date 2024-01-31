@@ -1,16 +1,23 @@
 ---
 title: "Si (1-bit computer)"
-# thumbnail: "/src/content/images/si-thumbnail.jpg"
-# imageCover: "/src/content/projets/images/si-0.jpg"
 priority: 15
+cover:
+  src: "images/si-computer4.jpg"
+  alt: description alternative
 date: "2021"
-legend: "Vitrine : Silicium, nitinol, cuivre, laiton, bois, plexiglas, métal,  dispositif électronique. 50 x 100 x 100 cm.  
-Dessin : Schéma semi-logique, tirage sur papier Fine art Rag. 80 x 200 cm."
+legend: >
+  Vitrine : Silicium, nitinol, cuivre, laiton, bois, plexiglas, métal,  dispositif électronique. 50x100x100cm.  
+
+
+  Dessin : Schéma semi-logique, tirage sur papier Fine art Rag. 80 x 200 cm.
+intro: >
+  Le projet _Si (1-bit computer)_ est la décomposition physique d’un système logique. Le dispositif dévoile le fonctionnement de nos appareils numériques, d’une manière à la fois archaïque et poétique. Une infime partie d’un système binaire est prélevé pour réaliser des opérations 1-bit. Le dispositif procède par agrandissement d’échelles physiques et temporelles, en étirant une opération logique sur plusieurs secondes et en amplifiant la taille des composants.
+
+
+  Le projet _Si (1-bit computer)_ est la décomposition physique d’un système logique. Le dispositif dévoile le fonctionnement de nos appareils numériques, d’une manière à la fois archaïque et poétique. Une infime partie d’un système binaire est prélevé pour réaliser des opérations 1-bit. Le dispositif procède par agrandissement d’échelles physiques et temporelles, en étirant une opération logique sur plusieurs secondes et en amplifiant la taille des composants.
 ---
 
 ![description alternative](/images/si-computer1.jpg) ![](/images/si-computer4.jpg)
-
-Le projet _Si (1-bit computer)_ est la décomposition physique d’un système logique. Le dispositif dévoile le fonctionnement de nos appareils numériques, d’une manière à la fois archaïque et poétique. Une infime partie d’un système binaire est prélevé pour réaliser des opérations 1-bit. Le dispositif procède par agrandissement d’échelles physiques et temporelles, en étirant une opération logique sur plusieurs secondes et en amplifiant la taille des composants.
 
 ![](/images/si-computer4.jpg) ![](/images/si-computer7.jpg)
 

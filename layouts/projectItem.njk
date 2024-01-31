@@ -1,0 +1,23 @@
+---
+layout: base
+---
+<main class="wrapper flow">
+
+    <div class="cover">
+        {% image cover.src, cover.alt %} 
+    </div>
+
+    <div class="projectBanner">
+        <div class="projectBanner_cartel flow">
+            <h1 class="projectBanner_title">{{title}}</h1>
+            <p class="projectBanner_date">[ {{date}} ]</p>
+            <div class="projectBanner_legend prose">{{legend | parse_markdown | safe }}</div>
+        </div>
+        <div class="projectBanner_description prose flow">
+            {{ intro | parse_markdown | safe}}
+        </div>
+    </div>
+    <div class="prose flow">
+        {{content | safe}}
+    </div>
+</main>
