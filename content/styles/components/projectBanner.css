@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   gap: var(--space-m);
   margin-block: var(--space-l);
-  --flow-space: var(--space-l);
 }
 
 .projectBanner_cartel {
@@ -30,4 +29,7 @@
 
 .projectBanner_legend {
   font-weight: 300;
+  font-style: italic;
+  font-size: var(--fs--1);
+  --flow-space: 0;
 }

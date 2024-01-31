@@ -15,6 +15,10 @@ body {
   font-size: var(--fs-0);
 }
 
+main {
+  margin-block: var(--space-xl) var(--space-2xl);
+}
+
 h1,
 h2,
 h3,
