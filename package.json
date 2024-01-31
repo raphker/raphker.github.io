@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy && cp _site/fr/index.html _site/index.html",
     "start": "eleventy --serve",
     "clear": "rm -rf _site"
   },
