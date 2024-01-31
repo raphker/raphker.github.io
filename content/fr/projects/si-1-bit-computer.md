@@ -1,16 +1,19 @@
 ---
 title: "Si (1-bit computer)"
 priority: 15
+thumbnail:
+  src: "/images/projects/si-thumbnail.jpg"
+  alt: ""
 cover:
-  src: "images/si-computer4.jpg"
+  src: "/images/projects/si-0.jpg"
   alt: description alternative
-date: "2021"
+moment: "2021"
 legend: >
   Vitrine : Silicium, nitinol, cuivre, laiton, bois, plexiglas, métal,  dispositif électronique. 50x100x100cm.  
 
 
   Dessin : Schéma semi-logique, tirage sur papier Fine art Rag. 80 x 200 cm.
-intro: >
+description: >
   Le projet _Si (1-bit computer)_ est la décomposition physique d’un système logique. Le dispositif dévoile le fonctionnement de nos appareils numériques, d’une manière à la fois archaïque et poétique. Une infime partie d’un système binaire est prélevé pour réaliser des opérations 1-bit. Le dispositif procède par agrandissement d’échelles physiques et temporelles, en étirant une opération logique sur plusieurs secondes et en amplifiant la taille des composants.
 
 
@@ -23,10 +26,10 @@ intro: >
   _Projet développé dans le cadre du programme doctoral SACRe-PSL / EnsAD._
 ---
 
-![description alternative](/images/si-computer1.jpg) ![](/images/si-computer4.jpg)
-
-![](/images/si-computer4.jpg) ![](/images/si-computer7.jpg)
-
-![](/images/si-computer8.jpg)
+![](/images/projects/si-1.jpg)
+![](/images/projects/si-2.jpg)
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/560871758?h=0cf941b432&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+![](/images/projects/si-3.jpg)
+![](/images/projects/si-4.jpg)
