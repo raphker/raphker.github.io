@@ -11,11 +11,11 @@ layout: base
     <div class="projectBanner">
         <div class="projectBanner_cartel flow">
             <h1 class="projectBanner_title">{{title}}</h1>
-            <p class="projectBanner_date">[ {{date}} ]</p>
+            <p class="projectBanner_date">[ {{moment}} ]</p>
             <div class="projectBanner_legend prose flow">{{legend | parse_markdown | safe }}</div>
         </div>
         <div class="projectBanner_description prose flow">
-            {{ intro | parse_markdown | safe}}
+            {{ description | parse_markdown | safe}}
         </div>
     </div>
     <div class="prose flow">
