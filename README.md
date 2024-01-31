@@ -10,7 +10,7 @@ Avant de commencer le développement, assurez-vous d'avoir les outils suivants i
 #### Cloner le dépôt :
 
 ```bash
-git clone https://github.com/achtaitaipai/raphker.git my-site-name
+git clone https://github.com/achtaitaipai/r-trema.git my-site-name
 ```
 
 #### Naviguer dans le dossier :
