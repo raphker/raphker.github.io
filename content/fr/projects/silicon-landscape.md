@@ -8,11 +8,10 @@ cover:
   alt: ""
 priority: 12
 moment: "2020"
-legend: >
+legend: |
   Série de prises de vues numériques fixes et en mouvement. Dimensions variables.
-description: >
+description: |
   Macrophotographies de silicium à échelle 15:1. La structure du semi-conducteur, rendue visible par le grossissement de l’objectif et le mouvement des réflexions lumineuses, se transforme en paysage cristallin.
-
 
   _Projet développé dans le cadre du programme doctoral SACRe-PSL / EnsAD._
 ---
