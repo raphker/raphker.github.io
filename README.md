@@ -1,43 +1,4 @@
-## Développement
-
-### Installation
-
-Avant de commencer le développement, assurez-vous d'avoir les outils suivants installés sur votre système :
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en) (inclut npm, le gestionnaire de paquets Node.js)
-
-#### Cloner le dépôt :
-
-```bash
-git clone https://github.com/achtaitaipai/r-trema.git my-site-name
-```
-
-#### Naviguer dans le dossier :
-
-```bash
-cd my-site-name
-```
-
-#### Installer les dépendances :
-
-```bash
-npm install
-```
-
-#### Exécuter Eleventy :
-
-Construire un livrable :
-
-```bash
-npm run build
-```
-
-L'exécuter sur le serveur de développement local :
-
-```bash
-npm start
-```
+# le site à Raph
 
 ## Création de contenu
 
@@ -84,7 +45,7 @@ Ligne de texte.
 Autre ligne de texte.
 ```
 
-### Pages projets
+## Pages projets
 
 Pour ajouter un nouveau projet créer un nouveau fichier `.md` dans le dossier `/content/[lang]/projects`
 
@@ -131,4 +92,45 @@ Comme c'est un super projet je vous montre d'autres images
 ![](/images/projects/carre-blanc-3.jpg)
 ![](/images/projects/carre-blanc-4.jpg)
 ![](/images/projects/carre-blanc-5.jpg)
+```
+
+## Développement
+
+### Installation
+
+Avant de commencer le développement, assurez-vous d'avoir les outils suivants installés sur votre système :
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en) (inclut npm, le gestionnaire de paquets Node.js)
+
+#### Cloner le dépôt :
+
+```bash
+git clone https://github.com/achtaitaipai/r-trema.git my-site-name
+```
+
+#### Naviguer dans le dossier :
+
+```bash
+cd my-site-name
+```
+
+#### Installer les dépendances :
+
+```bash
+npm install
+```
+
+#### Exécuter Eleventy :
+
+Construire un livrable :
+
+```bash
+npm run build
+```
+
+L'exécuter sur le serveur de développement local :
+
+```bash
+npm start
 ```
