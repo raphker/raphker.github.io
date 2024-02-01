@@ -3,6 +3,7 @@
   padding-inline: var(--space-3xl);
   padding-block: var(--space-s);
   display: flex;
+  font-size: var(--fs--1);
 }
 
 .footer_copyright {
