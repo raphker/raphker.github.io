@@ -2,7 +2,7 @@
 layout: base
 ---
 <ul>
-    {% for project in collections.projects | favor_lang %}
+    {% for project in collections.projects | favor_lang | sort_by_priority %}
         <li>
             <a href="{{ project.url }}">{{project.data.title}}
                 {% if project.isFallback %}

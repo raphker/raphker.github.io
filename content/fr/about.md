@@ -2,6 +2,7 @@
 tags: page
 layout: base
 title: Infos
+priority: 100
 ---
 
 Raphaëlle Kerbrat est artiste plasticienne et docteure SACRe – PSL de l’École des Arts Décoratifs de Paris.

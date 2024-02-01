@@ -1,6 +1,9 @@
 ---
-layout: base
-title: Accueil
+tags: page
+layout: home
+title: Projets
+collection: projects
+priority: 1000
 ---
 
-# Home
+# Projets
