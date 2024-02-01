@@ -1,20 +1,22 @@
 .projectBanner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-m);
+  display: grid;
+  gap: var(--space-xs);
   margin-block: var(--space-l);
 }
 
+@media (width >= 65rem) {
+  .projectBanner {
+    grid-template-columns: minmax(auto, 40ch) minmax(auto, 70ch);
+    /* justify-content: space-between; */
+    gap: var(--space-xl);
+  }
+}
+
 .projectBanner_cartel {
-  flex-basis: 15rem;
-  flex-grow: 999;
   --flow-space: var(--space-3xs);
 }
 
 .projectBanner_description {
-  flex-basis: 75ch;
-  flex-grow: 1;
-  min-inline-size: 50%;
 }
 
 .projectBanner_title {

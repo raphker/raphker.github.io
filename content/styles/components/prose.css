@@ -1,11 +1,15 @@
 .prose {
-  --grid-gap: var(--space-s);
-  & p {
+  --grid-gap: var(--space-l);
+  & > * {
     max-width: 75ch;
   }
   & em {
     font-weight: 300;
   }
+}
+
+.prose div {
+  max-width: 100%;
 }
 
 .prose p:has(img) {
@@ -34,5 +38,9 @@
   /* for vimeo iframes */
   script + & {
     margin-block-start: var(--grid-gap);
+  }
+
+  & + div {
+    --flow-space: var(--grid-gap);
   }
 }
