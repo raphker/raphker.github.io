@@ -12,10 +12,7 @@ header > div {
   display: grid;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  gap: var(--space-xl);
   align-items: center;
-  justify-content: space-between;
   padding-inline-start: var(--space-3xl);
 }
 

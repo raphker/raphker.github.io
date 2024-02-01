@@ -20,6 +20,8 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@fontsource/titillium-web": "^5.0.18"
+    "@achtaitaipai/niles": "^0.0.20",
+    "@fontsource/titillium-web": "^5.0.18",
+    "gsap": "^3.12.5"
   }
 }

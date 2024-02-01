@@ -10,7 +10,7 @@
         <header>
             <div class="wrapper" data-type="wide">
                 <a href="/" class="header_title">{{ config.title }}</a>
-                <nav class="nav">
+                <nav class="nav--desktop">
                     <ul role="list">
                         {% for item in collections.page | favor_lang | sort_by_priority%}
                             <li>
@@ -19,6 +19,23 @@
                         {% endfor %}
                     </ul>
                 </nav>
+                <nav class="nav--mobile">
+                    <c-hamburger>
+                        <button aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="1em" height="1em">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                        <ul role="list">
+                            {% for item in collections.page | favor_lang | sort_by_priority%}
+                                <li>
+                                    <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url or (item.data.collection and tags in item.data.collection) else "false" }}>{{item.data.title}}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </c-hamburger>
+                </nav>
+
             </div>
         </header>
         <svg viewBox="0 0 300 10" xmlns="http://www.w3.org/2000/svg" class="decorator">

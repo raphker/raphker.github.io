@@ -11,6 +11,14 @@
 @import url("./utils/wrapper.css");
 @import url("./utils/flow.css");
 
+/* DEBUG */
+
+body > div[class^="tp-"] {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;

@@ -1,3 +1,3 @@
-import { add } from "./add.js";
+import { Hamburger } from "./hamburger.js";
 
-console.log(add(8, 8));
+customElements.define("c-hamburger", Hamburger);

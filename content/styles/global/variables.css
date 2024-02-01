@@ -1,34 +1,28 @@
 :root {
-  --font-base: "Titillium", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-
-  --surface: #f8f9fa;
-  --text: #212529;
-
   --main-width: clamp(min(30rem, 100% - var(--space-xs)), 75vw, 90rem);
   --wide-width: clamp(min(30rem, 100% - var(--space-xs)), 95vw, 95rem);
 
   --header-height: var(--space-2xl);
 
-  /* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-
-  --fs--2: clamp(0.7813rem, 0.7932rem + -0.0154vi, 0.7901rem);
-  --fs--1: clamp(0.8889rem, 0.872rem + 0.0845vi, 0.9375rem);
-  --fs-0: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
-  --fs-1: clamp(1.125rem, 1.0467rem + 0.3913vi, 1.35rem);
-  --fs-2: clamp(1.2656rem, 1.1424rem + 0.6163vi, 1.62rem);
-  --fs-3: clamp(1.4238rem, 1.2429rem + 0.9046vi, 1.944rem);
-  --fs-4: clamp(1.6018rem, 1.3475rem + 1.2713vi, 2.3328rem);
-  --fs-5: clamp(1.802rem, 1.4551rem + 1.7345vi, 2.7994rem);
-
-  --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087vi, 0.3125rem);
-  --space-2xs: clamp(0.5rem, 0.4783rem + 0.1087vi, 0.5625rem);
-  --space-xs: clamp(0.75rem, 0.7065rem + 0.2174vi, 0.875rem);
-  --space-s: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
-  --space-m: clamp(1.5rem, 1.4348rem + 0.3261vi, 1.6875rem);
-  --space-l: clamp(2rem, 1.913rem + 0.4348vi, 2.25rem);
-  --space-xl: clamp(3rem, 2.8696rem + 0.6522vi, 3.375rem);
-  --space-2xl: clamp(4rem, 3.8261rem + 0.8696vi, 4.5rem);
-  --space-3xl: clamp(6rem, 5.7391rem + 1.3043vi, 6.75rem);
+  /* http://localhost:8080/fr/projects/si-1-bit-computer/?m=0.75%7C0.5%7C0.25%7C1%7C1.5%7C2%7C3%7C4%7C6&t=1240%7C18%7C1.2%7C320%7C16%7C1.067&c=%23f8f9fa%7C%23212529&f=0 */
+  --fs--2: clamp(0.878357rem, 0.912133rem + -0.168882vw, 0.78125rem);
+  --fs--1: clamp(0.937207rem, 0.937105rem + 0.00051vw, 0.9375rem);
+  --fs-0: clamp(1rem, 0.956522rem + 0.217391vw, 1.125rem);
+  --fs-1: clamp(1.067rem, 0.968565rem + 0.492174vw, 1.35rem);
+  --fs-2: clamp(1.138489rem, 0.971007rem + 0.83741vw, 1.62rem);
+  --fs-3: clamp(1.214768rem, 0.961122rem + 1.26823vw, 1.944rem);
+  --fs-4: clamp(1.296157rem, 0.935586rem + 1.802857vw, 2.3328rem);
+  --fs-5: clamp(1.383rem, 0.890353rem + 2.463235vw, 2.79936rem);
+  --space-3xs: clamp(0.25rem, 0.23913rem + 0.054348vw, 0.28125rem);
+  --space-2xs: clamp(0.5rem, 0.478261rem + 0.108696vw, 0.5625rem);
+  --space-xs: clamp(0.75rem, 0.717391rem + 0.163043vw, 0.84375rem);
+  --space-s: clamp(1rem, 0.956522rem + 0.217391vw, 1.125rem);
+  --space-m: clamp(1.5rem, 1.434783rem + 0.326087vw, 1.6875rem);
+  --space-l: clamp(2rem, 1.913043rem + 0.434783vw, 2.25rem);
+  --space-xl: clamp(3rem, 2.869565rem + 0.652174vw, 3.375rem);
+  --space-2xl: clamp(4rem, 3.826087rem + 0.869565vw, 4.5rem);
+  --space-3xl: clamp(6rem, 5.73913rem + 1.304348vw, 6.75rem);
+  --surface: #f8f9fa;
+  --text: #212529;
+  --font-base: "Titillium", "system-ui", "sans-serif";
 }
