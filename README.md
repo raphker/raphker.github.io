@@ -92,9 +92,9 @@ Le frontmatter des projets contient les entrées suivantes :
 
 | Entrées     | Type de valeur                                                                     | Fonction                             | Requis |
 | ----------- | ---------------------------------------------------------------------------------- | ------------------------------------ | ------ |
-| title       | chaîne de caractère                                                                | titre du projet                      | non    |
+| title       | chaîne de caractère                                                                | titre du projet                      | oui    |
 | priority    | nombre                                                                             | priorité dans l'ordre d'apparition   | non    |
-| thumbnail   | Objet avec en entrées **src**: chaîne de caractère et **alt**: chaîne de caractère | priorité dans l'ordre d'apparition   | non    |
+| thumbnail   | Objet avec en entrées **src**: chaîne de caractère et **alt**: chaîne de caractère | priorité dans l'ordre d'apparition   | oui    |
 | cover       | Objet avec en entrées **src**: chaîne de caractère et **alt**: chaîne de caractère | Image en bannière sur la page projet | non    |
 | moment      | chaîne de caractère                                                                | Date sur la page projet              | non    |
 | legend      | chaîne de caractère, accepte du markdown                                           | Légende sur la page projet           | non    |
@@ -126,6 +126,9 @@ description: |
 ![](/images/projects/carre-blanc-1.jpg)
 ![](/images/projects/carre-blanc-2.jpg)
 
+Comme c'est un super projet je vous montre d'autres images
+
 ![](/images/projects/carre-blanc-3.jpg)
 ![](/images/projects/carre-blanc-4.jpg)
+![](/images/projects/carre-blanc-5.jpg)
 ```
