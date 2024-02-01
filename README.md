@@ -62,13 +62,15 @@ Le contenu de la page suit le second `---`.
 
 ### Images
 
-Les images sont optimisées au moment de la construction du livrable. Pour pouvoir inclure des images dans les pages, vous devez les ajouter dans le fichiers `images` à la racine du projet.
+Les images sont optimisées au moment de la construction du livrable. Pour pouvoir inclure des images dans les pages, vous devez les ajouter dans le fichiers `images` à la racine du projet. Les images peuvent être inclues dans des sous dossiers.
 
 ```md
 ![mon chat](/images/chat.jpg)
+
+![mon plus beau timbre](/images/passions/timbre.jpg)
 ```
 
-Le texte entre `[]` permet de définir une description alternative pour les moteurs de recherches et les lecteurs d'écran.
+Le texte entre `[]` permet de définir [une description alternative de l'image](https://developer.mozilla.org/fr/docs/Learn/Accessibility/HTML#alternatives_textuelles). Bien que non obligatoire au fonctionnement du site, elle est fortement recommandée, pour des raisons d'accessibilité et de référencement.
 
 Pour que les images s'affichent en grille, il faut séparer les différentes lignes d'images par des sauts de lignes:
 
