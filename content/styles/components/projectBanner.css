@@ -6,14 +6,14 @@
 }
 
 .projectBanner_cartel {
-  flex-basis: 25rem;
-  flex-grow: 1;
+  flex-basis: 15rem;
+  flex-grow: 999;
   --flow-space: var(--space-3xs);
 }
 
 .projectBanner_description {
-  flex-basis: 0;
-  flex-grow: 999;
+  flex-basis: 75ch;
+  flex-grow: 1;
   min-inline-size: 50%;
 }
 

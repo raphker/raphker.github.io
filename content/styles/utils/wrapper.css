@@ -1,4 +1,7 @@
 .wrapper {
   max-width: var(--main-width);
   margin-inline: auto;
+  &[data-type="wide"] {
+    max-width: var(--wide-width);
+  }
 }

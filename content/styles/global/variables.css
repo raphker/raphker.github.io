@@ -7,6 +7,9 @@
   --text: #212529;
 
   --main-width: clamp(min(30rem, 100% - var(--space-xs)), 75vw, 90rem);
+  --wide-width: clamp(min(30rem, 100% - var(--space-xs)), 95vw, 95rem);
+
+  --header-height: var(--space-2xl);
 
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 

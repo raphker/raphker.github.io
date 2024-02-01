@@ -1,0 +1,28 @@
+header {
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  height: var(--header-height);
+  z-index: 11;
+  display: flex;
+  align-items: end;
+}
+
+header > div {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(auto, 1fr) minmax(auto, 4fr);
+  gap: var(--space-xl);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_title {
+  text-decoration: none;
+  font-size: var(--fs-2);
+  font-weight: 600;
+  text-align: right;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+}
