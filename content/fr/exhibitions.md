@@ -1,6 +1,6 @@
 ---
 tags: page
-layout: base
+layout: page
 title: Expositions
 priority: 300
 ---

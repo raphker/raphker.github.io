@@ -27,7 +27,8 @@
         </svg>
 
         <main class="wrapper flow">
-            {{ content | safe }}
+            {% block content %}
+            {% endblock content %}
         </main>
         <footer class="footer wrapper" data-type="wide">
             <p class="footer_copyright">{{config.copyright}}</p>

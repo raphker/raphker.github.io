@@ -1,6 +1,6 @@
----
-layout: base
----
+{%extends "layouts/base.njk"%}
+
+{% block content %}
     <ul>
         {% for project in collections.projects | favor_lang | sort_by_priority %}
             <li>
@@ -12,3 +12,4 @@ layout: base
             </li>
         {% endfor %}
     </ul>
+{% endblock content %}

@@ -1,6 +1,6 @@
 ---
 tags: page
-layout: base
+layout: page
 title: Recherche
 priority: 200
 ---

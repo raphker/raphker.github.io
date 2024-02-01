@@ -1,6 +1,6 @@
 ---
 tags: page
-layout: base
+layout: page
 title: Research
 priority: 200
 ---
