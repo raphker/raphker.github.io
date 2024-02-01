@@ -1,0 +1,30 @@
+.imagesRow {
+  --threshold: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--grid-gap);
+  --flow-space: var(--grid-gap);
+  max-width: 100%;
+  margin-inline: auto;
+  & > picture {
+    flex-basis: max((var(--threshold) - 100%) * 999, 0px);
+    flex-grow: calc(var(--ratio));
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  & img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  & + & {
+    --flow-space: var(--grid-gap);
+  }
+  /* for vimeo iframes */
+  script + & {
+    margin-block-start: var(--grid-gap);
+  }
+  & + div {
+    --flow-space: var(--grid-gap);
+  }
+}
