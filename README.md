@@ -23,7 +23,7 @@ Le contenu de la page suit le second `---`.
 
 ### Images
 
-Les images sont optimisées au moment de la construction du livrable. Pour pouvoir inclure des images dans les pages, vous devez les ajouter dans le fichiers `images` à la racine du projet. Les images peuvent être inclues dans des sous dossiers.
+Les images sont optimisées au moment de la construction du livrable. Pour pouvoir inclure des images dans les pages, vous devez les avoir ajouter dans le dossier `images` à la racine du projet. Les images peuvent être inclues dans des sous dossiers.
 
 ```md
 ![mon chat](/images/chat.jpg)
