@@ -16,7 +16,7 @@ header > div {
   gap: var(--space-xl);
   align-items: center;
   justify-content: space-between;
-  padding-inline-start: var(--space-xl);
+  padding-inline-start: var(--space-3xl);
 }
 
 .header_title {
