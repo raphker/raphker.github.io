@@ -3,6 +3,7 @@
 @import url("./global/reset.css");
 @import url("./components/header.css");
 @import url("./components/nav.css");
+@import url("./components/footer.css");
 @import url("./components/decorator.css");
 @import url("./components/prose.css");
 @import url("./components/projectBanner.css");
@@ -11,6 +12,9 @@
 @import url("./utils/flow.css");
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   line-height: 1.5;
   font-family: var(--font-base);
   color: var(--text);
@@ -19,6 +23,7 @@ body {
 }
 
 main {
+  flex-grow: 1;
   margin-block: var(--space-xl) var(--space-2xl);
 }
 

@@ -1,14 +1,14 @@
 ---
 layout: base
 ---
-<ul>
-    {% for project in collections.projects | favor_lang | sort_by_priority %}
-        <li>
-            <a href="{{ project.url }}">{{project.data.title}}
-                {% if project.isFallback %}
-                    <sup>{{project.data.lang}}</sup>
-                {% endif %}
-            </a>
-        </li>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for project in collections.projects | favor_lang | sort_by_priority %}
+            <li>
+                <a href="{{ project.url }}">{{project.data.title}}
+                    {% if project.isFallback %}
+                        <sup>{{project.data.lang}}</sup>
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>

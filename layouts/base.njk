@@ -26,14 +26,23 @@
             <path d="M0 5 300 5"/>
         </svg>
 
+        <main class="wrapper flow">
             {{ content | safe }}
+        </main>
+        <footer class="footer wrapper" data-type="wide">
+            <p class="footer_copyright">{{config.copyright}}</p>
+            {% if page.url | locale_links | length %}
+                <ul role="list" class="footer_languages">
+                    {% for link in page.url | locale_links %}
+                        {%- if not loop.first %},{% endif %}
+                        <li>
+                            <a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}">{{link.label}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </footer>
     </body>
-    <footer>
-            This page is also available in:
-            {% for link in page.url | locale_links %}
-                {%- if not loop.first %},{% endif %}
-                <a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}">{{link.label}}</a>
-            {% endfor %}
-    </footer>
+
     <script src="/scripts/index.js"></script>
 </html>

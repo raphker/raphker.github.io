@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  padding-inline: var(--space-xl);
+  padding-block: var(--space-s);
+  display: flex;
+}
+
+.footer_copyright {
+  margin-inline-end: auto;
+}
+
+.footer_languages {
+  display: flex;
+  gap: var(--space-2xs);
+  & a {
+    text-decoration: none;
+  }
+  & a[aria-current="page"] {
+    font-weight: 600;
+  }
+}
