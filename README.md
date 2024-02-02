@@ -51,15 +51,15 @@ Pour ajouter un nouveau projet créer un nouveau fichier `.md` dans le dossier `
 
 Le frontmatter des projets contient les entrées suivantes :
 
-| Entrées     | Type de valeur                                                                     | Fonction                             | Requis |
-| ----------- | ---------------------------------------------------------------------------------- | ------------------------------------ | ------ |
-| title       | chaîne de caractère                                                                | titre du projet                      | oui    |
-| priority    | nombre                                                                             | priorité dans l'ordre d'apparition   | non    |
-| thumbnail   | Objet avec en entrées **src**: chaîne de caractère et **alt**: chaîne de caractère | priorité dans l'ordre d'apparition   | oui    |
-| cover       | Objet avec en entrées **src**: chaîne de caractère et **alt**: chaîne de caractère | Image en bannière sur la page projet | non    |
-| moment      | chaîne de caractère                                                                | Date sur la page projet              | non    |
-| legend      | chaîne de caractère, accepte du markdown                                           | Légende sur la page projet           | non    |
-| description | chaîne de caractère, accepte du markdown                                           | Description sur la page projet       | non    |
+| Entrées     | Type de valeur                                                                     | Fonction                                      | Obligatoire |
+| ----------- | ---------------------------------------------------------------------------------- | --------------------------------------------- | ----------- |
+| title       | chaîne de caractère                                                                | titre du projet                               | oui         |
+| thumbnail   | Objet avec en entrées **src**: chaîne de caractère et **alt**: chaîne de caractère | Image de miniature dans les listes de projets | oui         |
+| priority    | nombre                                                                             | priorité dans l'ordre d'apparition            | non         |
+| cover       | Objet avec en entrées **src**: chaîne de caractère et **alt**: chaîne de caractère | Image en bannière sur la page projet          | non         |
+| moment      | chaîne de caractère                                                                | Date sur la page projet                       | non         |
+| legend      | chaîne de caractère, accepte du markdown                                           | Légende sur la page projet                    | non         |
+| description | chaîne de caractère, accepte du markdown                                           | Description sur la page projet                | non         |
 
 Exemple :
 
