@@ -3,10 +3,9 @@ import gsap from "gsap";
 export class Hamburger extends HTMLElement {
   button?: HTMLElement;
   list?: HTMLElement;
-  path?: SVGPathElement;
+  lines?: SVGLineElement[];
   expanded = false;
   openingTl = gsap.timeline({ paused: true });
-  closingTl = gsap.timeline({ paused: true });
 
   constructor() {
     super();
@@ -15,35 +14,66 @@ export class Hamburger extends HTMLElement {
   connectedCallback() {
     const btn = this.querySelector("button");
     const nav = this.querySelector("ul");
-    const path = this.querySelector<SVGPathElement>("path");
-    if (!btn || !nav || !path)
+    const lines = Array.from(this.querySelectorAll<SVGLineElement>("line"));
+    if (!btn || !nav || !lines)
       throw Error("Hamburger musts contain a <button> and a <nav>");
     this.button = btn;
     this.list = nav;
-    this.path = path;
+    this.lines = lines;
 
     this.openingTl
-      .to(this.path!, {
-        attr: {
-          d: "M6 18 L 18 6 M6 6l12 12",
-        },
-        duration: 0.3,
+      .to(this.lines[0]!, {
+        y: 6,
+        duration: 0.15,
       })
       .to(
-        this.list!,
+        this.lines[2]!,
         {
-          opacity: 1,
-          duration: 0.3,
+          y: -6,
+          duration: 0.15,
+        },
+        0
+      )
+      .to(this.lines, {
+        rotate: 90,
+        transformOrigin: "center center",
+        duration: 0.15,
+      })
+      .set(this.lines[1]!, {
+        opacity: 0,
+      })
+      .to(this.lines[0]!, {
+        rotate: 45,
+        transformOrigin: "center center",
+        duration: 0.25,
+      })
+      .to(
+        this.lines[2]!,
+        {
+          rotate: 135,
+          transformOrigin: "center center",
+          duration: 0.25,
         },
         "<"
       )
-      .from(this.list!.querySelectorAll("a"), {
-        yPercent: 100,
-        duration: 0.2,
-        stagger: 0.1,
-        ease: "ease.in",
-      });
-    this.list.style.setProperty("opacity", "0");
+      .fromTo(
+        this.list!,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 0.2,
+        },
+        0
+      )
+      .from(
+        this.list.querySelectorAll("a")!,
+        {
+          y: "100%",
+          duration: 0.2,
+          stagger: 0.1,
+        },
+        0
+      );
 
     this.button.setAttribute("aria-expanded", this.expanded.toString());
     this.button.addEventListener("click", this.toggle);
@@ -51,7 +81,6 @@ export class Hamburger extends HTMLElement {
   disconnectedCallback() {
     this.button?.removeEventListener("click", this.toggle);
     this.openingTl.kill();
-    this.closingTl.kill();
   }
 
   toggle = () => {
@@ -71,19 +100,8 @@ export class Hamburger extends HTMLElement {
     this.expanded = false;
     this.button?.setAttribute("aria-expanded", this.expanded.toString());
     document.body.style.setProperty("overflow", "auto");
-    gsap.to(this.path!, {
-      attr: {
-        d: "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5",
-      },
-      duration: 0.3,
+    this.openingTl.reverse().then(() => {
+      this.list?.style.setProperty("display", "none");
     });
-    gsap
-      .to(this.list!, {
-        opacity: 0,
-        duration: 0.6,
-      })
-      .then(() => {
-        this.list?.style.setProperty("display", "none");
-      });
   }
 }
