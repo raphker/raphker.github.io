@@ -19,10 +19,14 @@ module.exports = function (config) {
       const defaults = collection.filter(
         (el) => el.data.lang === siteConfig.defaultLanguage
       );
+      const getFileSlug = (el) =>
+        el.fileSlug === el.data.lang ? "index" : el.fileSlug;
       return defaults.map((el) => {
-        const slug = el.fileSlug;
+        const re = new RegExp(`^\/${siteConfig.defaultLanguage}\/`);
+        const target = el.filePathStem.replace(re, `/${lang}/`);
+        const slug = getFileSlug(el);
         const currentLangItem = collection.find(
-          (el) => el.fileSlug === slug && el.data.lang === lang
+          (el) => el.filePathStem === target && el.data.lang === lang
         );
         return currentLangItem ?? { ...el, isFallback: true };
       });
