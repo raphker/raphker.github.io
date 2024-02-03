@@ -2,21 +2,27 @@ export const trapFocus = (container: HTMLElement) => {
   const focusableElements = Array.from(
     container.querySelectorAll<HTMLElement>("a, button")
   );
-  const handleBlur = (e: FocusEvent) => {
-    const currentIndex = focusableElements.findIndex((el) => el === e.target);
-    const nextIndex = focusableElements.findIndex(
-      (el) => el === e.relatedTarget
-    );
-    if (nextIndex > 0) return;
-    if (currentIndex === 0)
-      focusableElements[focusableElements.length - 1]?.focus();
-    else focusableElements[0]?.focus();
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  const handleKeyFirst = (e: KeyboardEvent) => {
+    if (e.shiftKey && e.code === "Tab") {
+      e.preventDefault();
+      lastElement?.focus();
+      console.log(lastElement);
+    }
   };
-  focusableElements.forEach((el) => {
-    el.addEventListener("blur", handleBlur);
-  });
-  return () =>
-    focusableElements.forEach((el) => {
-      el.removeEventListener("blur", handleBlur);
-    });
+
+  const handleKeyLast = (e: KeyboardEvent) => {
+    if (!e.shiftKey && e.code === "Tab") {
+      e.preventDefault();
+      firstElement?.focus();
+    }
+  };
+  firstElement?.addEventListener("keydown", handleKeyFirst);
+  lastElement?.addEventListener("keydown", handleKeyLast);
+  return () => {
+    firstElement?.removeEventListener("keydown", handleKeyFirst);
+    lastElement?.removeEventListener("keydown", handleKeyLast);
+  };
 };

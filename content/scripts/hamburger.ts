@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { trapFocus } from "./lib/trapFocus.js";
 
 export class Hamburger extends HTMLElement {
   button?: HTMLElement;
@@ -6,6 +7,7 @@ export class Hamburger extends HTMLElement {
   lines?: SVGLineElement[];
   expanded = false;
   openingTl = gsap.timeline({ paused: true });
+  stopTrapfocus?: () => void;
 
   constructor() {
     super();
@@ -81,6 +83,7 @@ export class Hamburger extends HTMLElement {
   disconnectedCallback() {
     this.button?.removeEventListener("click", this.toggle);
     this.openingTl.kill();
+    if (this.stopTrapfocus) this.stopTrapfocus();
   }
 
   toggle = () => {
@@ -90,6 +93,7 @@ export class Hamburger extends HTMLElement {
 
   async open() {
     this.expanded = true;
+    this.stopTrapfocus = trapFocus(this);
     this.openingTl.restart();
     document.body.style.setProperty("overflow", "hidden");
     this.button?.setAttribute("aria-expanded", this.expanded.toString());
@@ -98,6 +102,7 @@ export class Hamburger extends HTMLElement {
 
   close() {
     this.expanded = false;
+    if (this.stopTrapfocus) this.stopTrapfocus();
     this.button?.setAttribute("aria-expanded", this.expanded.toString());
     document.body.style.setProperty("overflow", "auto");
     this.openingTl.reverse().then(() => {
