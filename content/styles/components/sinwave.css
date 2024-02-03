@@ -1,0 +1,22 @@
+c-sinwave {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 10;
+  stroke-width: 0.25;
+  & circle {
+    stroke-width: 1;
+  }
+
+  & a {
+    border: 1px solid red;
+    padding: 1rem;
+  }
+  & .stroke {
+    fill: none;
+    stroke: currentColor;
+  }
+  & .shape {
+    fill: var(--surface);
+    stroke: none;
+  }
+}
