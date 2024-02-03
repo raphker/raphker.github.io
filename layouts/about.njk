@@ -1,0 +1,14 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <div class="withSidebar" data-align="center">
+        {% if cover and cover.src %}
+            <div>
+                {% image cover.src, cover.alt %} 
+            </div>
+        {% endif %}
+        <article class="prose flow">
+        {{ content | safe}}
+        </article>
+    </div>
+{% endblock content %}

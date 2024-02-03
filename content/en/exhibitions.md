@@ -1,7 +1,7 @@
 ---
 tags: page
 layout: page
-title: "Exhibitions"
+title: "exhibitions"
 priority: 300
 ---
 

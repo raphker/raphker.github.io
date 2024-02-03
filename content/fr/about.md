@@ -1,8 +1,11 @@
 ---
 tags: page
-layout: page
-title: Infos
+layout: about
+title: infos
 priority: 100
+cover:
+  src: /images/infos.png
+  alt: photo de Raphaëlle Kerbrat
 ---
 
 Raphaëlle Kerbrat est artiste plasticienne et docteure SACRe – PSL de l’École des Arts Décoratifs de Paris.

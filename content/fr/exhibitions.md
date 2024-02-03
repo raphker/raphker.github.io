@@ -1,7 +1,7 @@
 ---
 tags: page
 layout: page
-title: Expositions
+title: expositions
 priority: 300
 ---
 

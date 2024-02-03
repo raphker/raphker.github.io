@@ -7,20 +7,20 @@
         </div>
     {% endif %}
     <article>
-        <div class="projectBanner">
-            <div class="projectBanner_cartel flow">
+        <div class="withSidebar region" style="--gutter:var(--space-l);">
+            <div class="flow" style="--flow-space:var(--space-xs)">
                 {% if title %}
-                    <h1 class="projectBanner_title">{{title}}</h1>
+                    <h1 class="text-lg bold">{{title}}</h1>
                 {% endif %}
                 {% if moment %}
-                    <p class="projectBanner_date">[ {{moment}} ]</p>
+                    <p class="bold">[ {{moment}} ]</p>
                 {% endif %}
                 {% if legend %}
-                    <div class="projectBanner_legend prose flow">{{legend | parse_markdown | safe }}</div>
+                    <div class="italic text-sm prose">{{legend | parse_markdown | safe }}</div>
                 {% endif %}
             </div>
             {% if description %}
-                <div class="projectBanner_description prose flow">
+                <div class="prose flow">
                     {{ description | parse_markdown | safe}}
                 </div>
             {% endif %}

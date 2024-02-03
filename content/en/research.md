@@ -1,7 +1,7 @@
 ---
 tags: page
 layout: page
-title: Research
+title: research
 priority: 200
 ---
 

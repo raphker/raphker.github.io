@@ -1,7 +1,7 @@
 ---
 tags: page
 layout: home
-title: Projets
+title: projets
 collection: projects
 priority: 1000
 ---

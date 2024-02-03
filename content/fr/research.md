@@ -1,7 +1,7 @@
 ---
 tags: page
 layout: page
-title: Recherche
+title: recherche
 priority: 200
 ---
 

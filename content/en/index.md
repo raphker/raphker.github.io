@@ -1,9 +1,9 @@
 ---
 tags: page
 layout: home
-title: Projects
-priority: 1000
+title: projects
 collection: projects
+priority: 1000
 ---
 
-# Projects
+# Projets

@@ -1,0 +1,23 @@
+.withSidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter, var(--space-xl));
+
+  & :first-child {
+    flex-basis: var(--sidebar-basis, 20rem);
+    flex-grow: 1;
+  }
+
+  & :last-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 50%;
+  }
+  &[data-align="start"] {
+    align-items: start;
+  }
+
+  &[data-align="center"] {
+    align-items: center;
+  }
+}

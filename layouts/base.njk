@@ -9,12 +9,12 @@
     <body>
         <header>
             <div class="wrapper" data-type="wide">
-                <a href="/" class="header_title">{{ config.title }}</a>
+                <a href="/" class="bold text-lg">{{ config.title }}</a>
                 <nav class="nav--desktop">
                     <ul role="list">
                         {% for item in collections.page | favor_lang | sort_by_priority%}
                             <li>
-                                <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url or (item.data.collection and tags in item.data.collection) else "false" }}>{{item.data.title}}</a>
+                                <a href="{{ item.url }}"  aria-current={{"page" if page.url == item.url or (item.data.collection and tags in item.data.collection) else "false" }}>{{item.data.title}}</a>
                             </li>
                         {% endfor %}
                     </ul>

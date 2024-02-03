@@ -1,0 +1,19 @@
+.text-lg {
+  font-size: var(--fs-2);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.text-sm {
+  font-size: var(--fs--1);
+}

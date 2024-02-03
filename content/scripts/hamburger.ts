@@ -74,7 +74,7 @@ export class Hamburger extends HTMLElement {
           duration: 0.2,
           stagger: 0.1,
         },
-        0
+        0.2
       );
 
     this.button.setAttribute("aria-expanded", this.expanded.toString());

@@ -20,8 +20,8 @@ ol[role="list"] {
   padding: 0;
 }
 
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  text-decoration: none;
   color: currentColor;
 }
 
@@ -32,6 +32,7 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 /* Inherit fonts for inputs and buttons */
