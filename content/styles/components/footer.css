@@ -1,6 +1,5 @@
 .footer {
   width: 100%;
-  padding-inline: var(--space-l);
   padding-block: var(--space-s);
   display: flex;
   font-size: var(--fs--1);

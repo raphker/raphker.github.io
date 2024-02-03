@@ -1,6 +1,6 @@
 :root {
-  --main-width: clamp(min(30rem, 100% - var(--space-xs)), 75vw, 90rem);
-  --wide-width: clamp(min(30rem, 100% - var(--space-xs)), 95vw, 95rem);
+  --main-width: clamp(min(30rem, 100% - var(--space-s)), 75vw, 90rem);
+  --wide-width: clamp(min(30rem, 100% - var(--space-s)), 95vw, 95rem);
 
   --header-height: var(--space-2xl);
 
