@@ -1,9 +1,15 @@
 .footer {
   width: 100%;
-  padding-inline: var(--space-3xl);
+  padding-inline: var(--space-l);
   padding-block: var(--space-s);
   display: flex;
   font-size: var(--fs--1);
+}
+
+@media (width >60rem) {
+  .footer {
+    padding-inline: var(--space-3xl);
+  }
 }
 
 .footer_copyright {
