@@ -101,7 +101,7 @@ export class SinWave extends HTMLElement {
         this.WAVELEFT + width * (i + 1)
       } ${this.CENTERY}`;
     }
-    const shapePath = strokePath + `V0 H${this.WAVELEFT} z`;
+    const shapePath = strokePath + `V0 H${this.WAVELEFT - 1} z`;
     return [strokePath, shapePath] as const;
   }
 }
