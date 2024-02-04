@@ -47,12 +47,12 @@ c-hamburger {
     align-items: center;
     font-size: var(--fs-3);
   }
-  & li {
-    overflow: hidden;
-  }
-
   & li > a {
     text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+  }
+  & li > a > span {
     display: inline-block;
   }
   & li > a[aria-current="page"] {

@@ -68,7 +68,7 @@ export class Hamburger extends HTMLElement {
         0
       )
       .from(
-        this.list.querySelectorAll("a")!,
+        this.list.querySelectorAll("a span")!,
         {
           y: "100%",
           duration: 0.2,
