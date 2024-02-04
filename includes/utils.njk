@@ -1,0 +1,12 @@
+{% macro splitLetters(text) %}
+    {% set index = 0 %}
+    {% for word in text.split(" ") -%}
+        <span class="word">{%- for letter in word -%}
+                <span style="--letter-index:{{index}}" class="letter">{{letter}}</span>
+            {%- set index = index + 1 -%}
+        {%- endfor -%}</span>
+        {% if loop.last === false %}
+            <span class="whitespace"> </span>
+        {% endif %}
+    {%- endfor -%}
+{% endmacro %}

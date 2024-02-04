@@ -18,6 +18,37 @@
   }
 }
 
+.nav--desktop a {
+  position: relative;
+  display: inline-block;
+  /* overflow: hidden; */
+  & .clone {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  & .letter {
+    transform-origin: bottom;
+    transform: translateY(0) rotateX(0);
+    transition: transform ease-out 0.3s calc(var(--letter-index) * 0.015s);
+  }
+  & .clone .letter {
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+    /* font-style: italic; */
+  }
+  &:hover {
+    & .letter {
+      transform-origin: bottom;
+      transform: translateY(-100%) rotateX(90deg);
+    }
+    & .clone .letter {
+      transform-origin: top;
+      transform: translateY(0) rotateX(0);
+    }
+  }
+}
+
 c-hamburger {
   display: flex;
   align-items: center;

@@ -1,0 +1,7 @@
+.word {
+  line-height: 1;
+}
+.word,
+.letter {
+  display: inline-block;
+}
