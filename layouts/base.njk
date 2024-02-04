@@ -17,7 +17,7 @@
                             <li>
                                 <a href="{{ item.url }}"  aria-current={{"page" if page.url == item.url or (item.data.collection and tags in item.data.collection) else "false" }}>
                                     {{utils.splitLetters(item.data.title)}}
-                                    <span class="clone">{{utils.splitLetters(item.data.title)}}</span>
+                                    <span class="clone" aria-hidden="true">{{utils.splitLetters(item.data.title)}}</span>
                                 </a>
                             </li>
                         {% endfor %}
@@ -35,7 +35,7 @@
                         <ul role="list">
                             {% for item in collections.page | favor_lang | sort_by_priority%}
                                 <li style="--index:{{ loop.index }};">
-                                    <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url or (item.data.collection and tags in item.data.collection) else "false" }}><span>{{item.data.title}}</span></a>
+                                    <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url or (item.data.collection and tags in item.data.collection) else "false" }}>{{ utils.splitLetters(item.data.title) }}</a>
                                 </li>
                             {% endfor %}
                         </ul>

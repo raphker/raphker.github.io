@@ -89,6 +89,9 @@ c-hamburger {
   & li > a[aria-current="page"] {
     font-weight: 600;
   }
+
+  & .word {
+  }
 }
 
 @media (width < 60rem) {

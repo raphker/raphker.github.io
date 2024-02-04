@@ -68,11 +68,12 @@ export class Hamburger extends HTMLElement {
         0
       )
       .from(
-        this.list.querySelectorAll("a span")!,
+        this.list.querySelectorAll("a .letter")!,
         {
-          y: "100%",
+          y: "1.2em",
           duration: 0.2,
-          stagger: 0.1,
+          stagger: 0.015,
+          ease: "sine",
         },
         0.2
       );
