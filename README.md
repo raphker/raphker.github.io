@@ -1,8 +1,18 @@
 # le site à Raph
 
+<!-- toc -->
+* [Création de contenu](#creation-de-contenu)
+  * [Frontmatter](#frontmatter)
+  * [Images](#images)
+  * [Pages projets](#pages-projets)
+* [Développement](#developpement)
+  * [Installation](#installation)
+
+<!-- toc stop -->
+
 ## Création de contenu
 
-Le contenu est écrit à l'aide de la syntaxe [Markdown](https://www.markdownguide.org/cheat-sheet/) dans les fichiers `.md`. Le "frontmatter" écrit en [Yaml](https://learnxinyminutes.com/docs/yaml/) permet de définir des métadonnées telles qu'un titre ou l'ordre d'apparition.
+Le contenu est écrit à l'aide de la syntaxe [Markdown](https://www.markdownguide.org/cheat-sheet/) dans les fichiers `.md`. Le "frontmatter" écrit en [Yaml](https://learnxinyminutes.com/docs/yaml/) permet de définir des métadonnées telles qu'un titre ou l'ordre d'apparition. Les fichiers de contenus sont situés dans les dossiers `/content/[lang]`
 
 ### Frontmatter
 
@@ -45,7 +55,7 @@ Ligne de texte.
 Autre ligne de texte.
 ```
 
-## Pages projets
+### Pages projets
 
 Pour ajouter un nouveau projet créer un nouveau fichier `.md` dans le dossier `/content/[lang]/projects`
 
@@ -103,25 +113,25 @@ Avant de commencer le développement, assurez-vous d'avoir les outils suivants i
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en) (inclut npm, le gestionnaire de paquets Node.js)
 
-#### Cloner le dépôt :
+**Cloner le dépôt :**
 
 ```bash
 git clone https://github.com/achtaitaipai/r-trema.git my-site-name
 ```
 
-#### Naviguer dans le dossier :
+**Naviguer dans le dossier :**
 
 ```bash
 cd my-site-name
 ```
 
-#### Installer les dépendances :
+**Installer les dépendances :**
 
 ```bash
 npm install
 ```
 
-#### Exécuter Eleventy :
+**Exécuter Eleventy :**
 
 Construire un livrable :
 
