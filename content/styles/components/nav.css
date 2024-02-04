@@ -21,30 +21,29 @@
 .nav--desktop a {
   position: relative;
   display: inline-block;
-  /* overflow: hidden; */
+  overflow: hidden;
   & .clone {
     position: absolute;
     left: 0;
     top: 0;
   }
   & .letter {
-    transform-origin: bottom;
-    transform: translateY(0) rotateX(0);
-    transition: transform ease-out 0.3s calc(var(--letter-index) * 0.015s);
+    transform-origin: top;
+    transform: translateY(0);
   }
   & .clone .letter {
     transform-origin: top;
-    transform: translateY(100%) rotateX(90deg);
-    /* font-style: italic; */
+    transform: translateY(120%);
   }
   &:hover {
     & .letter {
-      transform-origin: bottom;
-      transform: translateY(-100%) rotateX(90deg);
+      transition: transform var(--ease-out-3) 0.6s
+        calc(var(--letter-index) * 0.015s);
+      transform: translateY(-150%);
     }
     & .clone .letter {
       transform-origin: top;
-      transform: translateY(0) rotateX(0);
+      transform: translateY(0);
     }
   }
   &[aria-current="page"] .letter {
