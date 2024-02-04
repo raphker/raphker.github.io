@@ -1,14 +1,11 @@
 # le site à Raph
 
-<!-- toc -->
-* [Création de contenu](#creation-de-contenu)
-  * [Frontmatter](#frontmatter)
-  * [Images](#images)
-  * [Pages projets](#pages-projets)
-* [Développement](#developpement)
-  * [Installation](#installation)
-
-<!-- toc stop -->
+- [Création de contenu](#creation-de-contenu)
+  - [Frontmatter](#frontmatter)
+  - [Images](#images)
+  - [Pages projets](#pages-projets)
+- [Développement](#developpement)
+  - [Installation](#installation)
 
 ## Création de contenu
 

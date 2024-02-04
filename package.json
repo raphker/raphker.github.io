@@ -6,8 +6,7 @@
   "scripts": {
     "build": "eleventy && cp _site/fr/index.html _site/index.html",
     "start": "eleventy --serve",
-    "clear": "rm -rf _site",
-    "doc": "toc"
+    "clear": "rm -rf _site"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +17,6 @@
     "browserslist": "^4.22.2",
     "esbuild": "^0.19.11",
     "lightningcss": "^1.23.0",
-    "readme-toc": "^0.1.1",
     "typescript": "^5.3.3"
   },
   "dependencies": {
