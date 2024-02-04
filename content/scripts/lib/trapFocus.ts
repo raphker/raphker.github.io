@@ -9,7 +9,6 @@ export const trapFocus = (container: HTMLElement) => {
     if (e.shiftKey && e.code === "Tab") {
       e.preventDefault();
       lastElement?.focus();
-      console.log(lastElement);
     }
   };
 

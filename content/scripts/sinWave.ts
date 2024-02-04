@@ -26,8 +26,6 @@ export class SinWave extends HTMLElement {
     this.waveStroke = this.querySelector("#waveStroke");
     this.waveShape = this.querySelector("#waveShape");
     this.initScrollTrigger();
-    console.log(this.interPathes);
-
     this.addEventListener("click", () => {
       this.openInter()?.then(() => {
         this.closeInter();
