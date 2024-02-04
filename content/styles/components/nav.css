@@ -47,6 +47,13 @@
       transform: translateY(0) rotateX(0);
     }
   }
+  &[aria-current="page"] .letter {
+    transform: none;
+  }
+}
+
+[data-menu-open="true"] {
+  overflow: hidden;
 }
 
 c-hamburger {
@@ -88,9 +95,6 @@ c-hamburger {
   }
   & li > a[aria-current="page"] {
     font-weight: 600;
-  }
-
-  & .word {
   }
 }
 

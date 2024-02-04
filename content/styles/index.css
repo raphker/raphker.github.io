@@ -24,14 +24,17 @@ body > div[class^="tp-"] {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   line-height: 1.5;
   font-family: var(--font-base);
   color: var(--text);
   background: var(--surface);
   font-size: var(--fs-0);
+}
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {

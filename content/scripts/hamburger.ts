@@ -14,6 +14,7 @@ export class Hamburger extends HTMLElement {
   }
 
   connectedCallback() {
+    document.body.setAttribute("data-menu-open", "false");
     const btn = this.querySelector("button");
     const nav = this.querySelector("ul");
     const lines = Array.from(this.querySelectorAll<SVGLineElement>("line"));
@@ -96,7 +97,7 @@ export class Hamburger extends HTMLElement {
     this.expanded = true;
     this.stopTrapfocus = trapFocus(this);
     this.openingTl.restart();
-    document.body.style.setProperty("overflow", "hidden");
+    document.body.setAttribute("data-menu-open", "true");
     this.button?.setAttribute("aria-expanded", this.expanded.toString());
     this.list?.style.setProperty("display", "flex");
   }
@@ -105,7 +106,7 @@ export class Hamburger extends HTMLElement {
     this.expanded = false;
     if (this.stopTrapfocus) this.stopTrapfocus();
     this.button?.setAttribute("aria-expanded", this.expanded.toString());
-    document.body.style.setProperty("overflow", "auto");
+    document.body.setAttribute("data-menu-open", "false");
     this.openingTl.reverse().then(() => {
       this.list?.style.setProperty("display", "none");
     });

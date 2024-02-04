@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@achtaitaipai/niles": "^0.0.20",
+    "@barba/core": "^2.9.7",
     "@fontsource/titillium-web": "^5.0.18",
     "gsap": "^3.12.5"
   }
