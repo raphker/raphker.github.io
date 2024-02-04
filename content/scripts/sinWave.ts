@@ -7,7 +7,8 @@ export class SinWave extends HTMLElement {
   TOTALWIDTH = 300;
   WAVELEFT = 80;
   WAVESWIDTH = Math.random() * 50;
-  interPathes?: SVGPathElement[] | null;
+  interPathDesktop?: SVGPathElement | null;
+  interPathMobile?: SVGPathElement | null;
   waveStroke?: SVGPathElement | null;
   waveShape?: SVGPathElement | null;
   updateWave?: () => void;
@@ -22,14 +23,13 @@ export class SinWave extends HTMLElement {
   }
 
   connectedCallback() {
-    this.interPathes = Array.from(this.querySelectorAll(".inter"));
+    this.interPathDesktop = this.querySelector(".inter.desktopOnly");
+    this.interPathMobile = this.querySelector(".inter.mobileOnly");
     this.waveStroke = this.querySelector("#waveStroke");
     this.waveShape = this.querySelector("#waveShape");
     this.initScrollTrigger();
     this.addEventListener("click", () => {
-      this.openInter()?.then(() => {
-        this.closeInter();
-      });
+      this.openInter();
     });
   }
 
@@ -38,16 +38,20 @@ export class SinWave extends HTMLElement {
   }
 
   openInter() {
-    if (!this.interPathes) return;
-    return gsap.to(this.interPathes, {
+    if (!this.interPathDesktop || !this.interPathMobile) return;
+    gsap.to(this.interPathDesktop, {
       rotate: -22.5,
+      transformOrigin: "LEFT CENTER",
+    });
+    gsap.to(this.interPathMobile, {
+      rotate: -12.25,
       transformOrigin: "LEFT CENTER",
     });
   }
 
   closeInter() {
-    if (!this.interPathes) return;
-    return gsap.to(this.interPathes, {
+    if (!this.interPathDesktop || !this.interPathMobile) return;
+    return gsap.to([this.interPathDesktop, this.interPathMobile], {
       rotate: 0,
       transformOrigin: "LEFT CENTER",
     });

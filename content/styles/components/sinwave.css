@@ -12,7 +12,6 @@ c-sinwave {
   @media (width >80rem) {
     stroke-width: 0.25;
   }
-
   & circle {
     stroke-width: 1.5;
     @media (width >30rem) {
@@ -29,5 +28,18 @@ c-sinwave {
   & .shape {
     fill: var(--surface);
     stroke: none;
+  }
+}
+
+c-sinwave .desktopOnly {
+  display: none;
+}
+
+@media (width> 50rem) {
+  c-sinwave .mobileOnly {
+    display: none;
+  }
+  c-sinwave .desktopOnly {
+    display: unset;
   }
 }
