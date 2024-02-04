@@ -2,14 +2,25 @@ c-sinwave {
   position: sticky;
   top: var(--header-height);
   z-index: 10;
-  stroke-width: 0.25;
-  & circle {
-    stroke-width: 1;
+  stroke-width: 1;
+  @media (width >30rem) {
+    stroke-width: 0.6;
+  }
+  @media (width >60rem) {
+    stroke-width: 0.4;
+  }
+  @media (width >80rem) {
+    stroke-width: 0.25;
   }
 
-  & a {
-    border: 1px solid red;
-    padding: 1rem;
+  & circle {
+    stroke-width: 1.5;
+    @media (width >30rem) {
+      stroke-width: 0.5;
+    }
+    @media (width >60rem) {
+      stroke-width: 0;
+    }
   }
   & .stroke {
     fill: none;
