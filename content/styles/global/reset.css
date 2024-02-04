@@ -35,10 +35,24 @@ svg {
   height: auto;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
 select {
   font: inherit;
+}
+
+a[href],
+area,
+button,
+input,
+label[for],
+select,
+summary,
+textarea,
+[tabindex]:not([tabindex*="-"]) {
+  /* disable background on tap */
+  -webkit-tap-highlight-color: transparent;
+  /*  disable additional non-standard gestures such as double-tap to zoom */
+  touch-action: manipulation;
 }
