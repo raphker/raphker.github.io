@@ -28,7 +28,7 @@ Réalisation :
 - Design lumière : Annie Leuridan avec la collaboration de Louise Rustan
 - Développement informatique : Didier Bouchon
 - Suivi de la production de l’œuvre et de sa mise en espace : Lucile Vareilles
-- Soutien technique à la production et / ou au montage : Théo Chauvirey, Corentin Loubet, Joséphine Mas, Laurent Melloul, Simon Paugoy\_
+- Soutien technique à la production et / ou au montage : Théo Chauvirey, Corentin Loubet, Joséphine Mas, Laurent Melloul, Simon Paugoy
 
 _Ce projet à la croisée du design, de l’art, des techno-sciences et des études médiatiques, a été co-développé dans le cadre d’une collaboration internationale entre trois équipes de recherche-création (Le Speculative life Biolab de l’Institut Milieux, Université Concordia, Montréal ; Le groupe de recherche Reflective Interaction d’EnsadLab – laboratoire de l’École nationale supérieure des Arts Décoratifs – Université PSL ; Université de Toronto Mississauga)._
 
