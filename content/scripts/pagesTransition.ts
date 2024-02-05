@@ -23,3 +23,6 @@ export const initPagesTransition = () =>
       },
     ],
   });
+barba.hooks.afterEnter((data) => {
+  window.scrollTo(0, 0);
+});
