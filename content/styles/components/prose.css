@@ -1,13 +1,46 @@
 .prose {
   --grid-gap: var(--space-l);
+
   & > * {
     max-width: 75ch;
   }
+
+  & > div,
+  & > [class] {
+    max-width: 100%;
+  }
+
+  & ul,
+  & ol {
+    --flow-space: var(--space-2xs);
+    padding-left: var(--space-l);
+  }
+  & li + li {
+    margin-block-start: var(--space-2xs);
+  }
+
+  & a {
+    background-image: linear-gradient(
+      to top,
+      currentColor,
+      currentColor 1px,
+      transparent 1px
+    );
+    background-repeat: no-repeat;
+    transition: background-size 0.3s;
+    background-position: 100%;
+    background-size: 0%;
+    color: var(--link);
+    &:hover {
+      background-position: 0%;
+      background-size: 100%;
+    }
+  }
+
   & em {
     font-weight: 300;
   }
-}
-
-.prose div {
-  max-width: 100%;
+  & strong {
+    font-weight: 600;
+  }
 }

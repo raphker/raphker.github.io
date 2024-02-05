@@ -8,12 +8,12 @@
     {% endif %}
     <article>
         <div class="withSidebar region" style="--gutter:var(--space-l);">
-            <div class="flow" style="--flow-space:var(--space-xs)">
+            <div class="flow" >
                 {% if title %}
                     <h1 class="text-lg bold">{{title}}</h1>
                 {% endif %}
                 {% if moment %}
-                    <p class="bold">[ {{moment}} ]</p>
+                    <p class="bold" style="--flow-space:var(--space-2xs)">[ {{moment}} ]</p>
                 {% endif %}
                 {% if legend %}
                     <div class="italic text-sm prose">{{legend | parse_markdown | safe }}</div>

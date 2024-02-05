@@ -24,6 +24,7 @@
   --space-3xl: clamp(6rem, 5.73913rem + 1.304348vw, 6.75rem);
   --surface: #f8f9fa;
   --text: #212529;
+  --link: #1971c2;
   --font-base: "Titillium", "system-ui", "sans-serif";
 
   /* https://github.com/argyleink/open-props/blob/main/src/props.easing.css */
