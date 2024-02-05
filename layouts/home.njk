@@ -1,13 +1,27 @@
+{% import "utils.njk" as utils%}
 {%extends "layouts/base.njk"%}
 
 {% block content %}
-    <ul>
+    <ul role="list" class="cluster" data-justify="center" style="--column-gutter:var(--space-3xl)">
         {% for project in collections.projects | favor_lang | sort_by_priority %}
             <li>
-                <a href="{{ project.url }}">{{project.data.title}}
+                <a href="{{ project.url }}" class="projectCard">
+                    {% image project.data.thumbnail.src, project.data.thumbnail.alt %}
                     {% if project.isFallback %}
                         <sup>{{project.data.lang}}</sup>
                     {% endif %}
+                    <span class="projectCard_title bold text-xl">{{ utils.splitLetters(project.data.title) }}</span>
+                </a>
+            </li>
+        {% endfor %}
+        {% for project in collections.projects | favor_lang  %}
+            <li>
+                <a href="{{ project.url }}" class="projectCard">
+                    {% image project.data.thumbnail.src, project.data.thumbnail.alt %}
+                    {% if project.isFallback %}
+                        <sup>{{project.data.lang}}</sup>
+                    {% endif %}
+                    <span class="projectCard_title bold text-xl">{{ utils.splitLetters(project.data.title) }}</span>
                 </a>
             </li>
         {% endfor %}
