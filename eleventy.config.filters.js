@@ -11,6 +11,10 @@ module.exports = function (config) {
     return md.render(content ?? "");
   });
 
+  config.addFilter("i18n", function (content) {
+    return this.ctx.i18n[content.trim()]?.[this.ctx.lang] ?? content;
+  });
+
   config.addFilter(
     "sort_by_priority",
     /** @param {{data:{priority?:number}}[]} collection */
