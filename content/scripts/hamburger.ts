@@ -4,7 +4,8 @@ import { trapFocus } from "./lib/trapFocus.js";
 export class Hamburger extends HTMLElement {
   button?: HTMLElement;
   list?: HTMLElement;
-  lines?: SVGLineElement[];
+  openLabel?: HTMLElement;
+  closeLabel?: HTMLElement;
   expanded = false;
   openingTl = gsap.timeline({ paused: true });
   stopTrapfocus?: () => void;
@@ -14,50 +15,45 @@ export class Hamburger extends HTMLElement {
   }
 
   connectedCallback() {
-    document.body.setAttribute("data-menu-open", "false");
     const btn = this.querySelector("button");
     const nav = this.querySelector("ul");
+    const openLabel = this.querySelector<HTMLElement>(".open");
+    const closeLabel = this.querySelector<HTMLElement>(".close");
     const lines = Array.from(this.querySelectorAll<SVGLineElement>("line"));
-    if (!btn || !nav || !lines)
+    if (!btn || !nav || !lines || !openLabel || !closeLabel)
       throw Error("Hamburger musts contain a <button> and a <nav>");
     this.button = btn;
     this.list = nav;
-    this.lines = lines;
+    this.openLabel = openLabel;
+    this.closeLabel = closeLabel;
+
+    document.body.setAttribute("data-menu-open", "false");
 
     this.openingTl
-      .to(this.lines[0]!, {
-        y: 6,
-        duration: 0.15,
-      })
-      .to(
-        this.lines[2]!,
+      .fromTo(
+        this.button,
         {
-          y: -6,
-          duration: 0.15,
+          css: {
+            color: "var(--text)",
+          },
+        },
+        {
+          css: {
+            color: "var(--surface)",
+          },
+          duration: 0.5,
+        }
+      )
+      .fromTo(
+        this.openLabel.querySelectorAll(".letter"),
+        { y: 0 },
+        {
+          y: "-120%",
+          duration: 0.5,
+          stagger: 0.05,
+          ease: "power1.inOut",
         },
         0
-      )
-      .to(this.lines, {
-        rotate: 90,
-        transformOrigin: "center center",
-        duration: 0.15,
-      })
-      .set(this.lines[1]!, {
-        opacity: 0,
-      })
-      .to(this.lines[0]!, {
-        rotate: 45,
-        transformOrigin: "center center",
-        duration: 0.25,
-      })
-      .to(
-        this.lines[2]!,
-        {
-          rotate: 135,
-          transformOrigin: "center center",
-          duration: 0.25,
-        },
-        "<"
       )
       .fromTo(
         this.list!,
@@ -77,6 +73,17 @@ export class Hamburger extends HTMLElement {
           ease: "sine",
         },
         0.2
+      )
+      .fromTo(
+        this.closeLabel.querySelectorAll(".letter"),
+        { y: "120%" },
+        {
+          y: 0,
+          duration: 0.5,
+          stagger: 0.05,
+          ease: "power1.inOut",
+        },
+        "<"
       );
 
     this.button.setAttribute("aria-expanded", this.expanded.toString());
@@ -100,6 +107,8 @@ export class Hamburger extends HTMLElement {
     document.body.setAttribute("data-menu-open", "true");
     this.button?.setAttribute("aria-expanded", this.expanded.toString());
     this.list?.style.setProperty("display", "flex");
+    this.openLabel?.setAttribute("aria-hidden", "false");
+    this.closeLabel?.setAttribute("aria-hidden", "true");
   }
 
   close() {
@@ -107,6 +116,8 @@ export class Hamburger extends HTMLElement {
     if (this.stopTrapfocus) this.stopTrapfocus();
     this.button?.setAttribute("aria-expanded", this.expanded.toString());
     document.body.setAttribute("data-menu-open", "false");
+    this.openLabel?.setAttribute("aria-hidden", "true");
+    this.closeLabel?.setAttribute("aria-hidden", "false");
     this.openingTl.reverse().then(() => {
       this.list?.style.setProperty("display", "none");
     });
