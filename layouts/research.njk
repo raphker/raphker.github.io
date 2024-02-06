@@ -3,7 +3,6 @@
 
 
 
-{% set columns= 2 %}
 {% set items = [
 {letter:"a"},
 {letter:"b"},
@@ -27,19 +26,16 @@
 
 {% block content %}
     <div class="masonry">
-        {% for col in range(columns)%}
-            <div >
-                {%for i in range(0, (items.length) / columns) %}
-                    {% set current = items[col + i * columns] %}
-                    {% if current %}
-                        <article>
-                            {{ current.letter }}
+        {% for column in items | distribute(2)%}
+            <div>
+                {% for item in column %}
+                    <article>
+                            {{ item.letter }}
                             {% set nline = [1,2,3,4,5,6,7,8,9] | random %}
                             {% for j in range(0,nline) %}
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam, aspernatur repellendus accusantium molestiae saepe possimus vitae maxime similique magnam delectus. Voluptas perspiciatis quam sint pariatur, incidunt ab in ullam?</p>
                             {% endfor%}
                         </article>
-                    {% endif %}
                 {% endfor %}
             </div>
         {% endfor %}

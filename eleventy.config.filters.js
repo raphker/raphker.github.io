@@ -15,6 +15,18 @@ module.exports = function (config) {
     return this.ctx.i18n[content.trim()]?.[this.ctx.lang] ?? content;
   });
 
+  config.addFilter("distribute", (items, columns) => {
+    const results = new Array(columns);
+    for (let i = 0; i < items.length; i++) {
+      const element = items[i];
+      const col = i % columns;
+      if (results[col]) results[col].push(element);
+      else results[col] = [element];
+      if (i < 10) console.log(i, results);
+    }
+    return results;
+  });
+
   config.addFilter(
     "sort_by_priority",
     /** @param {{data:{priority?:number}}[]} collection */
