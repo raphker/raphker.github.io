@@ -4,6 +4,7 @@
 
 @import url("./layouts/sidebar.css");
 @import url("./layouts/cluster.css");
+@import url("./layouts/masonry.css");
 
 @import url("./components/header.css");
 @import url("./components/nav.css");

@@ -7,9 +7,6 @@
             <li>
                 <a href="{{ project.url }}" class="projectCard">
                     {% image project.data.thumbnail.src, project.data.thumbnail.alt %}
-                    {% if project.isFallback %}
-                        <sup>{{project.data.lang}}</sup>
-                    {% endif %}
                     <span class="projectCard_title bold text-xl">{{ utils.splitLetters(project.data.title) }}</span>
                 </a>
             </li>
@@ -18,9 +15,6 @@
             <li>
                 <a href="{{ project.url }}" class="projectCard">
                     {% image project.data.thumbnail.src, project.data.thumbnail.alt %}
-                    {% if project.isFallback %}
-                        <sup>{{project.data.lang}}</sup>
-                    {% endif %}
                     <span class="projectCard_title bold text-xl">{{ utils.splitLetters(project.data.title) }}</span>
                 </a>
             </li>

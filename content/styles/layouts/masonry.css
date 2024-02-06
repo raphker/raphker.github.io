@@ -1,0 +1,9 @@
+.masonry {
+  display: flex;
+  gap: var(--column-gutter, var(--gutter, var(--space-xl)));
+  & > * {
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gutter, var(--gutter, var(--space-xl)));
+  }
+}
