@@ -1,0 +1,9 @@
+.divide-y + .divide-y {
+  padding-block-start: var(--divide-space);
+  border-block-start: solid;
+}
+
+.divide-x + .divide-x {
+  padding-inline-start: var(--divide-space);
+  border-inline-start: solid;
+}
