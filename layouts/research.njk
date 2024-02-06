@@ -25,17 +25,15 @@
 {letter:"s"}]  %}
 
 {% block content %}
-    <div class="masonry">
+    <div class="masonry" style="--row-gutter:1rem;">
         {% for column in items | distribute(2)%}
             <div>
                 {% for item in column %}
-                    <article class="divide-y" style="--divide-space:var(--space-xl); width:100%;">
+                    <article class="divide-y" style="--divide-space:var(--space-m); width:100%;">
                             {{ item.letter }}
                             {% set nline = [1,2,3,4,5,6,7,8,9] | random %}
-
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam, aspernatur repellendus accusantium molestiae saepe possimus vitae maxime similique magnam delectus. Voluptas perspiciatis quam sint pariatur, incidunt ab in ullam?</p>
-                                    
-                            <c-collapse data-label="coucou">
+                            <c-collapse data-label="{{ "detail" | i18n}}">
                                 {% for j in range(0,nline) %}
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam, aspernatur repellendus accusantium molestiae saepe possimus vitae maxime similique magnam delectus. Voluptas perspiciatis quam sint pariatur, incidunt ab in ullam?</p>
                                 {% endfor%}

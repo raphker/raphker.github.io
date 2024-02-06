@@ -7,4 +7,8 @@ module.exports = {
     en: "Close",
     fr: "Fermer",
   },
+  detail: {
+    en: "Detail",
+    fr: "Détail",
+  },
 };

@@ -16,11 +16,13 @@
 @import url("./components/words.css");
 @import url("./components/link.css");
 @import url("./components/projectCard.css");
+@import url("./components/collapse.css");
 
 @import url("./utils/wrapper.css");
 @import url("./utils/flow.css");
 @import url("./utils/region.css");
 @import url("./utils/typo.css");
+@import url("./utils/divide.css");
 
 /* DEBUG */
 
