@@ -1,8 +1,3 @@
-ul:has(.projectCard:hover, .projectCard:focus-visible)
-  > li:has(.projectCard:not(:hover, :focus-visible)) {
-  opacity: 0.3;
-}
-
 li:has(.projectCard) {
   opacity: 1;
   transition: opacity 1s;
@@ -22,13 +17,17 @@ li:has(.projectCard) {
   display: none;
 }
 
-.projectCard:hover .projectCard_title,
-.projectCard:focus-visible .projectCard_title {
-  display: block;
-  overflow: hidden;
-  & .letter {
-    animation: projectCard-letter 0.3s calc(0.2s + var(--letter-index) * 0.02s)
-      both;
+@media (hover) {
+  ul:has(.projectCard:hover) > li:has(.projectCard:not(:hover)) {
+    opacity: 0.3;
+  }
+  .projectCard:hover .projectCard_title {
+    display: block;
+    overflow: hidden;
+    & .letter {
+      animation: projectCard-letter 0.3s
+        calc(0.2s + var(--letter-index) * 0.02s) both;
+    }
   }
 }
 
