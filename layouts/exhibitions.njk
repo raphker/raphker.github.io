@@ -5,11 +5,12 @@
 <div class="flow" style="--flow-space:var(--space-xl)">
  {% for exhibition in collections.exhibitions | favor_lang | sort_by_priority %}
     <article class="exhibitionCard" data-right="true">
-        <ul class="exhibitionCard_images reel" role="list">
+        <div class="exhibitionCard_images reel">
+            <c-reel-controls></c-reel-controls>
             {% for image in exhibition.data.gallery %}
-                <li>{% image image.src, image.alt | default("") %} </li>
+                {% image image.src, image.alt | default("") %}
             {% endfor %}
-        </ul>
+        </div>
         <div class="exhibitionCard_description">
             <div class="exhibitionCard_header">
                 <h2>{{exhibition.data.title}}</h2>
