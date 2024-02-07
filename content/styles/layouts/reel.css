@@ -13,7 +13,7 @@
 }
 
 .reel::-webkit-scrollbar-track {
-  background-color: var(--text);
+  background-color: var(--surface);
 }
 
 .reel::-webkit-scrollbar-thumb {
@@ -29,17 +29,14 @@
 
 .reel > * {
   flex: 0 0 auto;
+  height: 100%;
+  width: auto;
   scroll-snap-align: center;
 }
 
-.reel picture {
-  height: 100%;
-  width: auto;
-}
-
 .reel img {
+  object-fit: contain;
+  max-width: 100%;
   width: auto;
-  max-width: none;
   height: 100%;
-  margin-inline: auto;
 }
