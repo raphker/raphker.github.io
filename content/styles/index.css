@@ -2,6 +2,8 @@
 @import url("./global/variables.css");
 @import url("./global/reset.css");
 
+@import url("./lib/prism.css");
+
 @import url("./layouts/sidebar.css");
 @import url("./layouts/cluster.css");
 @import url("./layouts/masonry.css");

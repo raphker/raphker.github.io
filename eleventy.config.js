@@ -4,6 +4,7 @@ const i18nConfig = require("./eleventy.config.i18n.js");
 const imagesConfig = require("./eleventy.config.images.js");
 const mdConfig = require("./eleventy.config.markdown.js");
 const filters = require("./eleventy.config.filters.js");
+const syntaxHighlight = require("./eleventy.config.syntaxHighlight.js");
 
 /** @param {import('@11ty/eleventy').UserConfig} config */
 module.exports = function (config) {
@@ -17,6 +18,7 @@ module.exports = function (config) {
   imagesConfig(config);
   mdConfig(config);
   filters(config);
+  syntaxHighlight(config);
 
   return {
     dir: {

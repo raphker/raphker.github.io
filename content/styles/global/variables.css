@@ -26,6 +26,8 @@
   --text: #212529;
   --link: #1971c2;
   --font-base: "Titillium", "system-ui", "sans-serif";
+  --font-code: "ui-monospace", "Cascadia Code", "Source Code Pro", "Menlo",
+    "Consolas", "DejaVu Sans Mono", "monospace";
 
   /* https://github.com/argyleink/open-props/blob/main/src/props.easing.css */
   --ease-1: cubic-bezier(0.25, 0, 0.5, 1);
