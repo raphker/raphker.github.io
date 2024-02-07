@@ -10,7 +10,7 @@ module.exports = function (config) {
       if (inputPath !== "./content/styles/index.css") {
         return;
       }
-      let targets = browserslistToTargets(browserslist("> 0.01% and not dead"));
+      let targets = browserslistToTargets(browserslist("> 0.2% and not dead"));
 
       return async () => {
         let { code } = await bundle({
