@@ -1,0 +1,38 @@
+.exhibitionCard {
+  display: flex;
+  gap: var(--space-l);
+  flex-direction: column;
+  @media (width > 75rem) {
+    height: 30rem;
+    flex-direction: row;
+  }
+}
+
+.exhibitionCard_images {
+  height: 30rem;
+  flex-grow: 1;
+  @media (width <= 75rem) {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+}
+
+.exhibitionCard_description {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20rem;
+  flex-shrink: 0;
+  height: 100%;
+  gap: var(--space-s);
+}
+
+.exhibitionCard_header {
+  flex-grow: 1;
+}
+
+.exhibitionCard_content {
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+}

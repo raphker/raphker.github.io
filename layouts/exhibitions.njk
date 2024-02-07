@@ -1,0 +1,28 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+<div class="flow" style="--flow-space:var(--space-xl)">
+ {% for exhibition in collections.exhibitions | favor_lang | sort_by_priority %}
+    <article class="exhibitionCard" data-right="true">
+        <ul class="exhibitionCard_images reel" role="list">
+            {% for image in exhibition.data.gallery %}
+                <li>{% image image.src, image.alt | default("") %} </li>
+            {% endfor %}
+        </ul>
+        <div class="exhibitionCard_description">
+            <div class="exhibitionCard_header">
+                <h2>{{exhibition.data.title}}</h2>
+                <p class="bold">{{exhibition.data.legend}}</p>
+                <p>{{exhibition.data.place}}</p>
+                <p>{{exhibition.data.moment}}</p>
+            </div>
+            <div class="exhibitionCard_content prose">
+                {{exhibition.content | safe}}
+            </div>
+        </div>
+    </article>
+ {% endfor %}
+</div>
+
+{% endblock %}

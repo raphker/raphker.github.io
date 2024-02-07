@@ -1,6 +1,6 @@
 ---
 tags: page
-layout: page
+layout: exhibitions
 title: "exhibitions"
 priority: 300
 ---
