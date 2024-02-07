@@ -7,7 +7,7 @@ cover:
   src: "/images/projects/bug-0.jpg"
   alt: ""
 priority: 10
-moment: "2018"
+moment: "[2018]"
 legend: |
   Moteurs, antennes téléscopiques, dispositif électronique. 
 

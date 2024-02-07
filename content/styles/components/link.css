@@ -10,6 +10,8 @@
   & .letter {
     transform-origin: top;
     transform: translateY(0);
+    transition: transform var(--ease-in-2) 0.3s
+      calc(var(--letter-index) * 0.015s);
   }
   & .link_clone .letter {
     transform-origin: top;

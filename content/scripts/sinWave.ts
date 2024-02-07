@@ -7,6 +7,7 @@ export class SinWave extends HTMLElement {
   TOTALWIDTH = 300;
   WAVELEFT = 80;
   WAVESWIDTH = Math.random() * 50;
+  isOpen = false;
   interPathDesktop?: SVGPathElement | null;
   interPathMobile?: SVGPathElement | null;
   waveStroke?: SVGPathElement | null;
@@ -29,7 +30,13 @@ export class SinWave extends HTMLElement {
     this.waveShape = this.querySelector("#waveShape");
     this.initScrollTrigger();
     this.addEventListener("click", () => {
-      this.openInter();
+      if (!this.isOpen) {
+        this.openInter();
+        this.isOpen = true;
+      } else {
+        this.closeInter();
+        this.isOpen = false;
+      }
     });
   }
 
@@ -76,7 +83,10 @@ export class SinWave extends HTMLElement {
     this.scrollTrigger = ScrollTrigger.create({
       onUpdate: (self) => {
         const height = clampHeight(-self.getVelocity() / -1000);
-        if (Math.abs(height) > Math.abs(this.heightProxy.height)) {
+        if (
+          Math.abs(height) > Math.abs(this.heightProxy.height) &&
+          !this.isOpen
+        ) {
           this.heightProxy.height = height;
           gsap.to(this.heightProxy, {
             height: 0,

@@ -7,7 +7,7 @@ cover:
   src: "/images/projects/wireless-0.jpg"
   alt: ""
 priority: 14
-moment: "2020-2022"
+moment: "[2020-2022]"
 legend: |
   Triptyque de rayonnements électromagnétiques, impression numérique en PLA.  
 

@@ -7,7 +7,7 @@ cover:
   src: "/images/projects/siliconlandscape-0.jpg"
   alt: ""
 priority: 12
-moment: "2020"
+moment: "[2020]"
 legend: |
   Série de prises de vues numériques fixes et en mouvement. Dimensions variables.
 description: |

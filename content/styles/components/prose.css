@@ -25,21 +25,7 @@
   }
 
   & a {
-    background-image: linear-gradient(
-      to top,
-      currentColor,
-      currentColor 1px,
-      transparent 1px
-    );
-    background-repeat: no-repeat;
-    transition: background-size 0.3s;
-    background-position: 100%;
-    background-size: 0%;
-    color: var(--link);
-    &:hover {
-      background-position: 0%;
-      background-size: 100%;
-    }
+    text-decoration: underline;
   }
 
   & em {

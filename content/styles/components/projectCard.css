@@ -1,6 +1,5 @@
-li:has(.projectCard) {
-  opacity: 1;
-  transition: opacity 1s;
+.projectCard {
+  position: relative;
 }
 
 .projectCard img {
@@ -9,17 +8,22 @@ li:has(.projectCard) {
 }
 
 .projectCard_title {
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
   display: none;
+  text-align: center;
+  & .word {
+    white-space: nowrap;
+    overflow: hidden;
+  }
 }
 
 @media (hover) {
-  ul:has(.projectCard:hover) > li:has(.projectCard:not(:hover)) {
-    opacity: 0.3;
+  .projectCard:hover img {
+    opacity: 0.5;
   }
   .projectCard:hover .projectCard_title {
     display: block;
