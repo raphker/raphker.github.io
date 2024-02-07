@@ -22,7 +22,6 @@ module.exports = function (config) {
       const col = i % columns;
       if (results[col]) results[col].push(element);
       else results[col] = [element];
-      if (i < 10) console.log(i, results);
     }
     return results;
   });
