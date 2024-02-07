@@ -19,11 +19,11 @@
 .reel::-webkit-scrollbar-thumb {
   background-color: var(--text);
   background-image: linear-gradient(
-    var(--text) 0,
-    var(--text) 0.25rem,
+    var(--surface) 0,
     var(--surface) 0.25rem,
-    var(--surface) 0.75rem,
-    var(--text) 0.75rem
+    var(--text) 0.25rem,
+    var(--text) 0.75rem,
+    var(--surface) 0.75rem
   );
 }
 
