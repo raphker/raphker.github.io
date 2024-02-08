@@ -4,7 +4,7 @@
   - [Frontmatter](#frontmatter)
   - [Images](#images)
   - [Pages projets](#pages-projets)
-  - [Expositions]("expositions")
+  - [Expositions](#expositions)
 - [Développement](#développement)
   - [Installation](#installation)
 
