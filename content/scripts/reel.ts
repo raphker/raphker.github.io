@@ -117,7 +117,7 @@ export class reelWrapper extends HTMLElement {
       item.offsetLeft - (this.wrapper?.clientWidth - item.clientWidth) * 0.5;
     gsap.to(this.wrapper, {
       duration: 0.6,
-      scrollTo: { x: targetPosition, autoKill: true },
+      scrollTo: { x: targetPosition },
     });
   }
 }
