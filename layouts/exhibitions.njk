@@ -1,10 +1,11 @@
 {% extends "layouts/base.njk" %}
+{% import "utils.njk" as utils%}
 
 {% block content %}
 
 <div class="flow" style="--flow-space:var(--space-xl)">
  {% for exhibition in collections.exhibitions | favor_lang | sort_by_priority %}
-    <article class="exhibitionCard" data-right="true">
+    <article class="exhibitionCard">
         <c-reel-wrapper data-prev-label="{{"previousImage" | i18n}}" data-next-label="{{"nextImage" | i18n}}">
             <div class="exhibitionCard_images" data-wrapper>
                 {% for image in exhibition.data.gallery %}
@@ -12,20 +13,9 @@
                 {% endfor %}
             </div>
         </c-reel-wrapper>
-        <div class="exhibitionCard_description">
-            <div class="exhibitionCard_header flow leading-tight" style="--flow-space:var(--space-3xs)">
-                <h2 class="text-lg ">{{exhibition.data.title}}</h2>
-                {% if exhibition.data.legend %}
-                    <p class="bold ">{{exhibition.data.legend}}</p>
-                {% endif %}
-                {% if exhibition.data.place or exhibition.data.type %}
-                    <p style="--flow-space:var(--space-xs)">{{exhibition.data.place}}{{" - " if exhibition.data.place and exhibition.data.type}}{{exhibition.data.type}}</p>
-                {% endif %}
-                {% if exhibition.data.moment %}
-                    <p>{{exhibition.data.moment}}</p>
-                {% endif %}
-            </div>
-            <div class="exhibitionCard_content prose">
+        <div class="exhibitionCard_description flow" style="--flow-space:var(--space-2xs)">
+            {{ utils.cardHeader(exhibition, "exhibitionCard_header") }}
+            <div class="exhibitionCard_content">
                 {{exhibition.content | safe}}
             </div>
         </div>

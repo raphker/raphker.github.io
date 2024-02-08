@@ -5,7 +5,6 @@ export class Collapse extends HTMLElement {
   collapsableSection: HTMLElement;
   isOpen = false;
   animatedLine: SVGPathElement;
-  wrapperHeight = 2000;
 
   constructor() {
     super();
@@ -38,15 +37,12 @@ export class Collapse extends HTMLElement {
 
     this.append(this.button);
     this.append(this.collapsableSection);
-    this.wrapperHeight = this.collapsableSection.getBoundingClientRect().height;
     this.collapsableSection.style.setProperty("height", "0");
     this.button.addEventListener("click", this.hadndleClick);
-    window.addEventListener("resize", this.handleResize);
   }
 
   disconnectedCallback() {
     this.button.removeEventListener("click", this.hadndleClick);
-    window.removeEventListener("resize", this.handleResize);
   }
 
   hadndleClick = () => {
@@ -54,13 +50,15 @@ export class Collapse extends HTMLElement {
     else this.open();
   };
 
-  handleResize = () => {
+  getHeight() {
     if (!this.isOpen) this.collapsableSection.style.removeProperty("height");
-    this.wrapperHeight = this.collapsableSection.getBoundingClientRect().height;
+    const height = this.collapsableSection.getBoundingClientRect().height;
     if (!this.isOpen) this.collapsableSection.style.setProperty("height", "0");
-  };
+    return height;
+  }
 
   open() {
+    const height = this.getHeight();
     this.isOpen = true;
     gsap.to(this.animatedLine, {
       rotate: 90,
@@ -68,8 +66,8 @@ export class Collapse extends HTMLElement {
       duration: 0.3,
     });
     gsap.to(this.collapsableSection, {
-      height: this.wrapperHeight,
-      duration: this.wrapperHeight * 0.001,
+      height: height,
+      duration: height * 0.001,
       ease: "power1.in",
     });
     this.button.setAttribute("aria-expanded", "true");
@@ -77,6 +75,7 @@ export class Collapse extends HTMLElement {
   }
 
   close() {
+    const height = this.getHeight();
     this.isOpen = false;
     gsap.to(this.animatedLine, {
       rotate: 0,
@@ -85,7 +84,7 @@ export class Collapse extends HTMLElement {
     });
     gsap.to(this.collapsableSection, {
       height: 0,
-      duration: this.wrapperHeight * 0.001,
+      duration: height * 0.001,
       ease: "power1.out",
     });
     this.button.setAttribute("aria-expanded", "false");

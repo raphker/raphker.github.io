@@ -10,3 +10,18 @@
         {% endif %}
     {%- endfor -%}
 {% endmacro %}
+
+{% macro cardHeader(item, class) %}
+    <div class="flow leading-tight {{class}}" style="--flow-space:1em">
+        <h2 class="text-lg bold">{{item.data.title}}</h2>
+        {% if item.data.legend %}
+            <p class="bold"  style="--flow-space:var(--space-2xs)">{{item.data.legend}}</p>
+        {% endif %}
+        {% if item.data.place or item.data.type %}
+            <p style="--flow-space:var(--space-xs)">{{item.data.place}}{{" - " if item.data.place and item.data.type}}{{item.data.type}}</p>
+        {% endif %}
+        {% if item.data.moment %}
+            <p  style="--flow-space:var(--space-3xs)">{{item.data.moment}}</p>
+        {% endif %}
+    </div>
+{% endmacro %}

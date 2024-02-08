@@ -1,0 +1,11 @@
+@media (width < 75rem) {
+  .researchList-desktop {
+    display: none;
+  }
+}
+
+@media (width >= 75rem) {
+  .researchList {
+    display: none;
+  }
+}
