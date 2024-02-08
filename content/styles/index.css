@@ -4,24 +4,24 @@
 
 @import url("./lib/prism.css");
 
-@import url("./layouts/sidebar.css");
-@import url("./layouts/cluster.css");
-@import url("./layouts/masonry.css");
-
 @import url("./components/header.css");
 @import url("./components/nav.css");
 @import url("./components/footer.css");
 @import url("./components/sinwave.css");
 @import url("./components/prose.css");
+@import url("./components/masonry.css");
 @import url("./components/imagesRow.css");
 @import url("./components/cover.css");
 @import url("./components/words.css");
 @import url("./components/link.css");
+@import url("./components/projectsList.css");
 @import url("./components/projectCard.css");
+@import url("./components/projectHeader.css");
 @import url("./components/collapse.css");
 @import url("./components/exhibitionCard.css");
 @import url("./components/reelWrapper.css");
 @import url("./components/researchList.css");
+@import url("./components/aboutSection.css");
 
 @import url("./utils/wrapper.css");
 @import url("./utils/flow.css");
@@ -52,7 +52,7 @@ body > div {
 }
 
 main {
-  flex-grow: 1;
+  margin-block: auto;
   padding-block: var(--space-xl);
   width: 100%;
 }

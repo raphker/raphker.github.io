@@ -1,13 +1,13 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <div class="withSidebar" data-align="center">
+    <div class="aboutSection" data-align="center">
         {% if cover and cover.src %}
-            <div>
+            <div class="aboutSection_image">
                 {% image cover.src, cover.alt %} 
             </div>
         {% endif %}
-        <article class="prose flow">
+        <article class="aboutSection_content prose flow">
         {{ content | safe}}
         </article>
     </div>

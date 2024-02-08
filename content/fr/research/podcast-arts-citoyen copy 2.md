@@ -5,9 +5,9 @@ place: "Fondation Daniel et Nina Carasso"
 moment: "[2022]"
 type: "Interview - Podcast"
 legend: "Arts et sciences (4/11): rendre visible l’empreinte du numérique."
-cover:
-  src: "/images/research/podcast-art-citoyen.jpg"
-  alt: ""
+# cover:
+#   src: "/images/research/podcast-art-citoyen.jpg"
+#   alt: ""
 ---
 
 Un podcast de la Fondation Daniel et Nina Carasso, produit par wave.audio. Production exécutive : Isabelle Duriez. Cet épisode est écrit et présenté par Léa Minod et réalisé par Guillaume Girault.

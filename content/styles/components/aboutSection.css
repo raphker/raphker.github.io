@@ -1,0 +1,20 @@
+.aboutSection {
+  display: flex;
+  gap: var(--space-xl);
+  align-items: center;
+  justify-content: space-between;
+  @media (width < 65rem) {
+    flex-direction: column;
+  }
+}
+
+.aboutSection_image {
+  flex-basis: 20rem;
+  max-inline-size: 25rem;
+}
+
+.aboutSection_content {
+  max-inline-size: 75ch;
+  flex-basis: 60ch;
+  flex-grow: 1;
+}

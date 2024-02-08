@@ -1,4 +1,4 @@
-.cluster {
+.projectsList {
   display: flex;
   flex-wrap: wrap;
   row-gap: var(--row-gutter, var(--gutter, var(--space-xl)));

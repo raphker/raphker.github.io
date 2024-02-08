@@ -7,8 +7,8 @@
         </div>
     {% endif %}
     <article>
-        <div class="withSidebar region" style="--gutter:var(--space-l);">
-            <div class="flow" >
+        <div class="projectHeader region">
+            <div class="projectHeader_infos flow" >
                 {% if title %}
                     <h1 class="text-lg bold">{{title}}</h1>
                 {% endif %}
@@ -20,7 +20,7 @@
                 {% endif %}
             </div>
             {% if description %}
-                <div class="prose flow">
+                <div class="projectHeader_resume prose flow">
                     {{ description | parse_markdown | safe}}
                 </div>
             {% endif %}

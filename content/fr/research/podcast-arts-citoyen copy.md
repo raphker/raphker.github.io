@@ -1,6 +1,6 @@
 ---
 title: "Podcast Les voix de l’art citoyen"
-priority: 100
+priority: -3
 place: "Fondation Daniel et Nina Carasso"
 moment: "[2022]"
 type: "Interview - Podcast"

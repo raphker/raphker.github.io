@@ -1,0 +1,16 @@
+.projectHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-l);
+  align-items: start;
+
+  & > .projectHeader_infos {
+    flex-basis: var(--sidebar-basis, 20rem);
+    flex-grow: 1;
+  }
+  & > .projectHeader_resume {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 50%;
+  }
+}
