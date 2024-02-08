@@ -21,3 +21,7 @@
 .text-sm {
   font-size: var(--fs--1);
 }
+
+.leading-tight {
+  line-height: 1.2;
+}
