@@ -1,10 +1,11 @@
 # le site à Raph
 
-- [Création de contenu](#creation-de-contenu)
+- [Création de contenu](#création-de-contenu)
   - [Frontmatter](#frontmatter)
   - [Images](#images)
   - [Pages projets](#pages-projets)
-- [Développement](#developpement)
+  - [Expositions]("expositions")
+- [Développement](#développement)
   - [Installation](#installation)
 
 ## Création de contenu
@@ -51,6 +52,10 @@ Ligne de texte.
 
 Autre ligne de texte.
 ```
+
+### Code
+
+Pour intégrer des blocs de code, il est possible d'utiliser [la syntaxe markdown prévue à cet effet](https://www.markdownguide.org/extended-syntax/#syntax-highlighting). Ces blocs seront automatiquements transformés et stylisés.
 
 ### Pages projets
 
@@ -99,6 +104,46 @@ Comme c'est un super projet je vous montre d'autres images
 ![](/images/projects/carre-blanc-3.jpg)
 ![](/images/projects/carre-blanc-4.jpg)
 ![](/images/projects/carre-blanc-5.jpg)
+```
+
+### Expositions
+
+Pour ajouter une nouvelle expositions créer un nouveau fichier `.md` dans le dossier `/content/[lang]/exhibitions`
+
+Le frontmatter des expositions contient les entrées suivantes :
+
+| Entrées  | Type de valeur                                                                | Fonction                           | Obligatoire |
+| -------- | ----------------------------------------------------------------------------- | ---------------------------------- | ----------- |
+| title    | chaîne de caractère                                                           | titre de l'exposition              | oui         |
+| priority | nombre                                                                        | priorité dans l'ordre d'apparition | non         |
+| place    | chaîne de caractère                                                           | lieu de l'exposition               | non         |
+| moment   | chaîne de caractère                                                           | Date sur la page expositions       | non         |
+| type     | chaîne de caractère                                                           | type d'exposition                  | non         |
+| legend   | chaîne de caractère                                                           | Description rapide de l'exposition | non         |
+| gallery  | liste d'images, Chaque image accepte une entrée **src** et une entrée **alt** | Galerie d'images                   | oui         |
+
+Exemple :
+
+```md
+---
+title: Au delà
+priority: 666
+place: La lune
+moment: "[08.10.2032 - 26.11.2032]"
+type: "Exposition individuelle"
+legend: Une superbe exposition
+gallery:
+  - src: /images/expos/lune-0.jpg
+    alt: affiche de l'exposition
+  - src: /images/expos/lune-1.jpg
+    alt: "tableau Ma lune est la plus belle"
+  - src: /images/expos/lune-2.jpg
+    alt: "sculpture Dans ma lune"
+---
+
+Cette expo était **tip top** cool
+
+[[lien]](https://example.com)
 ```
 
 ## Développement
