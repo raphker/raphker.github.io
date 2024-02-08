@@ -7,7 +7,6 @@
 @import url("./layouts/sidebar.css");
 @import url("./layouts/cluster.css");
 @import url("./layouts/masonry.css");
-@import url("./layouts/reel.css");
 
 @import url("./components/header.css");
 @import url("./components/nav.css");
@@ -21,6 +20,7 @@
 @import url("./components/projectCard.css");
 @import url("./components/collapse.css");
 @import url("./components/exhibitionCard.css");
+@import url("./components/reelWrapper.css");
 
 @import url("./utils/wrapper.css");
 @import url("./utils/flow.css");

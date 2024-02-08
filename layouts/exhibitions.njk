@@ -5,17 +5,18 @@
 <div class="flow" style="--flow-space:var(--space-xl)">
  {% for exhibition in collections.exhibitions | favor_lang | sort_by_priority %}
     <article class="exhibitionCard" data-right="true">
-        <div class="exhibitionCard_images reel">
-            <c-reel-controls></c-reel-controls>
-            {% for image in exhibition.data.gallery %}
-                {% image image.src, image.alt | default("") %}
-            {% endfor %}
-        </div>
+        <c-reel-wrapper data-prev-label="{{"previousImage" | i18n}}" data-next-label="{{"nextImage" | i18n}}">
+            <div class="exhibitionCard_images" data-wrapper>
+                {% for image in exhibition.data.gallery %}
+                    {% image image.src, image.alt | default("") %}
+                {% endfor %}
+            </div>
+        </c-reel-wrapper>
         <div class="exhibitionCard_description">
-            <div class="exhibitionCard_header">
-                <h2>{{exhibition.data.title}}</h2>
-                <p class="bold">{{exhibition.data.legend}}</p>
-                <p>{{exhibition.data.place}}</p>
+            <div class="exhibitionCard_header flow leading-tight" style="--flow-space:var(--space-3xs)">
+                <h2 class="text-lg ">{{exhibition.data.title}}</h2>
+                <p class="bold ">{{exhibition.data.legend}}</p>
+                <p style="--flow-space:var(--space-xs)">{{exhibition.data.place}}</p>
                 <p>{{exhibition.data.moment}}</p>
             </div>
             <div class="exhibitionCard_content prose">

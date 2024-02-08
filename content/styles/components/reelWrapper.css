@@ -1,0 +1,69 @@
+c-reel-wrapper {
+  position: relative;
+  & > button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    font-size: var(--fs-5);
+    & svg {
+      color: white;
+      mix-blend-mode: difference;
+      width: var(--space-xl);
+      height: var(--space-xl);
+    }
+  }
+  & > .previousBtn {
+    position: absolute;
+    left: var(--space-3xs);
+    top: calc(50% - var(--space-xl) * 0.5);
+  }
+  & > .nextBtn {
+    position: absolute;
+    right: var(--space-3xs);
+    top: calc(50% - var(--space-xl) * 0.5);
+  }
+}
+
+c-reel-wrapper > div {
+  display: flex;
+  block-size: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-color: var(--text) var(--surface);
+  scroll-snap-type: x mandatory;
+  gap: var(--space-s);
+}
+
+c-reel-wrapper > div::-webkit-scrollbar {
+  block-size: 1rem;
+}
+
+c-reel-wrapper > div::-webkit-scrollbar-track {
+  background-color: var(--surface);
+}
+
+c-reel-wrapper > div::-webkit-scrollbar-thumb {
+  background-color: var(--text);
+  background-image: linear-gradient(
+    var(--surface) 0,
+    var(--surface) 0.25rem,
+    var(--text) 0.25rem,
+    var(--text) 0.75rem,
+    var(--surface) 0.75rem
+  );
+}
+
+c-reel-wrapper > div > * {
+  flex: 0 0 auto;
+  height: 100%;
+  width: auto;
+  scroll-snap-align: center;
+}
+
+c-reel-wrapper > div img {
+  object-fit: contain;
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+}

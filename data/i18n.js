@@ -11,4 +11,12 @@ module.exports = {
     en: "Detail",
     fr: "Détail",
   },
+  previousImage: {
+    en: "Previous image",
+    fr: "Image précédente",
+  },
+  nextImage: {
+    en: "Next image",
+    fr: "Image suivante",
+  },
 };
