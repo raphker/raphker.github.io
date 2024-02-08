@@ -6,7 +6,7 @@ export class SinWave extends HTMLElement {
   CENTERY = 5;
   TOTALWIDTH = 300;
   WAVELEFT = 80;
-  WAVESWIDTH = Math.random() * 50;
+  WAVESWIDTH = 15;
   isOpen = false;
   interPathDesktop?: SVGPathElement | null;
   interPathMobile?: SVGPathElement | null;
