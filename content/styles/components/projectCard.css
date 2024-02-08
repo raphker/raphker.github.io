@@ -5,6 +5,7 @@
 .projectCard img {
   height: 15rem;
   width: auto;
+  transition: opacity 0.3s;
 }
 
 .projectCard_title {
@@ -16,6 +17,7 @@
   display: none;
   text-align: center;
   & .word {
+    line-height: 1.5;
     white-space: nowrap;
     overflow: hidden;
   }
@@ -27,7 +29,6 @@
   }
   .projectCard:hover .projectCard_title {
     display: block;
-    overflow: hidden;
     & .letter {
       animation: projectCard-letter 0.3s
         calc(0.2s + var(--letter-index) * 0.02s) both;
