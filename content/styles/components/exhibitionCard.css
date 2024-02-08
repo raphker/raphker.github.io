@@ -25,10 +25,25 @@
 .exhibitionCard_description {
   display: flex;
   flex-direction: column;
+  position: relative;
   flex-basis: 20rem;
   flex-shrink: 0;
   height: 100%;
   gap: var(--space-2xs);
+  @media (width > 75rem) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: var(--space-3xl);
+      background-color: var(--surface);
+      mask-image: linear-gradient(transparent 50%, black);
+      z-index: 10;
+      pointer-events: none;
+    }
+  }
 }
 
 .exhibitionCard_header {
@@ -36,7 +51,9 @@
 }
 
 .exhibitionCard_content {
+  position: relative;
   height: 100%;
   min-height: 0;
   overflow: auto;
+  padding-block-end: var(--space-m);
 }
