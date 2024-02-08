@@ -1,31 +1,13 @@
 .link {
   position: relative;
   display: inline-block;
-  overflow: hidden;
-  & .link_clone {
-    position: absolute;
-    left: 0;
-    top: 0;
+  &:hover:not([aria-current="page"]) .letter {
+    animation: link-letter-anim 0.3s calc(var(--letter-index) * 0.04s);
   }
-  & .letter {
-    transform-origin: top;
-    transform: translateY(0);
-    transition: transform var(--ease-in-2) 0.3s
-      calc(var(--letter-index) * 0.015s);
-  }
-  & .link_clone .letter {
-    transform-origin: top;
-    transform: translateY(120%);
-  }
-  &:hover {
-    & .letter {
-      transition: transform var(--ease-out-3) 0.6s
-        calc(var(--letter-index) * 0.015s);
-      transform: translateY(-150%);
-    }
-    & .link_clone .letter {
-      transform-origin: top;
-      transform: translateY(0);
-    }
+}
+
+@keyframes link-letter-anim {
+  50% {
+    transform: translateY(-20%);
   }
 }
