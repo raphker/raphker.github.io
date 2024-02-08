@@ -6,6 +6,7 @@
   - [Blocs de code](#blocs-de-code)
   - [Pages projets](#pages-projets)
   - [Expositions](#expositions)
+  - [Recherche](#recherche)
 - [Développement](#développement)
   - [Installation](#installation)
 
@@ -145,6 +146,40 @@ gallery:
 Cette expo était **tip top** cool
 
 [[lien]](https://example.com)
+```
+
+### Recherche
+
+Pour ajouter une nouvelle recherche créer un nouveau fichier `.md` dans le dossier `/content/[lang]/research`
+
+Le frontmatter des recherches contient les entrées suivantes :
+
+| Entrées  | Type de valeur                                                                     | Fonction                             | Obligatoire |
+| -------- | ---------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| title    | chaîne de caractère                                                                | titre de l'exposition                | oui         |
+| priority | nombre                                                                             | priorité dans l'ordre d'apparition   | non         |
+| place    | chaîne de caractère                                                                | lieu de l'exposition                 | non         |
+| moment   | chaîne de caractère                                                                | Date sur la page expositions         | non         |
+| type     | chaîne de caractère                                                                | type d'exposition                    | non         |
+| legend   | chaîne de caractère                                                                | Description rapide de l'exposition   | non         |
+| cover    | Objet avec en entrées **src**: chaîne de caractère et **alt**: chaîne de caractère | Image en bannière sur la page projet | non         |
+
+Exemple :
+
+```md
+---
+title: J'ai trouvé
+priority: 666
+place: Dans ma tête
+moment: "[08.10.2032]"
+type: "Découverte"
+legend: Une Découverte révolutionnaire
+cover:
+  src: "/images/research/decouverte.jpg"
+  alt: "ampoule allumée"
+---
+
+Cette découverte va changer le **monde**
 ```
 
 ## Développement
