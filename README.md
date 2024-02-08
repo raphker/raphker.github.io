@@ -3,6 +3,7 @@
 - [Création de contenu](#création-de-contenu)
   - [Frontmatter](#frontmatter)
   - [Images](#images)
+  - [Blocs de code](#blocs-de-code)
   - [Pages projets](#pages-projets)
   - [Expositions](#expositions)
 - [Développement](#développement)
@@ -53,7 +54,7 @@ Ligne de texte.
 Autre ligne de texte.
 ```
 
-### Code
+### Blocs de code
 
 Pour intégrer des blocs de code, il est possible d'utiliser [la syntaxe markdown prévue à cet effet](https://www.markdownguide.org/extended-syntax/#syntax-highlighting). Ces blocs seront automatiquements transformés et stylisés.
 
