@@ -15,9 +15,15 @@
         <div class="exhibitionCard_description">
             <div class="exhibitionCard_header flow leading-tight" style="--flow-space:var(--space-3xs)">
                 <h2 class="text-lg ">{{exhibition.data.title}}</h2>
-                <p class="bold ">{{exhibition.data.legend}}</p>
-                <p style="--flow-space:var(--space-xs)">{{exhibition.data.place}}</p>
-                <p>{{exhibition.data.moment}}</p>
+                {% if exhibition.data.legend %}
+                    <p class="bold ">{{exhibition.data.legend}}</p>
+                {% endif %}
+                {% if exhibition.data.place or exhibition.data.type %}
+                    <p style="--flow-space:var(--space-xs)">{{exhibition.data.place}}{{" - " if exhibition.data.place and exhibition.data.type}}{{exhibition.data.type}}</p>
+                {% endif %}
+                {% if exhibition.data.moment %}
+                    <p>{{exhibition.data.moment}}</p>
+                {% endif %}
             </div>
             <div class="exhibitionCard_content prose">
                 {{exhibition.content | safe}}
