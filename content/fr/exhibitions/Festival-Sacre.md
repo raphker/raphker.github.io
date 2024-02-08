@@ -16,7 +16,7 @@ gallery:
 
 Le programme doctoral de recherche – création « SACRe : Sciences, Art, Création, Recherche » fête ses 10 ans. Du 17 au 19 novembre, l’Université PSL célèbre cet anniversaire à la Gaîté Lyrique, avec un « Festival pop-up ». Durant trois jours, le Festival SACRe proposera une sélection de projets artistiques pluridisciplinaires brassant les arts visuels, le design, la composition musicale, la mise en scène de théâtre, le cinéma, ainsi que l’histoire et de la théorie des arts.
 
-<a href="https://www.gaite-lyrique.net/festival/festival-sacre">[lien]</a>
+[[lien]](https://www.gaite-lyrique.net/festival/festival-sacre)
 
 Commissaire d'exposition: Valentine Busquet
 Design graphique: Studio double
