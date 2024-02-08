@@ -39,23 +39,19 @@ export class Collapse extends HTMLElement {
     this.append(this.collapsableSection);
     this.collapsableSection.style.setProperty("height", "0");
     this.button.addEventListener("click", this.hadndleClick);
+
+    window.addEventListener("resize", this.handleResize);
   }
 
   disconnectedCallback() {
     this.button.removeEventListener("click", this.hadndleClick);
+    window.removeEventListener("resize", this.handleResize);
   }
 
   hadndleClick = () => {
     if (this.isOpen) this.close();
     else this.open();
   };
-
-  getHeight() {
-    if (!this.isOpen) this.collapsableSection.style.removeProperty("height");
-    const height = this.collapsableSection.getBoundingClientRect().height;
-    if (!this.isOpen) this.collapsableSection.style.setProperty("height", "0");
-    return height;
-  }
 
   open() {
     const height = this.getHeight();
@@ -89,5 +85,17 @@ export class Collapse extends HTMLElement {
     });
     this.button.setAttribute("aria-expanded", "false");
     this.collapsableSection.setAttribute("aria-hidden", "true");
+  }
+
+  handleResize = () => {
+    if (!this.isOpen) return;
+    this.collapsableSection.style.removeProperty("height");
+  };
+
+  getHeight() {
+    if (!this.isOpen) this.collapsableSection.style.removeProperty("height");
+    const height = this.collapsableSection.getBoundingClientRect().height;
+    if (!this.isOpen) this.collapsableSection.style.setProperty("height", "0");
+    return height;
   }
 }
