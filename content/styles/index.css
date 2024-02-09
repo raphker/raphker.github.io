@@ -52,6 +52,7 @@ body > div {
 }
 
 main {
+  scroll-margin-block-start: 10ex;
   margin-block: auto;
   padding-block: var(--space-xl);
   width: 100%;

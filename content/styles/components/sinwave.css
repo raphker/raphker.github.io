@@ -35,11 +35,34 @@ c-sinwave .desktopOnly {
   display: none;
 }
 
+c-sinwave {
+  --center-x: 43.75%;
+}
+
 @media (width> 50rem) {
+  c-sinwave {
+    --center-x: 45.75%;
+  }
   c-sinwave .mobileOnly {
     display: none;
   }
   c-sinwave .desktopOnly {
     display: unset;
+  }
+}
+
+/* INTRODUCTION */
+
+c-sinwave[data-intro] {
+  --viewbox-height: 10;
+  --viewbox-width: 300;
+  --height: calc((var(--viewbox-height) / var(--viewbox-width)) * 100vw);
+  --margin-block: calc(50vh - var(--header-height) - var(--height) * 0.5) 50vh;
+}
+
+c-sinwave {
+  --center-x: 43.75%;
+  @media (width> 50rem) {
+    --center-x: 45.75%;
   }
 }

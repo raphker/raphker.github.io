@@ -13,11 +13,13 @@ export class SinWave extends HTMLElement {
   waveStroke?: SVGPathElement | null;
   waveShape?: SVGPathElement | null;
   updateWave?: () => void;
+  withAnimIntro = false;
+  introTimeline?: gsap.core.Timeline;
 
   heightProxy = {
     height: 0,
   };
-  scrollTrigger?: ScrollTrigger;
+  waveScrollTrigger?: ScrollTrigger;
 
   constructor() {
     super();
@@ -29,38 +31,75 @@ export class SinWave extends HTMLElement {
     this.waveStroke = this.querySelector("#waveStroke");
     this.waveShape = this.querySelector("#waveShape");
     this.initScrollTrigger();
-    this.addEventListener("click", () => {
-      if (!this.isOpen) {
-        this.openInter();
-        this.isOpen = true;
-      } else {
-        this.closeInter();
-        this.isOpen = false;
-      }
-    });
+
+    this.withAnimIntro = this.hasAttribute("data-intro");
+    if (this.withAnimIntro && location.hash === "") this.initIntro();
   }
 
   disconnectedCallback() {
-    this.scrollTrigger?.kill();
+    this.waveScrollTrigger?.kill();
+    this.introTimeline?.kill();
   }
 
-  openInter() {
-    if (!this.interPathDesktop || !this.interPathMobile) return;
-    gsap.to(this.interPathDesktop, {
-      rotate: -22.5,
-      transformOrigin: "LEFT CENTER",
+  initIntro() {
+    this.style.setProperty("margin-block", "var(--margin-block)");
+    this.introTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: this,
+        scrub: true,
+        start: "center center",
+        end: `+=${window.innerHeight * 0.8}px`,
+        // markers: true,
+      },
+      onStart: () => {
+        this.isOpen = true;
+        if (location.hash === "")
+          gsap.to(window, {
+            duration: 1.5,
+            scrollTo: window.innerHeight * 0.8,
+            ease: "power1.in",
+          });
+      },
+      onRepeat: () => {
+        this.isOpen = true;
+      },
+      onComplete: () => {
+        this.isOpen = false;
+      },
     });
-    gsap.to(this.interPathMobile, {
-      rotate: -12.25,
-      transformOrigin: "LEFT CENTER",
-    });
-  }
 
-  closeInter() {
-    if (!this.interPathDesktop || !this.interPathMobile) return;
-    return gsap.to([this.interPathDesktop, this.interPathMobile], {
-      rotate: 0,
-      transformOrigin: "LEFT CENTER",
+    const mathMedia = gsap.matchMedia();
+    mathMedia.add(
+      {
+        // set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.
+        lg: `(min-width:50rem)`,
+        md: `(max-width: 50rem)`,
+        sm: "(max-width: 30rem)",
+      },
+      (context) => {
+        // context.conditions has a boolean property for each condition defined above indicating if it's matched or not.
+        const conditions = context.conditions;
+        let rotate = -22.5;
+        if (conditions && conditions["md"]) rotate = -12.25;
+        if (conditions && conditions["sm"]) rotate = -12;
+
+        this.introTimeline?.from(
+          this.querySelectorAll(".inter"),
+          {
+            rotate,
+            transformOrigin: "LEFT CENTER",
+            duration: 1.2,
+          },
+          0
+        );
+      }
+    );
+
+    this.introTimeline.from(this.querySelector("g#sinWaveSchema")!, {
+      css: {
+        transform: "translateX(var(--center-x))",
+      },
+      duration: 1,
     });
   }
 
@@ -80,7 +119,7 @@ export class SinWave extends HTMLElement {
 
     // this.updateWave();
 
-    this.scrollTrigger = ScrollTrigger.create({
+    this.waveScrollTrigger = ScrollTrigger.create({
       onUpdate: (self) => {
         const height = clampHeight(-self.getVelocity() / -1000);
         if (

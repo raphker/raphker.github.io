@@ -11,12 +11,12 @@
         <div data-barba="container">
             <header>
                 <div class="wrapper" data-type="wide">
-                    <a href="/" class="bold text-lg">{{ config.title }}</a>
+                    <a href="{{"/" | locale_url}}" class="bold text-lg">{{ config.title }}</a>
                     <nav class="nav--desktop">
                         <ul role="list">
                             {% for item in collections.page | favor_lang | sort_by_priority%}
                                 <li>
-                                    <a href="{{ item.url }}"  aria-current={{"page" if page.url == item.url else "false" }} class="link">
+                                    <a href="{{ item.url }}{{ item.data.target }}"  aria-current={{"page" if page.url == item.url else "false" }} class="link">
                                         {{utils.splitLetters(item.data.title)}}
                                     </a>
                                 </li>
@@ -34,7 +34,7 @@
                             <ul role="list">
                                 {% for item in collections.page | favor_lang | sort_by_priority%}
                                     <li style="--index:{{ loop.index }};">
-                                        <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url else "false" }}>{{ utils.splitLetters(item.data.title) }}</a>
+                                        <a href="{{ item.url }}{{ item.data.target }}" aria-current={{"page" if page.url == item.url else "false" }}>{{ utils.splitLetters(item.data.title) }}</a>
                                     </li>
                                 {% endfor %}
                             </ul>
@@ -42,31 +42,34 @@
                     </nav>
                 </div>
             </header>
-            <c-sinwave>
+            <c-sinwave {{"data-intro" if isHome}}>
                 <svg viewBox="0 0 300 10" xmlns="http://www.w3.org/2000/svg">
-                    {# mask before wave #}
-                    <path class="shape" d="M-300 5 H 80 V 0 h -380 z"/>
-                    {# stroke before inter #}
-                    <path class="stroke" d="M-300 5 L 8 5 "/>
-                    {# stroke after inter #}
-                    <path class="stroke desktopOnly" d="M18 5 L 80 5 "/>
-                    <path class="stroke mobileOnly" d="M30 5 L 80 5 "/>
-                    {# circles of inter #}
-                    <circle cx="8" cy="5" r=".6" stroke="currentColor" fill="currentColor"/>
+                    <g id="sinWaveSchema">
+                        {# mask before wave #}
+                        <path class="shape" d="M-300 5 H 80 V 0 h -380 z"/>
+                        {# stroke before inter #}
+                        <path class="stroke" d="M-300 5 L 8 5 "/>
+                        {# stroke after inter #}
+                        <path class="stroke desktopOnly" d="M18 5 L 80 5 "/>
+                        <path class="stroke mobileOnly" d="M30 5 L 80 5 "/>
+                        {# circles of inter #}
+                        <circle cx="8" cy="5" r=".6" stroke="currentColor" fill="currentColor"/>
 
-                    <circle cx="18" cy="5" r=".6" stroke="currentColor" fill="currentColor" class="desktopOnly"/>
-                    <circle cx="30" cy="5" r=".6" stroke="currentColor" fill="currentColor" class="mobileOnly"/>
-                    {# inter line #}
-                    <path d="M8 5 L 18 5" class="stroke inter desktopOnly"/>
-                    <path d="M8 5 L 30 5" class="stroke inter mobileOnly"/>
-                    {# mask wave #}
-                    <path class="shape" d="M80 5 L300 5 V0 H80z" id="waveShape"/>
-                    {# stroke wave #}
-                    <path class="stroke" d="M80 5 L300 5" id="waveStroke"/>
+                        <circle cx="18" cy="5" r=".6" stroke="currentColor" fill="currentColor" class="desktopOnly"/>
+                        <circle cx="30" cy="5" r=".6" stroke="currentColor" fill="currentColor" class="mobileOnly"/>
+                        {# inter line #}
+                        <path d="M8 5 L 18 5" class="stroke inter desktopOnly"/>
+                        <path d="M8 5 L 30 5" class="stroke inter mobileOnly"/>
+                        {# mask wave #}
+                        <path class="shape" d="M80 5 L300 5 V0 H80z" id="waveShape"/>
+                        {# stroke wave #}
+                        <path class="stroke" d="M80 5 L300 5" id="waveStroke"/>
+                    </g>
+
                 </svg>
             </c-sinwave>
 
-            <main class="wrapper flow">
+            <main class="wrapper flow" id="content">
                 {% block content %}
                 {% endblock content %}
             </main>
