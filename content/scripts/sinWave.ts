@@ -42,23 +42,24 @@ export class SinWave extends HTMLElement {
   }
 
   initIntro() {
-    this.style.setProperty("margin-block", "var(--margin-block)");
+    document
+      .querySelector<HTMLElement>("main#content")
+      ?.style?.setProperty("margin-block-start", "1000px");
     this.introTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: this,
         scrub: true,
         start: "center center",
-        end: `+=${window.innerHeight * 0.8}px`,
+        end: `+=1000px`,
         // markers: true,
       },
       onStart: () => {
         this.isOpen = true;
-        if (location.hash === "")
-          gsap.to(window, {
-            duration: 1.5,
-            scrollTo: window.innerHeight * 0.8,
-            ease: "power1.in",
-          });
+        gsap.to(window, {
+          duration: 1.5,
+          scrollTo: window.innerHeight * 0.8,
+          ease: "power1.in",
+        });
       },
       onRepeat: () => {
         this.isOpen = true;
@@ -95,12 +96,20 @@ export class SinWave extends HTMLElement {
       }
     );
 
-    this.introTimeline.from(this.querySelector("g#sinWaveSchema")!, {
-      css: {
-        transform: "translateX(var(--center-x))",
-      },
-      duration: 1,
-    });
+    this.introTimeline
+      .from("header ", {
+        y: "-100%",
+      })
+      .from(
+        this.querySelector("g#sinWaveSchema")!,
+        {
+          css: {
+            transform: "translateX(var(--center-x))",
+          },
+          duration: 3,
+        },
+        "<"
+      );
   }
 
   initScrollTrigger() {

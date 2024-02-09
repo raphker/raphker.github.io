@@ -57,7 +57,9 @@ c-sinwave[data-intro] {
   --viewbox-height: 10;
   --viewbox-width: 300;
   --height: calc((var(--viewbox-height) / var(--viewbox-width)) * 100vw);
-  --margin-block: calc(50vh - var(--header-height) - var(--height) * 0.5) 50vh;
+  margin-block-start: calc(50svh - var(--header-height) - var(--height) * 0.5);
+  margin-block-start: calc(50vh - var(--header-height) - var(--height) * 0.5);
+  /* margin-block-start: 100truc; */
 }
 
 c-sinwave {
