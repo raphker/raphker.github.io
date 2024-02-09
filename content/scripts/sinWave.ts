@@ -42,6 +42,7 @@ export class SinWave extends HTMLElement {
   }
 
   initIntro() {
+    this.style.setProperty("margin-block-start", `var(--margin-block-top)`);
     document
       .querySelector<HTMLElement>("main#content")
       ?.style?.setProperty("margin-block-start", "1000px");
@@ -97,8 +98,8 @@ export class SinWave extends HTMLElement {
     );
 
     this.introTimeline
-      .from("header ", {
-        y: "-100%",
+      .from("header .nav--desktop ", {
+        y: -100,
       })
       .from(
         this.querySelector("g#sinWaveSchema")!,
