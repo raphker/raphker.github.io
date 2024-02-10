@@ -42,25 +42,22 @@ export class SinWave extends HTMLElement {
   }
 
   initIntro() {
-    this.style.setProperty("margin-block-start", `var(--margin-block-top)`);
-    document
-      .querySelector<HTMLElement>("main#content")
-      ?.style?.setProperty("margin-block-start", "1000px");
+    this.setAttribute("data-intro", "true");
     this.introTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: this,
         scrub: true,
         start: "center center",
-        end: `+=1000px`,
-        // markers: true,
+        end: "top top",
+        endTrigger: "#content",
       },
       onStart: () => {
         this.isOpen = true;
-        gsap.to(window, {
-          duration: 1.5,
-          scrollTo: window.innerHeight * 0.8,
-          ease: "power1.in",
-        });
+        // gsap.to(window, {
+        //   duration: 1.5,
+        //   scrollTo: "#content",
+        //   ease: "power1.in",
+        // });
       },
       onRepeat: () => {
         this.isOpen = true;
@@ -90,7 +87,7 @@ export class SinWave extends HTMLElement {
           {
             rotate,
             transformOrigin: "LEFT CENTER",
-            duration: 1.2,
+            duration: 2,
           },
           0
         );
@@ -107,7 +104,7 @@ export class SinWave extends HTMLElement {
           css: {
             transform: "translateX(var(--center-x))",
           },
-          duration: 3,
+          duration: 1,
         },
         "<"
       );
