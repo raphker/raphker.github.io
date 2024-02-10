@@ -11,6 +11,10 @@ export class reelWrapper extends HTMLElement {
   items?: HTMLElement[];
   observer?: IntersectionObserver;
   visibleItems: Element[] = [];
+  isInTransition = false;
+  firstIsInview = false;
+  lastIsInview = false;
+  actionsQueue: (() => void)[] = [];
 
   constructor() {
     super();
@@ -75,21 +79,24 @@ export class reelWrapper extends HTMLElement {
   updateButtons() {
     const firstItem = this.items?.[0];
     const lastItem = this.items?.[this.items?.length - 1];
-    const firstIsInview = firstItem
+    this.firstIsInview = firstItem
       ? this.visibleItems.includes(firstItem)
       : false;
-    const lastIsInview = lastItem
-      ? this.visibleItems.includes(lastItem)
-      : false;
+    this.lastIsInview = lastItem ? this.visibleItems.includes(lastItem) : false;
 
-    if (firstIsInview) this.previousBtn.style.setProperty("display", "none");
+    if (this.firstIsInview)
+      this.previousBtn.style.setProperty("display", "none");
     else this.previousBtn.style.removeProperty("display");
 
-    if (lastIsInview) this.nextBtn.style.setProperty("display", "none");
+    if (this.lastIsInview) this.nextBtn.style.setProperty("display", "none");
     else this.nextBtn.style.removeProperty("display");
   }
 
   handlePreviousClick = () => {
+    if (this.isInTransition) {
+      this.actionsQueue.push(this.handlePreviousClick);
+      return;
+    }
     const previousItem = this.items?.find((current, i) => {
       const next = this.items?.[i + 1];
       if (!next) return false;
@@ -101,6 +108,10 @@ export class reelWrapper extends HTMLElement {
   };
 
   handleNextClick = () => {
+    if (this.isInTransition) {
+      this.actionsQueue.push(this.handleNextClick);
+      return;
+    }
     const nextItem = this.items?.find((current, i) => {
       const previous = this.items?.[i - 1];
       if (!previous) return false;
@@ -118,6 +129,14 @@ export class reelWrapper extends HTMLElement {
     gsap.to(this.wrapper, {
       duration: 0.6,
       scrollTo: { x: targetPosition },
+      onStart: () => {
+        this.isInTransition = true;
+      },
+      onComplete: () => {
+        this.isInTransition = false;
+        this.actionsQueue.shift()?.();
+        if (this.firstIsInview || this.lastIsInview) this.actionsQueue = [];
+      },
     });
   }
 }
