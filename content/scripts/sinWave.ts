@@ -47,36 +47,30 @@ export class SinWave extends HTMLElement {
       scrollTrigger: {
         trigger: this,
         scrub: true,
-        start: "center center",
-        end: "top top",
-        endTrigger: "#content",
-      },
-      onStart: () => {
-        this.isOpen = true;
-        // gsap.to(window, {
-        //   duration: 1.5,
-        //   scrollTo: "#content",
-        //   ease: "power1.in",
-        // });
-      },
-      onRepeat: () => {
-        this.isOpen = true;
-      },
-      onComplete: () => {
-        this.isOpen = false;
+        start: "bottom center",
+        end: "+800px",
+        onEnter: () => {
+          this.isOpen = true;
+          gsap.to(window, {
+            scrollTo:
+              (document.getElementById("content")?.offsetTop ?? 0) - 100,
+            duration: 2,
+            ease: "power1.in",
+          });
+        },
+        onEnterBack: () => (this.isOpen = true),
+        onLeave: () => (this.isOpen = false),
       },
     });
 
     const mathMedia = gsap.matchMedia();
     mathMedia.add(
       {
-        // set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.
         lg: `(min-width:50rem)`,
         md: `(max-width: 50rem)`,
         sm: "(max-width: 30rem)",
       },
       (context) => {
-        // context.conditions has a boolean property for each condition defined above indicating if it's matched or not.
         const conditions = context.conditions;
         let rotate = -22.5;
         if (conditions && conditions["md"]) rotate = -12.25;
@@ -87,7 +81,7 @@ export class SinWave extends HTMLElement {
           {
             rotate,
             transformOrigin: "LEFT CENTER",
-            duration: 2,
+            duration: 1,
           },
           0
         );
@@ -95,18 +89,24 @@ export class SinWave extends HTMLElement {
     );
 
     this.introTimeline
-      .from("header .nav--desktop ", {
-        y: -100,
-      })
       .from(
         this.querySelector("g#sinWaveSchema")!,
         {
           css: {
             transform: "translateX(var(--center-x))",
           },
-          duration: 1,
+          duration: 0.7,
         },
-        "<"
+        ">"
+      )
+      .from(
+        "header .nav--desktop li, header button",
+        {
+          y: -100,
+          duration: 0.3,
+          stagger: 0.1,
+        },
+        0.4
       );
   }
 
