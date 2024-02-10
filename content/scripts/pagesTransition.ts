@@ -21,6 +21,14 @@ export const initPagesTransition = () =>
                 duration: 0.8,
               },
               "<"
+            )
+            .to(
+              "c-hamburger ul",
+              {
+                backgroundColor: "#f8f9fa",
+                duration: 0.8,
+              },
+              "<"
             );
         },
         enter(data) {
