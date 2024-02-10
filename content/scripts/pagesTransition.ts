@@ -7,18 +7,36 @@ export const initPagesTransition = () =>
       {
         name: "opacity-transition",
         async leave(data) {
-          return gsap.to(data.current.container, {
-            opacity: 0,
-            duration: 0.6,
-            ease: "power1.in",
-          });
+          const tl = gsap.timeline();
+          return tl
+            .to("main", {
+              opacity: 0,
+              duration: 0.6,
+              ease: "power1.in",
+            })
+            .to(
+              "main",
+              {
+                translateY: 16,
+                duration: 0.8,
+              },
+              "<"
+            );
         },
         enter(data) {
-          gsap.from(data.next.container, {
+          const tl = gsap.timeline();
+          tl.from("main", {
             opacity: 0,
             duration: 0.5,
             ease: "power1.in",
-          });
+          }).from(
+            "main",
+            {
+              translateY: 16,
+              duration: 0.7,
+            },
+            0
+          );
         },
       },
     ],
