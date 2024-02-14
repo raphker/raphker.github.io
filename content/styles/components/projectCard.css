@@ -1,5 +1,6 @@
 .projectCard {
   position: relative;
+  display: block;
 }
 
 .projectCard img {
