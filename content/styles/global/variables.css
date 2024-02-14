@@ -4,24 +4,6 @@
 
   --header-height: var(--space-2xl);
 
-  /* http://localhost:8080/fr/projects/si-1-bit-computer/?m=0.75%7C0.5%7C0.25%7C1%7C1.5%7C2%7C3%7C4%7C6&t=1240%7C18%7C1.2%7C320%7C16%7C1.067&c=%23f8f9fa%7C%23212529&f=0 */
-  --fs--2: clamp(0.878357rem, 0.912133rem + -0.168882vw, 0.78125rem);
-  --fs--1: clamp(0.937207rem, 0.937105rem + 0.00051vw, 0.9375rem);
-  --fs-0: clamp(1rem, 0.956522rem + 0.217391vw, 1.125rem);
-  --fs-1: clamp(1.067rem, 0.968565rem + 0.492174vw, 1.35rem);
-  --fs-2: clamp(1.138489rem, 0.971007rem + 0.83741vw, 1.62rem);
-  --fs-3: clamp(1.214768rem, 0.961122rem + 1.26823vw, 1.944rem);
-  --fs-4: clamp(1.296157rem, 0.935586rem + 1.802857vw, 2.3328rem);
-  --fs-5: clamp(1.383rem, 0.890353rem + 2.463235vw, 2.79936rem);
-  --space-3xs: clamp(0.25rem, 0.23913rem + 0.054348vw, 0.28125rem);
-  --space-2xs: clamp(0.5rem, 0.478261rem + 0.108696vw, 0.5625rem);
-  --space-xs: clamp(0.75rem, 0.717391rem + 0.163043vw, 0.84375rem);
-  --space-s: clamp(1rem, 0.956522rem + 0.217391vw, 1.125rem);
-  --space-m: clamp(1.5rem, 1.434783rem + 0.326087vw, 1.6875rem);
-  --space-l: clamp(2rem, 1.913043rem + 0.434783vw, 2.25rem);
-  --space-xl: clamp(3rem, 2.869565rem + 0.652174vw, 3.375rem);
-  --space-2xl: clamp(4rem, 3.826087rem + 0.869565vw, 4.5rem);
-  --space-3xl: clamp(6rem, 5.73913rem + 1.304348vw, 6.75rem);
   --surface: #f8f9fa;
   --text: #212529;
   --link: #1971c2;

@@ -1,28 +1,31 @@
-const browserslist = require("browserslist");
-const { bundle, browserslistToTargets } = require("lightningcss");
+const postcss = require("postcss");
+const atImport = require("postcss-import");
+const minify = require("postcss-minify");
+const presetEnv = require("postcss-preset-env");
+const utopia = require("postcss-utopia");
 
 /** @param {import('@11ty/eleventy').UserConfig} config */
 module.exports = function (config) {
   config.addTemplateFormats("css");
   config.addExtension("css", {
     outputFileExtension: "css",
-    compile: async function (_inputContent, inputPath) {
+    compile: async function (content, inputPath) {
       if (inputPath !== "./content/styles/index.css") {
         return;
       }
-      let targets = browserslistToTargets(browserslist("> 0.2% and not dead"));
-
       return async () => {
-        let { code } = await bundle({
-          filename: inputPath,
-          minify: true,
-          sourceMap: false,
-          targets,
-          drafts: {
-            nesting: true,
-          },
+        const { css } = await postcss([
+          atImport,
+          utopia,
+          presetEnv({
+            stage: 1,
+            browsers: "> 0.2% and not dead",
+          }),
+          // minify,
+        ]).process(content, {
+          from: inputPath,
         });
-        return code;
+        return css;
       };
     },
   });

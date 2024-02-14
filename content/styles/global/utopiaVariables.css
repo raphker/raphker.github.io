@@ -1,0 +1,25 @@
+:root{
+      /* @link https://utopia.fyi/type/calculator?c=320,16,1.067,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  @utopia typeScale({
+    minWidth: 320,
+    maxWidth: 1240,
+    minFontSize: 16,
+    maxFontSize: 18,
+    minTypeScale: 1.067,
+    maxTypeScale: 1.2,
+    positiveSteps: 5,
+    negativeSteps: 2,
+    prefix: "fs",
+  });
+
+  @utopia spaceScale({
+    minWidth: 320,
+    maxWidth: 1240,
+    minSize: 16,
+    maxSize: 18,
+    positiveSteps: [1.5, 2, 3, 4, 6],
+    negativeSteps: [0.75, 0.5, 0.25],
+    prefix: "space",
+  });
+}
