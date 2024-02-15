@@ -1,7 +1,7 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <div class="aboutSection" data-align="center">
+    <div class="aboutSection region" data-align="center" style="--region-space:var(--space-xl)">
         {% if cover and cover.src %}
             <div class="aboutSection_image">
                 {% image cover.src, cover.alt %} 

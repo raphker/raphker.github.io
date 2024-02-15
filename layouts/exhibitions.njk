@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<div class="flow" style="--flow-space:var(--space-xl)">
+<div class="flow region" style="--flow-space:var(--space-xl); --region-space:var(--space-xl);">
  {% for exhibition in collections.exhibitions | favor_lang | sort_by_priority %}
     <article class="exhibitionCard">
         <c-reel-wrapper data-prev-label="{{"previousImage" | i18n}}" data-next-label="{{"nextImage" | i18n}}">

@@ -18,11 +18,4 @@
     width: 100%;
     height: auto;
   }
-
-  * + & {
-    margin-block-start: var(--grid-gap);
-  }
-  & + * {
-    --flow-space: var(--grid-gap);
-  }
 }

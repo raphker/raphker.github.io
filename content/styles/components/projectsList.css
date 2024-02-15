@@ -1,8 +1,8 @@
 .projectsList {
   display: flex;
   flex-wrap: wrap;
-  row-gap: var(--row-gutter, var(--gutter, var(--space-xl)));
-  column-gap: var(--column-gutter, var(--gutter, var(--space-xl)));
+  row-gap: var(--space-2xl);
+  column-gap: var(--space-4xl);
   &[data-justify="center"] {
     justify-content: center;
   }
