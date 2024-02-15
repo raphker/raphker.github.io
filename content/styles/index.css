@@ -22,13 +22,13 @@
 @import url("./components/exhibitionCard.css");
 @import url("./components/reelWrapper.css");
 @import url("./components/researchList.css");
+@import url("./components/researchItem.css");
 @import url("./components/aboutSection.css");
 
 @import url("./utils/wrapper.css");
 @import url("./utils/flow.css");
 @import url("./utils/region.css");
 @import url("./utils/typo.css");
-@import url("./utils/divide.css");
 
 /* DEBUG */
 

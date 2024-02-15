@@ -9,41 +9,43 @@
         margin-inline:auto;
     }
 </style>
-    <div class="researchList-desktop masonry region" style="--row-gutter:1rem; --region-space:var(--space-xl);">
-        {% for column in collections.research | favor_lang | sort_by_priority | distribute(2)%}
-            <div>
-                {% for item  in column %}
-                    <article class="divide-y flow" style="--divide-space:var(--space-m); ">
-                            {% if item.data.cover %}
-                                {% image item.data.cover.src, item.data.cover.alt %} 
-                            {% endif %}
-                            {{ utils.cardHeader(item)}}
-                            <c-collapse data-label="{{ "detail" | i18n}}" style="--flow-space:var(--space-s)">
-                                <div class="prose flow region" style="--region-space:var(--space-s)">
-                                    {{ item.content | safe }}
-                                </div>
-                            </c-collapse>
-                        </article>
-                {% endfor %}
-            </div>
-        {% endfor %}
-    </div>
+    <article class="region" style="--region-space:var(--space-xl);">
+        <div class="researchList-desktop masonry" style="--row-gutter:var(--space-l);">
+            {% for column in collections.research | favor_lang | sort_by_priority | distribute(2)%}
+                <div>
+                    {% for item  in column %}
+                        <article class="researchItem flow" style="--divide-space:var(--space-m); ">
+                                {% if item.data.cover %}
+                                    {% image item.data.cover.src, item.data.cover.alt %} 
+                                {% endif %}
+                                {{ utils.cardHeader(item)}}
+                                <c-collapse data-label="{{ "detail" | i18n}}" style="--flow-space:var(--space-s)">
+                                    <div class="prose flow region" style="--region-space:var(--space-s)">
+                                        {{ item.content | safe }}
+                                    </div>
+                                </c-collapse>
+                            </article>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
 
-    <div class="researchList flow region" style="--row-gutter:1rem; --region-space:var(--space-xl);">
-        {% for item in collections.research | favor_lang | sort_by_priority %}
-                    <article class="divide-y flow" style="--divide-space:var(--space-m);">
-                            {% if item.data.cover %}
-                                {% image item.data.cover.src, item.data.cover.alt %} 
-                            {% endif %}
-                            {{ utils.cardHeader(item)}}
-                            <c-collapse data-label="{{ "detail" | i18n}}" style="--flow-space:var(--space-s)">
-                                <div class="prose flow region" style="--region-space:var(--space-s)">
-                                    {{ item.content | safe }}
-                                </div>
-                            </c-collapse>
-                        </article>
-                {% endfor %}
-    </div>
+        <div class="researchList flow" style="--row-gutter:var(--space-l);">
+            {% for item in collections.research | favor_lang | sort_by_priority %}
+                        <article class="researchItem flow" style="--divide-space:var(--space-m);">
+                                {% if item.data.cover %}
+                                    {% image item.data.cover.src, item.data.cover.alt %} 
+                                {% endif %}
+                                {{ utils.cardHeader(item)}}
+                                <c-collapse data-label="{{ "detail" | i18n}}" style="--flow-space:var(--space-s)">
+                                    <div class="prose flow region" style="--region-space:var(--space-s)">
+                                        {{ item.content | safe }}
+                                    </div>
+                                </c-collapse>
+                            </article>
+                    {% endfor %}
+        </div>
+    </article>
 
 
 {% endblock content %} 
