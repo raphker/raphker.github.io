@@ -21,30 +21,24 @@ export const initPagesTransition = () =>
                 duration: 0.8,
               },
               "<"
-            )
-            .to(
-              "c-hamburger ul",
-              {
-                backgroundColor: "#f8f9fa",
-                duration: 0.8,
-              },
-              "<"
             );
         },
         enter(data) {
-          const tl = gsap.timeline();
-          tl.from("main", {
-            opacity: 0,
-            duration: 0.5,
-            ease: "power1.in",
-          }).from(
-            "main",
-            {
-              translateY: 16,
-              duration: 0.7,
-            },
-            0
-          );
+          const tl = gsap
+            .timeline()
+            .from("main", {
+              opacity: 0,
+              duration: 0.5,
+              ease: "power1.in",
+            })
+            .from(
+              "main",
+              {
+                translateY: 16,
+                duration: 0.7,
+              },
+              0
+            );
         },
       },
     ],
