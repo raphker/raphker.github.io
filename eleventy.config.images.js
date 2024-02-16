@@ -50,7 +50,7 @@ module.exports = function (config) {
       const imageRatio = rawData.width / rawData.height;
 
       const imageMetadata = await Image(imgPath, {
-        widths: [height * imageRatio],
+        widths: [Math.round(height * imageRatio)],
         formats: ["webp", "jpeg"],
         outputDir: path.join(config.dir.output, "img"),
         urlPath: "/img",
