@@ -1,20 +1,22 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <article class="flow region" style="--flow-space:var(--space-l); --region-space-start:0;">
+    <article class=" region" style="--region-space-start:0;">
         {% if cover and cover.src %}
             <div class="cover">
                 {% image cover.src, cover.alt %} 
             </div>
         {% endif %}
-        <div class="projectHeader">
-            <div class="projectHeader_infos flow" >
-                {% if title %}
-                    <h1 class="text-lg bold">{{title}}</h1>
-                {% endif %}
-                {% if moment %}
-                    <p class="bold" style="--flow-space:var(--space-2xs)">{{moment}}</p>
-                {% endif %}
+        <div class="projectHeader region" style="--region-space-start:var(--space-l); --region-space-end:var(--space-l);">
+            <div class="projectHeader_infos flow">
+                <div>
+                    {% if title %}
+                        <h1 class="text-lg bold">{{title}}</h1>
+                    {% endif %}
+                    {% if moment %}
+                        <p class="bold">{{moment}}</p>
+                    {% endif %}
+                </div>
                 {% if legend %}
                     <div class="italic text-sm prose">{{legend | parse_markdown | safe }}</div>
                 {% endif %}
