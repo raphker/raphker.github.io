@@ -2,7 +2,7 @@
   display: flex;
   gap: var(--space-xl);
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   @media (width < 65rem) {
     flex-direction: column;
   }
