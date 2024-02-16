@@ -2,13 +2,6 @@
 {% import "utils.njk" as utils%}
 
 {% block content %}
-<style>
-    img{
-        max-height: 60vh;
-        width: auto;
-        margin-inline:auto;
-    }
-</style>
     <article class="region" style="--region-space:var(--space-xl);">
         <div class="researchList-desktop masonry" style="--row-gutter:var(--space-l);">
             {% for column in collections.research | filter_by_lang | sort_by_priority | distribute(2)%}
@@ -16,7 +9,7 @@
                     {% for item  in column %}
                         <article class="researchItem flow" style="--divide-space:var(--space-m); ">
                             {% if item.data.cover %}
-                                {% image item.data.cover.src, item.data.cover.alt %} 
+                                {% image item.data.cover.src, item.data.cover.alt, [600] %}
                             {% endif %}
                             {{ utils.cardHeader(item)}}
                             <c-collapse data-label="{{ "detail" | i18n}}" style="--flow-space:var(--space-s)">
@@ -34,7 +27,7 @@
             {% for item in collections.research | filter_by_lang | sort_by_priority %}
                     <article class="researchItem flow" style="--divide-space:var(--space-m);">
                         {% if item.data.cover %}
-                            {% image item.data.cover.src, item.data.cover.alt %} 
+                            {% image item.data.cover.src, item.data.cover.alt,[300,600,800], "(max-width:30rem) 100vw, 75vw"%}
                         {% endif %}
                         {{ utils.cardHeader(item)}}
                         <c-collapse data-label="{{ "detail" | i18n}}" style="--flow-space:var(--space-s)">
@@ -46,6 +39,4 @@
             {% endfor %}
         </div>
     </article>
-
-
 {% endblock content %} 
