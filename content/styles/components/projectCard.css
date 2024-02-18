@@ -17,6 +17,7 @@
   pointer-events: none;
   display: none;
   text-align: center;
+  line-height: 1;
   & .word {
     line-height: 1.5;
     white-space: nowrap;
