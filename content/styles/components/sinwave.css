@@ -2,70 +2,18 @@ c-sinwave {
   position: sticky;
   top: var(--header-height);
   z-index: 10;
-  stroke-width: 1;
-  @media (width >30rem) {
-    stroke-width: 0.6;
-  }
-  @media (width >60rem) {
-    stroke-width: 0.4;
-  }
-  @media (width >80rem) {
-    stroke-width: 0.25;
-  }
-  & circle {
-    stroke-width: 1.5;
-    @media (width >30rem) {
-      stroke-width: 0.5;
-    }
-    @media (width >60rem) {
-      stroke-width: 0;
-    }
-  }
-  & .stroke {
-    fill: none;
-    stroke: currentColor;
-  }
-  & .shape {
-    fill: var(--surface);
-    stroke: none;
+  &[data-intro="true"] {
+    margin-block-start: calc(50vh - var(--header-height));
+    margin-block-end: 50vh;
   }
 }
 
-c-sinwave .desktopOnly {
-  display: none;
-}
-
-c-sinwave {
-  --center-x: 43.75%;
-}
-
-@media (width> 50rem) {
-  c-sinwave {
-    --center-x: 45.75%;
-  }
-  c-sinwave .mobileOnly {
-    display: none;
-  }
-  c-sinwave .desktopOnly {
-    display: unset;
-  }
-}
-
-/* INTRODUCTION */
-
-c-sinwave[data-intro="true"] {
-  --viewbox-height: 10;
-  --viewbox-width: 300;
-  --height: calc((var(--viewbox-height) / var(--viewbox-width)) * 100vw);
-  margin-block-start: calc(50vh - var(--header-height) - var(--height) * 0.5);
-  & + main {
-    margin-block-start: 1000px;
-  }
-}
-
-c-sinwave {
-  --center-x: 43.75%;
-  @media (width> 50rem) {
-    --center-x: 45.75%;
-  }
-}
+/* body::after {
+  content: "";
+  position: fixed;
+  width: 1px;
+  height: 100%;
+  background: red;
+  top: 0;
+  left: 50%;
+} */

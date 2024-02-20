@@ -2,7 +2,7 @@ import { Collapse } from "./collapse.js";
 import { Hamburger } from "./hamburger.js";
 import { initPagesTransition } from "./pagesTransition.js";
 import { reelWrapper } from "./reel.js";
-import { SinWave } from "./sinWave.js";
+import { SinWave } from "./sinWave/SinWave.js";
 
 customElements.define("c-hamburger", Hamburger);
 customElements.define("c-sinwave", SinWave);

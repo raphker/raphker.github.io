@@ -19,4 +19,12 @@ module.exports = {
     en: "Next image",
     fr: "Image suivante",
   },
+  openInter: {
+    en: "Open",
+    fr: "Ouvrir",
+  },
+  closeInter: {
+    en: "Close",
+    fr: "Fermer",
+  },
 };
