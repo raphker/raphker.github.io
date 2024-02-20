@@ -47,7 +47,7 @@ export class SinWave extends HTMLElement {
         scrollTrigger: {
           onEnter: () => {
             this.introState = "playing";
-            this.scrollToContent();
+            // this.scrollToContent();
           },
           onEnterBack: () => {
             this.introState = "playing";
@@ -164,7 +164,10 @@ export class SinWave extends HTMLElement {
 
   scrollToContent() {
     gsap.to(window, {
-      scrollTo: "#content",
+      scrollTo: {
+        y: "#content",
+        autoKill: true,
+      },
       duration: 3,
     });
   }
