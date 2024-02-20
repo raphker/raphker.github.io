@@ -5,6 +5,11 @@ c-sinwave {
   &[data-intro="true"] {
     margin-block-start: calc(50vh - var(--header-height));
     margin-block-end: 50vh;
+
+    @supports (height: 50svh) {
+      margin-block-start: calc(50svh - var(--header-height));
+      margin-block-end: 50svh;
+    }
   }
 }
 

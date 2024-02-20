@@ -47,7 +47,7 @@ export class SinWave extends HTMLElement {
         scrollTrigger: {
           onEnter: () => {
             this.introState = "playing";
-            // this.scrollToContent();
+            this.scrollToContent();
           },
           onEnterBack: () => {
             this.introState = "playing";
@@ -63,7 +63,7 @@ export class SinWave extends HTMLElement {
           end: "start center",
           endTrigger: "#content",
           scrub: true,
-          // markers: true,
+          markers: true,
         },
       })
       .from(this.interElements, {
