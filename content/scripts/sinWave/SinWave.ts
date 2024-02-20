@@ -31,7 +31,7 @@ export class SinWave extends HTMLElement {
       this.introTimeline?.kill();
       this.initIntro();
     }, 200);
-    window.addEventListener("resize", this.handleResize);
+    // window.addEventListener("resize", this.handleResize);
     this.initIntro();
   }
 
@@ -46,8 +46,8 @@ export class SinWave extends HTMLElement {
       .timeline({
         scrollTrigger: {
           onEnter: () => {
-            this.introState = "playing";
             this.scrollToContent();
+            this.introState = "playing";
           },
           onEnterBack: () => {
             this.introState = "playing";
