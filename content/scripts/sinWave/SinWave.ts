@@ -32,7 +32,7 @@ export class SinWave extends HTMLElement {
       this.introTimeline?.kill();
       this.initIntro();
     }, 200);
-    window.addEventListener("resize", this.handleResize);
+    // window.addEventListener("resize", this.handleResize);
     this.initIntro();
   }
 
