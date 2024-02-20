@@ -27,11 +27,12 @@ export class SinWave extends HTMLElement {
   connectedCallback() {
     this.initSvg();
     this.handleResize = debounce(() => {
+      if (this.introState !== "completed") return;
       this.initSvg();
       this.introTimeline?.kill();
       this.initIntro();
     }, 200);
-    // window.addEventListener("resize", this.handleResize);
+    window.addEventListener("resize", this.handleResize);
     this.initIntro();
   }
 
@@ -59,7 +60,7 @@ export class SinWave extends HTMLElement {
             this.introState = "waiting";
           },
           trigger: this,
-          start: "start center",
+          start: "clamp(start center)",
           end: "start center",
           endTrigger: "#content",
           scrub: true,
