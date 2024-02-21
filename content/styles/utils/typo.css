@@ -1,3 +1,7 @@
+.text-m {
+  font-size: var(--fs-1);
+}
+
 .text-lg {
   font-size: var(--fs-2);
 }

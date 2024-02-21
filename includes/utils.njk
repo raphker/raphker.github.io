@@ -12,7 +12,7 @@
 {% endmacro %}
 
 {% macro cardHeader(item, class) %}
-    <div class="flow leading-tight {{class}}" style="--flow-space:1em">
+    <div class="flow leading-tight {{class}} text-m" style="--flow-space:1em">
         <h2 class="text-lg bold">{{item.data.title}}</h2>
         {% if item.data.legend %}
             <p class="bold"  style="--flow-space:var(--space-2xs)">{{item.data.legend}}</p>

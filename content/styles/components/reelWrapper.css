@@ -31,7 +31,7 @@ c-reel-wrapper > div {
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  gap: var(--space-s);
+  /* gap: var(--space-s); */
 }
 
 c-reel-wrapper > div > * {
@@ -42,7 +42,7 @@ c-reel-wrapper > div > * {
 }
 
 c-reel-wrapper > div img {
-  object-fit: contain;
+  object-fit: cover;
   max-width: 100%;
   width: auto;
   height: 100%;
