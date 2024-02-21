@@ -7,7 +7,7 @@ c-collapse {
     border: none;
     cursor: pointer;
     padding: 0;
-    font-size: var(--fs-2);
+    font-size: var(--fs-3);
   }
   & svg {
     width: 1em;
