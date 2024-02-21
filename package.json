@@ -17,7 +17,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "esbuild": "^0.19.11",
     "postcss": "^8.4.35",
-    "postcss-import": "^16.0.0",
+    "postcss-import": "^15.0.0",
     "postcss-minify": "^1.1.0",
     "postcss-preset-env": "^9.3.0",
     "postcss-utopia": "^1.0.1",
