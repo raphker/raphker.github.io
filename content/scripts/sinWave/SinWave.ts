@@ -168,7 +168,6 @@ export class SinWave extends HTMLElement {
   };
 
   scrollToContent() {
-    console.log("go");
     gsap.to(window, {
       scrollTo: {
         y: "#content",
@@ -192,7 +191,8 @@ export class SinWave extends HTMLElement {
   disconnectedCallback() {
     this.scrollTrigger?.kill();
     this.introTimeline?.kill();
-    window.removeEventListener("resize", this.initSvg);
+    if (this.handleResize)
+      window.removeEventListener("resize", this.handleResize);
     this.button?.removeEventListener("click", this.handleClick);
   }
 }
