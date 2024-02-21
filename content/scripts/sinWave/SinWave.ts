@@ -15,7 +15,7 @@ export class SinWave extends HTMLElement {
   scrollTrigger?: ScrollTrigger;
   handleResize?: () => void;
   openAngle?: number;
-  interElements?: SVGPathElement[];
+  interElement?: SVGPathElement;
   distanceBetweenInterAndCEnter = 0;
   introTimeline?: gsap.core.Timeline;
   introState: "disabled" | "completed" | "playing" | "waiting" = "disabled";
@@ -31,7 +31,6 @@ export class SinWave extends HTMLElement {
       if (this.widthPx === window.innerWidth) return;
       if (this.introState === "playing") return;
       this.initSvg();
-      this.introTimeline?.kill();
       this.initIntro();
     }, 200);
     window.addEventListener("resize", this.handleResize);
@@ -41,10 +40,11 @@ export class SinWave extends HTMLElement {
   initIntro() {
     if (!this.hasAttribute("data-intro")) return;
     if (location.hash !== "") return;
-    if (!this.interElements || !this.svg || !this.svgGroup || !this.openAngle)
+    if (!this.interElement || !this.svg || !this.svgGroup || !this.openAngle)
       return;
     this.setAttribute("data-intro", "true");
     this.introState = "waiting";
+    this.introTimeline?.kill();
     this.introTimeline = gsap
       .timeline({
         scrollTrigger: {
@@ -69,7 +69,7 @@ export class SinWave extends HTMLElement {
           // markers: true,
         },
       })
-      .from(this.interElements, {
+      .from(this.interElement, {
         rotate: this.openAngle,
         duration: 0.8,
       })
@@ -98,7 +98,7 @@ export class SinWave extends HTMLElement {
     const interWidth = Math.max(5, width / 30);
     this.distanceBetweenInterAndCEnter =
       width * 0.5 - (interLeft + interWidth * 0.5);
-    const { svg, svgGroup, updateWave, interElements, openAngle, button } =
+    const { svg, svgGroup, updateWave, interElement, openAngle, button } =
       drawSvg({
         width,
         height,
@@ -117,6 +117,7 @@ export class SinWave extends HTMLElement {
     this.button?.remove();
     this.scrollTrigger?.kill();
     this.heightProxy.value = 0;
+    this.introTimeline?.kill();
 
     this.scrollTrigger = ScrollTrigger.create({
       onUpdate: (self) => {
@@ -140,7 +141,7 @@ export class SinWave extends HTMLElement {
     this.svgGroup = svgGroup;
     this.button = button;
     this.openAngle = openAngle;
-    this.interElements = interElements;
+    this.interElement = interElement;
     this.append(this.svg, button);
     this.isOpen = false;
 
@@ -156,8 +157,8 @@ export class SinWave extends HTMLElement {
       this.introState === "completed"
     ) {
       this.isOpen = !this.isOpen;
-      if (this.openAngle && this.interElements) {
-        gsap.to(this.interElements, {
+      if (this.openAngle && this.interElement) {
+        gsap.to(this.interElement, {
           rotate: this.isOpen ? this.openAngle : 0,
           duration: 0.3,
         });
@@ -167,6 +168,7 @@ export class SinWave extends HTMLElement {
   };
 
   scrollToContent() {
+    console.log("go");
     gsap.to(window, {
       scrollTo: {
         y: "#content",

@@ -64,7 +64,7 @@ export const drawSvg = ({
     svg,
     svgGroup,
     updateWave: sinWave.updateHeight,
-    interElements: inter.elements,
+    interElement: inter.elements[1],
     openAngle: inter.openAngle,
     button: aroundInter.button,
   };
@@ -136,7 +136,7 @@ const createAroundInter = (
 
   beforeInterShape.setAttribute(
     "d",
-    `M-${svgWidth} ${centerY} H ${interLeft} V 0 H -${svgWidth}z`
+    `M-${svgWidth} ${centerY} H ${interLeft + 1} V 0 H -${svgWidth}z`
   );
   beforeInterShape.style.setProperty("stroke", "none");
   beforeInterShape.style.setProperty("fill", background);
@@ -156,8 +156,8 @@ const createAroundInter = (
   );
   afterInterShape.setAttribute(
     "d",
-    `M${interLeft + interWidth} ${centerY} H ${sinWaveLeft} V 0 H ${
-      interLeft + interWidth
+    `M${interLeft + interWidth - 1} ${centerY} H ${sinWaveLeft} V 0 H ${
+      interLeft + interWidth - 1
     }z`
   );
   afterInterShape.style.setProperty("stroke", "none");
