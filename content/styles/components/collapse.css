@@ -2,7 +2,7 @@ c-collapse {
   display: flex;
   flex-direction: column;
   & > button {
-    align-self: flex-end;
+    align-self: center;
     background: transparent;
     border: none;
     cursor: pointer;
