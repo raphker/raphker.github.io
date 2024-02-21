@@ -19,6 +19,7 @@ export class SinWave extends HTMLElement {
   distanceBetweenInterAndCEnter = 0;
   introTimeline?: gsap.core.Timeline;
   introState: "disabled" | "completed" | "playing" | "waiting" = "disabled";
+  widthPx?: number;
 
   constructor() {
     super();
@@ -27,12 +28,13 @@ export class SinWave extends HTMLElement {
   connectedCallback() {
     this.initSvg();
     this.handleResize = debounce(() => {
-      if (this.introState !== "completed") return;
+      if (this.widthPx === window.innerWidth) return;
+      if (this.introState === "playing") return;
       this.initSvg();
       this.introTimeline?.kill();
       this.initIntro();
     }, 200);
-    // window.addEventListener("resize", this.handleResize);
+    window.addEventListener("resize", this.handleResize);
     this.initIntro();
   }
 
@@ -46,8 +48,8 @@ export class SinWave extends HTMLElement {
     this.introTimeline = gsap
       .timeline({
         scrollTrigger: {
-          onEnter: () => {
-            this.scrollToContent();
+          onEnter: (self) => {
+            if (self.start === 0) this.scrollToContent();
             this.introState = "playing";
           },
           onEnterBack: () => {
@@ -61,19 +63,19 @@ export class SinWave extends HTMLElement {
           },
           trigger: this,
           start: "clamp(start center)",
-          end: "start center",
+          end: "start end",
           endTrigger: "#content",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
       })
       .from(this.interElements, {
         rotate: this.openAngle,
-        duration: 3,
+        duration: 0.8,
       })
       .from(this.svgGroup, {
         x: `${this.distanceBetweenInterAndCEnter}px`,
-        duration: 0.5,
+        duration: 0.2,
       })
       .from(
         [this.button],
@@ -82,14 +84,15 @@ export class SinWave extends HTMLElement {
             window.innerWidth * 0.5 -
             this.button!.offsetLeft -
             this.button!.clientWidth * 0.5,
-          duration: 0.5,
+          duration: 0.2,
         },
         "<"
       );
   }
 
   initSvg = () => {
-    const width = window.innerWidth / 5;
+    this.widthPx = window.innerWidth;
+    const width = this.widthPx / 5;
     const height = Math.max(5, width / 30);
     const interLeft = width * 0.03;
     const interWidth = Math.max(5, width / 30);
@@ -126,7 +129,7 @@ export class SinWave extends HTMLElement {
         gsap.to(this.heightProxy, {
           value: 0,
           duration: 0.8,
-          ease: "power1.out",
+          ease: "power4.in",
           overwrite: true,
           onUpdate: () => updateWave(this.heightProxy.value),
         });
@@ -167,9 +170,10 @@ export class SinWave extends HTMLElement {
     gsap.to(window, {
       scrollTo: {
         y: "#content",
-        autoKill: true,
+        autoKill: false,
       },
-      duration: 3,
+      duration: 4,
+      ease: "power5.out",
     });
   }
 
