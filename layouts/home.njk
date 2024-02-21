@@ -4,7 +4,8 @@
 {% set isHome = true %}
 
 {% block content %}
-    <ul role="list" class="projectsList region" data-justify="center" style="--region-space:var(--space-3xl)">
+    <div class="projects">
+    <ul role="list" class="projects_list region" style="--region-space:var(--space-3xl)">
         {% for project in collections.projects | favor_lang | sort_by_priority %}
             <li>
                 <a href="{{ project.url }}" class="projectCard">
@@ -22,4 +23,6 @@
             </li>
         {% endfor %}
     </ul>
+    </div>
+
 {% endblock content %}

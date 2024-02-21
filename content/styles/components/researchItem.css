@@ -1,4 +1,8 @@
 .researchItem {
   border-block-end: 1px solid var(--text);
   padding-block-end: var(--space-s);
+
+  & img {
+    width: 100%;
+  }
 }

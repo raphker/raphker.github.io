@@ -1,0 +1,12 @@
+.projects {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.projects_list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--space-2xl);
+  column-gap: var(--space-4xl);
+  justify-content: center;
+}

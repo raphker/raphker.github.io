@@ -1,9 +1,0 @@
-.projectsList {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: var(--space-2xl);
-  column-gap: var(--space-4xl);
-  &[data-justify="center"] {
-    justify-content: center;
-  }
-}
