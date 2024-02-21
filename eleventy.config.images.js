@@ -6,13 +6,20 @@ let logged = false;
 module.exports = function (config) {
   config.addShortcode(
     "image",
-    async (src, alt, widths = ["auto"], sizes = undefined, lazy = true) => {
+    async (
+      src,
+      alt,
+      widths = ["auto"],
+      sizes = undefined,
+      lazy = true,
+      formats = ["webp", "jpeg"]
+    ) => {
       // remove "/", if existing, from the start of the filePath
       const imgPath = src.replace(/^\//, "");
 
       const imageMetadata = await Image(imgPath, {
         widths,
-        formats: ["webp", "jpeg"],
+        formats,
         outputDir: path.join(config.dir.output, "img"),
         urlPath: "/img",
       });
@@ -50,8 +57,8 @@ module.exports = function (config) {
       const imageRatio = rawData.width / rawData.height;
 
       const imageMetadata = await Image(imgPath, {
-        widths: [Math.round(height * imageRatio)],
-        formats: ["webp", "jpeg"],
+        widths: [Math.ceil(height * imageRatio)],
+        formats: ["webp", "png"],
         outputDir: path.join(config.dir.output, "img"),
         urlPath: "/img",
       });

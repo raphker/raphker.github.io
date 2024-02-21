@@ -8,7 +8,7 @@
         {% for project in collections.projects | favor_lang | sort_by_priority %}
             <li>
                 <a href="{{ project.url }}" class="projectCard">
-                    {% image_by_height project.data.thumbnail.src, project.data.thumbnail.alt, 240 %}
+                    {% image project.data.thumbnail.src, project.data.thumbnail.alt, ["auto"], undefined, true, ["webp","png"] %}
                     <span class="projectCard_title bold text-xl">{{ utils.splitLetters(project.data.title) }}</span>
                 </a>
             </li>
@@ -16,7 +16,7 @@
         {% for project in collections.projects | favor_lang  %}
             <li>
                 <a href="{{ project.url }}" class="projectCard">
-                    {% image_by_height project.data.thumbnail.src, project.data.thumbnail.alt, 240, true %}
+                    {% image project.data.thumbnail.src, project.data.thumbnail.alt, ["auto"], undefined, true, ["webp","png"] %}
                     <span class="projectCard_title bold text-xl">{{ utils.splitLetters(project.data.title) }}</span>
                 </a>
             </li>

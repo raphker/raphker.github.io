@@ -9,7 +9,7 @@
         <c-reel-wrapper data-prev-label="{{"previousImage" | i18n}}" data-next-label="{{"nextImage" | i18n}}">
             <div class="exhibitionCard_images" data-wrapper>
                 {% for image in exhibition.data.gallery %}
-                    {% image_by_height image.src, image.alt | default(""), 480, true %}
+                    {% image image.src, image.alt | default("") %}
                 {% endfor %}
             </div>
         </c-reel-wrapper>

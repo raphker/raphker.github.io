@@ -27,7 +27,7 @@
             {% for item in collections.research | filter_by_lang | sort_by_priority %}
                     <article class="researchItem flow" style="--divide-space:var(--space-m);">
                         {% if item.data.cover %}
-                            {% image item.data.cover.src, item.data.cover.alt,[300,600,800], "(max-width:30rem) 100vw, 75vw"%}
+                            {% image item.data.cover.src, item.data.cover.alt,[300,600,800,"auto"], "(max-width:30rem) 100vw, 75vw"%}
                         {% endif %}
                         {{ utils.cardHeader(item)}}
                         <c-collapse data-label="{{ "detail" | i18n}}" style="--flow-space:var(--space-s)">
