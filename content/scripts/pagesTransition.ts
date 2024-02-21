@@ -1,5 +1,6 @@
 import barba from "@barba/core";
 import gsap from "gsap";
+import { Hamburger } from "./hamburger.js";
 
 export const initPagesTransition = () =>
   barba.init({
@@ -7,15 +8,15 @@ export const initPagesTransition = () =>
       {
         name: "opacity-transition",
         async leave(data) {
-          const tl = gsap.timeline();
-          return tl
-            .to("main", {
-              opacity: 0,
+          return gsap
+            .timeline()
+            .to(".transitionScreen", {
+              opacity: 1,
               duration: 0.6,
               ease: "power1.in",
             })
             .to(
-              "main",
+              "main, c-hamburger ul li",
               {
                 translateY: 16,
                 duration: 0.8,
