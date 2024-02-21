@@ -18,7 +18,7 @@ Le programme doctoral de recherche – création « SACRe : Sciences, Art, Créa
 
 [[lien]](https://www.gaite-lyrique.net/festival/festival-sacre)
 
-Commissaire d'exposition: Valentine Busquet
+Commissaire d'exposition: Valentine Busquet\
 Design graphique: Studio double
 
 _Crédits photos: Daniel Nicolaevsky Maria_
