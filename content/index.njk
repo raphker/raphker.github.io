@@ -2,7 +2,7 @@
 <html lang="{{ page.lang }}">
     {% include "head.njk" %}
     <body data-barba="wrapper">
-        <div data-barba="container" data-barba-namespace="intro">
+        <div data-barba="container" data-barba-namespace="intro" class="introWrapper">
             <a href="/{{config.defaultLanguage}}" class="introLink">
                 <c-intro data-label-open="{{ "openInter" | i18n }}" data-label-close="{{ "closeInter" | i18n }}"></c-intro>
             </a>
