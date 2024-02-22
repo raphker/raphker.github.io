@@ -6,7 +6,7 @@
             {% for link in page.url | locale_links %}
                 {%- if not loop.first %},{% endif %}
                 <li>
-                    <a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}" class="link">
+                    <a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}" class="link" data-barba-prevent>
                         {{ macros.splitLetters(link.label) }}
                     </a>
                 </li>
