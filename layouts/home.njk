@@ -13,14 +13,6 @@
                 </a>
             </li>
         {% endfor %}
-        {% for project in collections.projects | favor_lang  %}
-            <li>
-                <a href="{{ project.url }}" class="projectCard">
-                    {% image project.data.thumbnail.src, project.data.thumbnail.alt, ["auto"], undefined, true, ["webp","png"] %}
-                    <span class="projectCard_title bold text-xl">{{ macros.splitLetters(project.data.title) }}</span>
-                </a>
-            </li>
-        {% endfor %}
     </ul>
 
 {% endblock content %}
