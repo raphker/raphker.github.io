@@ -7,7 +7,7 @@ cover:
   src: "/images/projects/arbor-0.jpg"
   alt: ""
 priority: 13
-moment: "[2021]"
+moment: "2021"
 legend: |
   Antennes métalliques, dispositif électronique, moteurs, cuivre.
 

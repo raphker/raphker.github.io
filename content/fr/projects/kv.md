@@ -1,0 +1,27 @@
+---
+title: "309ppp"
+priority: 6
+thumbnail:
+  src: "/images/projects/309ppp-thumbnail.jpg"
+  alt: ""
+cover:
+  src: "/images/projects/309ppp-0.jpg"
+  alt: ""
+moment: "2017"
+legend: |
+Silicium, 309 impressions laser. 
+
+
+29 x 41 x 10 cm
+description: |
+Après avoir été numérisée à l’aide d’un scanner, l’image d’un morceau de silicium, un matériau semi-conducteur, est dévoilée sur la tranche des feuilles d’une ramette de papier. Le silicium, placé au sommet de la pile de papier, opère ainsi un jeu sur la condition physique et matérielle du numérique.
+---
+
+![](/images/projects/309ppp-1.jpg)
+
+
+![](/images/projects/309ppp-2.jpg)
+
+
+![](/images/projects/309ppp-3.jpg)
+![](/images/projects/309ppp-4.jpg)
