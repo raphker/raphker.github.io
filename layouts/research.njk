@@ -1,5 +1,5 @@
 {% extends "layouts/base.njk" %}
-{% import "utils.njk" as utils%}
+{% import "macros.njk" as macros%}
 
 {% block content %}
     <article class="region" style="--region-space:var(--space-xl);">
@@ -11,7 +11,7 @@
                             {% if item.data.cover %}
                                 {% image item.data.cover.src, item.data.cover.alt, [600] %}
                             {% endif %}
-                            {{ utils.cardHeader(item)}}
+                            {{ macros.cardHeader(item)}}
                             <c-collapse data-label="{{ "detail" | i18n}}" style="--flow-space:var(--space-s)">
                                 <div class="prose flow region" style="--region-space:var(--space-s)">
                                     {{ item.content | safe }}
@@ -29,7 +29,7 @@
                         {% if item.data.cover %}
                             {% image item.data.cover.src, item.data.cover.alt,[300,600,800,"auto"], "(max-width:30rem) 100vw, 75vw"%}
                         {% endif %}
-                        {{ utils.cardHeader(item)}}
+                        {{ macros.cardHeader(item)}}
                         <c-collapse data-label="{{ "detail" | i18n}}" style="--flow-space:var(--space-s)">
                             <div class="prose flow region" style="--region-space:var(--space-s)">
                                 {{ item.content | safe }}

@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-type Params = {
+export type Params = {
   width: number;
   height: number;
   interLeft: number;
@@ -9,9 +9,9 @@ type Params = {
   circleRadius: number;
   strokeWidth: number;
   numberOfWaves: number;
-  foreground: string;
   background: string;
 };
+
 export const drawSvg = ({
   width,
   height,
@@ -21,14 +21,13 @@ export const drawSvg = ({
   circleRadius,
   strokeWidth,
   numberOfWaves,
-  foreground,
   background,
 }: Params) => {
   const centerY = height / 2;
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   svg.setAttribute("stroke-width", strokeWidth.toString());
-  svg.style.setProperty("stroke", foreground);
+  svg.style.setProperty("stroke", "currentColor");
   svg.style.setProperty("fill", "none");
 
   const svgGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
@@ -53,8 +52,8 @@ export const drawSvg = ({
   svgGroup.append(
     ...aroundInter.elements,
     ...inter.elements,
-    createCircle(interLeft, centerY, circleRadius, foreground),
-    createCircle(interLeft + interWidth, centerY, circleRadius, foreground),
+    createCircle(interLeft, centerY, circleRadius, "currentColor"),
+    createCircle(interLeft + interWidth, centerY, circleRadius, "currentColor"),
     ...sinWave.elements
   );
 
@@ -66,7 +65,6 @@ export const drawSvg = ({
     updateWave: sinWave.updateHeight,
     interElement: inter.elements[1],
     openAngle: inter.openAngle,
-    button: aroundInter.button,
   };
 };
 
@@ -128,19 +126,16 @@ const createAroundInter = (
     "path"
   );
   beforeInterPath.setAttribute("d", `M-${svgWidth} ${centerY} H ${interLeft}`);
-
   const beforeInterShape = document.createElementNS(
     "http://www.w3.org/2000/svg",
     "path"
   );
-
   beforeInterShape.setAttribute(
     "d",
     `M-${svgWidth} ${centerY} H ${interLeft + 1} V 0 H -${svgWidth}z`
   );
   beforeInterShape.style.setProperty("stroke", "none");
   beforeInterShape.style.setProperty("fill", background);
-
   const afterInterPath = document.createElementNS(
     "http://www.w3.org/2000/svg",
     "path"
@@ -149,7 +144,6 @@ const createAroundInter = (
     "d",
     `M${interLeft + interWidth} ${centerY} H ${sinWaveLeft}`
   );
-
   const afterInterShape = document.createElementNS(
     "http://www.w3.org/2000/svg",
     "path"
@@ -163,18 +157,6 @@ const createAroundInter = (
   afterInterShape.style.setProperty("stroke", "none");
   afterInterShape.style.setProperty("fill", background);
 
-  const button = document.createElement("button");
-  button.style.setProperty("position", "absolute");
-  button.style.setProperty("top", "25%");
-  button.style.setProperty("left", `3%`);
-  button.style.setProperty(
-    "width",
-    `${(Math.max(5, svgWidth / 30) / svgWidth) * 100}%`
-  );
-  button.style.setProperty("height", "50%");
-  button.style.setProperty("background", "transparent");
-  button.style.setProperty("border", "none");
-
   return {
     elements: [
       beforeInterShape,
@@ -182,7 +164,6 @@ const createAroundInter = (
       beforeInterPath,
       afterInterPath,
     ],
-    button,
   };
 };
 
@@ -219,9 +200,7 @@ const createSinWave = (
     shapeSetter({ d: shapePath });
     strokeSetter({ d: strokePath });
   };
-
   updateHeight(0);
-
   return { elements: [sinWaveShape, sinWavePath], updateHeight };
 };
 
@@ -239,7 +218,6 @@ const getWavePathes = (
     const y = centerY + height * dir;
     const x1 = left + waveWidth * (i + 0.25);
     const x2 = left + waveWidth * (i + 0.75);
-
     strokePath += `C${x1} ${y}, ${x2} ${y}, ${
       left + waveWidth * (i + 1)
     } ${centerY}`;

@@ -1,16 +1,15 @@
-{% import "utils.njk" as utils%}
+{% import "macros.njk" as macros%}
 {%extends "layouts/base.njk"%}
 
 {% set isHome = true %}
 
 {% block content %}
-    <div class="projects">
-    <ul role="list" class="projects_list region" style="--region-space:var(--space-3xl)">
+    <ul role="list" class="projectsList region" style="--region-space:var(--space-3xl)">
         {% for project in collections.projects | favor_lang | sort_by_priority %}
             <li>
                 <a href="{{ project.url }}" class="projectCard">
                     {% image project.data.thumbnail.src, project.data.thumbnail.alt, ["auto"], undefined, true, ["webp","png"] %}
-                    <span class="projectCard_title bold text-xl">{{ utils.splitLetters(project.data.title) }}</span>
+                    <span class="projectCard_title bold text-xl">{{ macros.splitLetters(project.data.title) }}</span>
                 </a>
             </li>
         {% endfor %}
@@ -18,11 +17,10 @@
             <li>
                 <a href="{{ project.url }}" class="projectCard">
                     {% image project.data.thumbnail.src, project.data.thumbnail.alt, ["auto"], undefined, true, ["webp","png"] %}
-                    <span class="projectCard_title bold text-xl">{{ utils.splitLetters(project.data.title) }}</span>
+                    <span class="projectCard_title bold text-xl">{{ macros.splitLetters(project.data.title) }}</span>
                 </a>
             </li>
         {% endfor %}
     </ul>
-    </div>
 
 {% endblock content %}

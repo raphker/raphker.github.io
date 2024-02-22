@@ -2,6 +2,7 @@ import { drawSvg } from "./drawSvg.js";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { debounce } from "../lib/debounce.js";
+import { getSvgParams } from "./getSvgParams.js";
 gsap.registerPlugin(ScrollTrigger);
 
 export class SinWave extends HTMLElement {
@@ -16,10 +17,6 @@ export class SinWave extends HTMLElement {
   handleResize?: () => void;
   openAngle?: number;
   interElement?: SVGPathElement;
-  distanceBetweenInterAndCEnter = 0;
-  introTimeline?: gsap.core.Timeline;
-  introState: "disabled" | "completed" | "playing" | "waiting" = "disabled";
-  widthPx?: number;
 
   constructor() {
     super();
@@ -27,103 +24,28 @@ export class SinWave extends HTMLElement {
 
   connectedCallback() {
     this.initSvg();
-    this.handleResize = debounce(() => {
-      if (this.widthPx === window.innerWidth) return;
-      if (this.introState === "playing") return;
-      this.initSvg();
-      this.initIntro();
-    }, 200);
+    this.handleResize = debounce(this.initSvg, 200);
     window.addEventListener("resize", this.handleResize);
-    this.initIntro();
-  }
-
-  initIntro() {
-    if (!this.hasAttribute("data-intro")) return;
-    if (location.hash !== "") return;
-    if (!this.interElement || !this.svg || !this.svgGroup || !this.openAngle)
-      return;
-    this.setAttribute("data-intro", "true");
-    this.introState = "waiting";
-    this.introTimeline?.kill();
-    this.introTimeline = gsap
-      .timeline({
-        scrollTrigger: {
-          onEnter: (self) => {
-            if (self.start === 0) this.scrollToContent();
-            this.introState = "playing";
-          },
-          onEnterBack: () => {
-            this.introState = "playing";
-          },
-          onLeave: () => {
-            this.introState = "completed";
-          },
-          onLeaveBack: () => {
-            this.introState = "waiting";
-          },
-          trigger: this,
-          start: "clamp(start center)",
-          end: "start end",
-          endTrigger: "#content",
-          scrub: true,
-          // markers: true,
-        },
-      })
-      .from(this.interElement, {
-        rotate: this.openAngle,
-        duration: 0.8,
-      })
-      .from(this.svgGroup, {
-        x: `${this.distanceBetweenInterAndCEnter}px`,
-        duration: 0.2,
-      })
-      .from(
-        [this.button],
-        {
-          x:
-            window.innerWidth * 0.5 -
-            this.button!.offsetLeft -
-            this.button!.clientWidth * 0.5,
-          duration: 0.2,
-        },
-        "<"
-      );
   }
 
   initSvg = () => {
-    this.widthPx = window.innerWidth;
-    const width = this.widthPx / 5;
-    const height = Math.max(5, width / 30);
-    const interLeft = width * 0.03;
-    const interWidth = Math.max(5, width / 30);
-    this.distanceBetweenInterAndCEnter =
-      width * 0.5 - (interLeft + interWidth * 0.5);
-    const { svg, svgGroup, updateWave, interElement, openAngle, button } =
-      drawSvg({
-        width,
-        height,
-        interLeft,
-        interWidth,
-        circleRadius: Math.max(0.3, width / 600),
-        sinWaveLeft: width / 5,
-        strokeWidth: 0.25,
-        numberOfWaves: 15,
-        background: "var(--surface)",
-        foreground: "var(--text)",
-      });
+    const svgParams = getSvgParams("var(--surface)");
+    const { svg, svgGroup, updateWave, interElement, openAngle } =
+      drawSvg(svgParams);
+
+    const button = this.createButton(
+      (svgParams.interWidth / svgParams.width) * 100
+    );
 
     this.button?.removeEventListener("click", this.handleClick);
     this.svg?.remove();
     this.button?.remove();
     this.scrollTrigger?.kill();
     this.heightProxy.value = 0;
-    this.introTimeline?.kill();
 
     this.scrollTrigger = ScrollTrigger.create({
       onUpdate: (self) => {
         if (this.isOpen) return;
-        if (this.introState === "playing" || this.introState === "waiting")
-          return;
         const height = self.getVelocity() / 2000;
         if (Math.abs(height) < Math.abs(this.heightProxy.value)) return;
         this.heightProxy.value = height;
@@ -149,22 +71,27 @@ export class SinWave extends HTMLElement {
     this.button?.addEventListener("click", this.handleClick);
   };
 
+  createButton(width: number) {
+    const button = document.createElement("button");
+    button.style.setProperty("position", "absolute");
+    button.style.setProperty("top", "25%");
+    button.style.setProperty("left", `3%`);
+    button.style.setProperty("width", `${width}%`);
+    button.style.setProperty("height", "50%");
+    button.style.setProperty("background", "transparent");
+    button.style.setProperty("border", "none");
+    return button;
+  }
+
   handleClick = () => {
-    if (this.introState === "waiting") {
-      this.scrollToContent();
-    } else if (
-      this.introState === "disabled" ||
-      this.introState === "completed"
-    ) {
-      this.isOpen = !this.isOpen;
-      if (this.openAngle && this.interElement) {
-        gsap.to(this.interElement, {
-          rotate: this.isOpen ? this.openAngle : 0,
-          duration: 0.3,
-        });
-      }
-      this.setButtonLabel();
+    this.isOpen = !this.isOpen;
+    if (this.openAngle && this.interElement) {
+      gsap.to(this.interElement, {
+        rotate: this.isOpen ? this.openAngle : 0,
+        duration: 0.3,
+      });
     }
+    this.setButtonLabel();
   };
 
   scrollToContent() {
@@ -190,7 +117,6 @@ export class SinWave extends HTMLElement {
 
   disconnectedCallback() {
     this.scrollTrigger?.kill();
-    this.introTimeline?.kill();
     if (this.handleResize)
       window.removeEventListener("resize", this.handleResize);
     this.button?.removeEventListener("click", this.handleClick);

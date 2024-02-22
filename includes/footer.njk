@@ -1,0 +1,16 @@
+{% import "macros.njk" as macros %}
+ <footer class="footer wrapper" data-type="wide">
+    <p class="footer_copyright">{{config.copyright}}</p>
+    {% if page.url | locale_links | length %}
+        <ul role="list" class="footer_languages">
+            {% for link in page.url | locale_links %}
+                {%- if not loop.first %},{% endif %}
+                <li>
+                    <a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}" class="link">
+                        {{ macros.splitLetters(link.label) }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</footer>
