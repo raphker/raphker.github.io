@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+    {% include "head.njk" %}
+    <body data-barba="wrapper">
+        <div data-barba="container" data-barba-namespace="intro">
+            <a href="/{{config.defaultLanguage}}" class="introLink">
+                <c-intro data-label-open="{{ "openInter" | i18n }}" data-label-close="{{ "closeInter" | i18n }}"></c-intro>
+            </a>
+            <div class="transitionScreen" aria-hidden="true"></div>
+        </div>
+    </body>
+    <script src="/scripts/index.js"></script>
+</html>
