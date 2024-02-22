@@ -2,7 +2,7 @@
 title: "Si (1-bit computer)"
 priority: 15
 thumbnail:
-  src: "/images/projects/si-thumbnail.jpg"
+  src: "/images/projects/si-thumbnail.png"
   alt: ""
 cover:
   src: "/images/projects/si-0.jpg"

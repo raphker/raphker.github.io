@@ -1,27 +1,31 @@
 ---
-title: "309ppp"
+title: "kV"
 priority: 6
 thumbnail:
-  src: "/images/projects/309ppp-thumbnail.jpg"
+  src: "/images/projects/kv-thumbnail.png"
   alt: ""
 cover:
-  src: "/images/projects/309ppp-0.jpg"
+  src: "/images/projects/kv-0.jpg"
   alt: ""
-moment: "2017"
+moment: "2016"
 legend: |
-Silicium, 309 impressions laser. 
+Héliogravures sur cuivre.
+30 x 30 cm.
 
 
-29 x 41 x 10 cm
+Gravures sur papier, oxyde de cuivre réalisée à partir de câbles électrique. 
+50 x 50 cm.
 description: |
-Après avoir été numérisée à l’aide d’un scanner, l’image d’un morceau de silicium, un matériau semi-conducteur, est dévoilée sur la tranche des feuilles d’une ramette de papier. Le silicium, placé au sommet de la pile de papier, opère ainsi un jeu sur la condition physique et matérielle du numérique.
+Omniprésent dans notre environnement, le fil de cuivre est le premier outil de transport d’énergie et de conductibilité électrique. Il est à l’image de l’objet technique dans son plus simple appareil. 
+
+Les trois héliogravures représentent des sections de câbles électriques vues en coupe et dans leur taille d’origine. Tirés des plaques, plusieurs tirages sont obtenus à partir d’un pigment d’oxyde de cuivre. Ce pigment, réalisé à partir de fil électrique oxydé, renvoie à la plasticité des câbles dans leur matérialité brute.
 ---
 
-![](/images/projects/309ppp-1.jpg)
+![](/images/projects/kv-1.jpg)
 
 
-![](/images/projects/309ppp-2.jpg)
+![](/images/projects/kv-2.jpg)
 
 
-![](/images/projects/309ppp-3.jpg)
-![](/images/projects/309ppp-4.jpg)
+![](/images/projects/kv-3.jpg)
+![](/images/projects/kv-4.jpg)
