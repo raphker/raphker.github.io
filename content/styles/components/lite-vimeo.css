@@ -1,0 +1,8 @@
+lite-vimeo {
+  &.ltv-activated {
+    background: var(--surface) !important;
+  }
+  & .ltv-playbtn {
+    background: var(--text) !important;
+  }
+}
