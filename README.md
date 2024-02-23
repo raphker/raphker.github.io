@@ -59,6 +59,14 @@ Autre ligne de texte.
 
 Pour intégrer des blocs de code, il est possible d'utiliser [la syntaxe markdown prévue à cet effet](https://www.markdownguide.org/extended-syntax/#syntax-highlighting). Ces blocs seront automatiquements transformés et stylisés.
 
+### Vidéo vimeo
+
+Pour intégrer des vidéos vimeos, il est possible d'utiliser le composant `lite-vimeo`. Qui permet d'intégrer des vidéos vimeo de façon plus performante. L'id se trouve dans l'url de la video. Par example pour la video [https://vimeo.com/321474353](https://vimeo.com/321474353) :
+
+```md
+<lite-vimeo videoid="321474353"></lite-vimeo>
+```
+
 ### Pages projets
 
 Pour ajouter un nouveau projet créer un nouveau fichier `.md` dans le dossier `/content/[lang]/projects`
