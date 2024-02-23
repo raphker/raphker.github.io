@@ -30,8 +30,28 @@ c-reel-wrapper > div {
   block-size: auto;
   overflow-x: auto;
   overflow-y: hidden;
+  scrollbar-color: var(--text) var(--surface);
   scroll-snap-type: x mandatory;
   /* gap: var(--space-s); */
+}
+
+c-reel-wrapper > div::-webkit-scrollbar {
+  block-size: 1rem;
+}
+
+c-reel-wrapper > div::-webkit-scrollbar-track {
+  background-color: var(--surface);
+}
+
+c-reel-wrapper > div::-webkit-scrollbar-thumb {
+  background-color: var(--text);
+  background-image: linear-gradient(
+    var(--surface) 0,
+    var(--surface) 0.25rem,
+    var(--text) 0.25rem,
+    var(--text) 0.75rem,
+    var(--surface) 0.75rem
+  );
 }
 
 c-reel-wrapper > div > * {
