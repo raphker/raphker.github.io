@@ -22,8 +22,8 @@ description: |
 ![](/images/projects/bug-2.jpg)
 
 <lite-vimeo videoid="321474353">
-  <div class="ltv-playbtn"></div>
 </lite-vimeo>
+<player-x src="https://vimeo.com/321474353" controls></player-x>
 
 ![](/images/projects/bug-3.jpg)
 ![](/images/projects/bug-0.jpg)

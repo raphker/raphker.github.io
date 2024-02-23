@@ -27,7 +27,6 @@ description: |
 ![](/images/projects/arbor-2.jpg)
 
 <lite-vimeo videoid="538379979">
-  <div class="ltv-playbtn"></div>
 </lite-vimeo>
 
 ![](/images/projects/arbor-3.jpg)

@@ -20,7 +20,6 @@ description: |
 ![](/images/projects/fossilation-2.jpg)
 
 <lite-vimeo videoid="537887403">
-  <div class="ltv-playbtn"></div>
 </lite-vimeo>
 
 Réalisation :

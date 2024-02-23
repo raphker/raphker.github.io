@@ -20,7 +20,6 @@ description: |
 ![](/images/projects/siliconlandscape-2.jpg)
 
 <lite-vimeo videoid="548558899">
-  <div class="ltv-playbtn"></div>
 </lite-vimeo>
 
 ![](/images/projects/siliconlandscape-3.jpg)

@@ -21,5 +21,4 @@ description: |
 ![](/images/projects/feedback-2.jpg)
 
 <lite-vimeo videoid="208955887">
-  <div class="ltv-playbtn"></div>
 </lite-vimeo>
