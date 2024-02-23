@@ -1,3 +1,5 @@
+import "lite-vimeo-embed";
+
 import { Collapse } from "./collapse.js";
 import { Hamburger } from "./hamburger.js";
 import { initPagesTransition } from "./pagesTransition/index.js";

@@ -6,7 +6,8 @@
   }
 
   & > div,
-  & > [class] {
+  & > [class],
+  & > lite-vimeo {
     max-width: 100%;
   }
 
