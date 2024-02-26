@@ -13,10 +13,6 @@ export const introTransition: ITransitionPage = {
   enter() {
     gsap
       .timeline()
-      .from("header", {
-        opacity: 0,
-        duration: 0.3,
-      })
       .from(
         "main",
         {

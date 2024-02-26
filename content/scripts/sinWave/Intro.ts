@@ -38,20 +38,6 @@ export class Intro extends HTMLElement {
           duration: 1.5,
           ease: "power1.out",
         })
-        // .fromTo(
-        //   "body",
-        //   {
-        //     backgroundColor: "var(--text)",
-        //     color: "var(--surface)",
-        //     duration: 0.1,
-        //   },
-        //   {
-        //     color: "var(--text)",
-        //     backgroundColor: "var(--surface)",
-        //     duration: 0.1,
-        //   },
-        //   "-=0.5"
-        // )
         .from(
           svgGroup,
           {
@@ -59,9 +45,7 @@ export class Intro extends HTMLElement {
               svgParams.width * 0.5 -
               svgParams.interLeft -
               svgParams.interWidth * 0.5,
-            onStart: () => {
-              document.querySelector(".introWrapper")?.classList?.toggle("on");
-            },
+            duration: 0.8,
           },
           "-=0.4"
         )
@@ -71,6 +55,7 @@ export class Intro extends HTMLElement {
             top:
               window.innerHeight * 0.5 -
               (this.parentElement?.clientHeight ?? 0) * 0.5,
+            duration: 0.8,
           },
           "<"
         );
