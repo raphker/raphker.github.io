@@ -22,8 +22,8 @@ gallery:
   - src: /images/exhibitions/le-poids-des-donnees-pompidou-13.jpg
   - src: /images/exhibitions/le-poids-des-donnees-pompidou-14.jpg
 ---
-« Publier ou périr ! », telle est la formule en usage dans le monde de la recherche académique. Mais, au delà de diffuser des textes adressés à une communauté de chercheurs, qu’en est-il de la recherche-création ?
-Raphaëlle Kerbrat présente les travaux menés dans le cadre de son doctorat en arts visuels : _Le Poids des Données. Paradoxes matériels et sensibles du numérique._ Pour cela, elle renouvelle les formats, à travers un dispositif alliant soutenance publique, exposition, ateliers et conférences, avec des expériences artistiques. Les dispositifs présentés sensibilisent les publics à la réalité physique du numérique.
+
+Raphaëlle Kerbrat présente les travaux menés dans le cadre de son doctorat en arts visuels : _Le Poids des Données. Paradoxes matériels et sensibles du numérique._ Pour cela, elle renouvelle les formats de publication académique, à travers un dispositif alliant soutenance publique, exposition, ateliers et conférences, avec des expériences artistiques. Les dispositifs présentés sensibilisent les publics à la réalité physique du numérique.
 
 [[lien]](https://www.centrepompidou.fr/fr/programme/agenda/evenement/JZy6dhY)
 
