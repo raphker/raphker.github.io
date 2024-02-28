@@ -6,25 +6,25 @@ moment: "[18.11.2021 - 17.12.2021]"
 type: "Exposition personnelle"
 legend: "SIANA, l'immaginaire des technologies"
 gallery:
-  - src: "/images/exhibitions/paysages-immateriels-0.jpg"
+  - src: /images/exhibitions/paysages-immateriels-0.jpg
     alt: ""
-  - src: "/images/exhibitions/paysages-immateriels-1.jpg"
+  - src: /images/exhibitions/paysages-immateriels-1.jpg
     alt: ""
-  - src: "/images/exhibitions/paysages-immateriels-2.jpg"
+  - src: /images/exhibitions/paysages-immateriels-2.jpg
     alt: ""
-  - src: "/images/exhibitions/paysages-immateriels-3.jpg"
+  - src: /images/exhibitions/paysages-immateriels-3.jpg
     alt: ""
-  - src: "/images/exhibitions/paysages-immateriels-4jpg"
+  - src: /images/exhibitions/paysages-immateriels-4jpg
     alt: ""
-  - src: "/images/exhibitions/paysages-immateriels-5.jpg"
+  - src: /images/exhibitions/paysages-immateriels-5.jpg
     alt: ""
-  - src: "/images/exhibitions/paysages-immateriels-6.jpg"
+  - src: /images/exhibitions/paysages-immateriels-6.jpg
     alt: ""
-  - src: "/images/exhibitions/paysages-immateriels-7.jpg"
+  - src: /images/exhibitions/paysages-immateriels-7.jpg
     alt: ""
-  - src: "/images/exhibitions/paysages-immateriels-8.jpg"
+  - src: /images/exhibitions/paysages-immateriels-8.jpg
     alt: ""
-  - src: "/images/exhibitions/paysages-immateriels-9.jpg"
+  - src: /images/exhibitions/paysages-immateriels-9.jpg
     alt: ""
 ---
 Une exposition de Raphaëlle Kerbrat organisée par SIANA, dans le cadre de l’événement « Explorer l’invisible », conçu par le réseau francilien Exoplanète Terre comme la séquence arts-sciences de la Biennale Némo.
