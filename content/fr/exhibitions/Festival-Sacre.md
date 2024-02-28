@@ -6,12 +6,12 @@ moment: "[16.11.2023 - 19.11.2023]"
 type: "Exposition collective"
 legend: "Etat des lieux, 10 ans d'expérimentations entre recherche et création"
 gallery:
-  - src: /images/expos/festival-sacre-0.jpg
-  - src: /images/expos/festival-sacre-1.jpg
-  - src: /images/expos/festival-sacre-2.jpg
-  - src: /images/expos/festival-sacre-3.jpg
-  - src: /images/expos/festival-sacre-4.jpg
-  - src: /images/expos/festival-sacre-5.jpg
+  - src: /images/exhibitions/festival-sacre-0.jpg
+  - src: /images/exhibitions/festival-sacre-1.jpg
+  - src: /images/exhibitions/festival-sacre-2.jpg
+  - src: /images/exhibitions/festival-sacre-3.jpg
+  - src: /images/exhibitions/festival-sacre-4.jpg
+  - src: /images/exhibitions/festival-sacre-5.jpg
 ---
 
 Le programme doctoral de recherche – création « SACRe : Sciences, Art, Création, Recherche » fête ses 10 ans, en proposant une sélection de projets artistiques pluridisciplinaires brassant les arts visuels, le design, la composition musicale, la mise en scène de théâtre, le cinéma, ainsi que l’histoire et de la théorie des arts.
