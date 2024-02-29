@@ -7,7 +7,7 @@ thumbnail:
 cover:
   src: "/images/projects/feedback-0.jpg"
   alt: ""
-moment: "2017"
+moment: "[2017]"
 legend: |
   Disque dur, micro, ordinateur, haut-parleurs.
 

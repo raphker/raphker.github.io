@@ -7,7 +7,7 @@ thumbnail:
 cover:
   src: "/images/projects/male-femelle-0.jpg"
   alt: ""
-moment: "2016"
+moment: "[2016]"
 legend: |
   Double édition, 85 pages. 21 x 21 cm.
 description: |

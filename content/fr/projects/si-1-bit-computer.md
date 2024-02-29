@@ -7,7 +7,7 @@ thumbnail:
 cover:
   src: "/images/projects/si-0.jpg"
   alt: ""
-moment: "2021"
+moment: "[2021]"
 legend: |
   Vitrine : Silicium, nitinol, cuivre, laiton, bois, plexiglas, métal,  dispositif électronique. 50x100x100cm.  
 

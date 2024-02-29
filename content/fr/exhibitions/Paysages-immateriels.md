@@ -1,5 +1,5 @@
 ---
-title: "Paysages ~~Im~~matériels"
+title: "Paysages (Im)matériels"
 priority: 12
 place: "A.N.A.S, Évry-Courcouronnes"
 moment: "[18.11.2021 - 17.12.2021]"
@@ -7,8 +7,8 @@ type: "Exposition personnelle"
 legend: "SIANA, l'immaginaire des technologies"
 gallery:
   - src: /images/exhibitions/paysages-immateriels-0.jpg
-  - src: /images/exhibitions/paysages-immateriels-1.jpg
   - src: /images/exhibitions/paysages-immateriels-2.jpg
+  - src: /images/exhibitions/paysages-immateriels-1.jpg
   - src: /images/exhibitions/paysages-immateriels-3.jpg
   - src: /images/exhibitions/paysages-immateriels-4.jpg
   - src: /images/exhibitions/paysages-immateriels-5.jpg

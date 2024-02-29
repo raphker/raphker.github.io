@@ -7,7 +7,7 @@ cover:
   src: "/images/projects/fossilation-0.jpg"
   alt: ""
 priority: 11
-moment: "2021"
+moment: "[2021]"
 legend: |
   Membrane en bioplastique, dispositif de captation d’énergie résiduelle du bâtiment en interaction avec la lumière.
 

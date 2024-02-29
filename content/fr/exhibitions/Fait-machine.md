@@ -1,7 +1,7 @@
 ---
 title: "Fait Machine"
 priority: 14
-place: "MIAM - Musée International des Arts Modestes "
+place: "MIAM - Musée International des Arts Modestes, Sète "
 moment: "[17.02.2023 - 12.11.2023]"
 type: "Exposition collective"
 legend: "Code_____sur le fil"

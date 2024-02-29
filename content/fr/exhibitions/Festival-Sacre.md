@@ -1,7 +1,7 @@
 ---
 title: "Festival SACRe"
 priority: 15
-place: "Gaîté Lyrique"
+place: "Gaîté Lyrique, Paris"
 moment: "[16.11.2023 - 19.11.2023]"
 type: "Exposition collective"
 legend: "Etat des lieux, 10 ans d'expérimentations entre recherche et création"

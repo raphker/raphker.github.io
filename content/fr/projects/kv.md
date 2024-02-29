@@ -7,7 +7,7 @@ thumbnail:
 cover:
   src: "/images/projects/kv-0.jpg"
   alt: ""
-moment: "2016"
+moment: "[2016]"
 legend: |
   Héliogravures sur cuivre.
   30 x 30 cm.
