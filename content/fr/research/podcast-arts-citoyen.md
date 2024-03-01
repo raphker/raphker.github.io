@@ -12,7 +12,7 @@ cover:
 
 Un podcast de la Fondation Daniel et Nina Carasso, produit par wave.audio. Production exécutive : Isabelle Duriez. Cet épisode est écrit et présenté par Léa Minod et réalisé par Guillaume Girault.
 
-<a href="https://www.fondationcarasso.org/art-citoyen/podcast-les-voix-de-lart-citoyen/">[lien]</a>
+[[lien]](https://www.fondationcarasso.org/art-citoyen/podcast-les-voix-de-lart-citoyen/)
 
 Épisode 4 \_ Arts et sciences (4/11) : rendre visible l’empreinte du numérique.
 

@@ -1,6 +1,6 @@
 ---
 title: "Machin.e.s"
-priority: 9
+priority: 14
 place: "École des Arts Décoratifs"
 moment: "[2024]"
 type: "Enseignement"
@@ -12,4 +12,4 @@ cover:
 
 L'atelier _Machin.e.s_ est un cours d'introduction à l'électronique, conçu pour les élèves de première année à l'École des Arts Décoratifs.
 
-Les étudiants sont invités à manipuler et fabriquer des objets électroniques, graphiques et sonore, avec une programmation entièrement matérielle (basée sur des NE555), pour apprendre la lecture et l'écriture d'un circuit, les logiques de programmation et le fonctionnement des différents composants.
+Les étudiant.e.s sont invités à manipuler et fabriquer des objets électroniques, graphiques et sonore, avec une programmation entièrement matérielle (basée sur des NE555), pour apprendre la lecture et l'écriture d'un circuit, les logiques de programmation et le fonctionnement des différents composants.
