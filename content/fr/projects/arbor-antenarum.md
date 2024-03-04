@@ -11,7 +11,7 @@ moment: "[2021]"
 legend: |
   Antennes métalliques, dispositif électronique, moteurs, cuivre.
 
-  Dimension variables - Installation : environ 300 cm x 160 cm.
+  Dimensions variables [Installation : environ 300 cm x 160 cm].
 
 description: |
   Depuis quelques années déjà, se sont discrètement installées dans nos villes de grandes colonnes métalliques, habillées de plastique à l’apparence végétale : les arbres antennes. Ces antennes relais 4G-5G ont pour but de se fondre dans le paysage.
@@ -24,10 +24,14 @@ description: |
 ---
 
 ![](/images/projects/arbor-1.jpg)
+
 ![](/images/projects/arbor-2.jpg)
 
 <lite-vimeo videoid="538379979">
 </lite-vimeo>
 
 ![](/images/projects/arbor-3.jpg)
+
 ![](/images/projects/arbor-4.jpg)
+
+![](/images/projects/arbor-5.jpg)

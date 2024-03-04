@@ -9,15 +9,15 @@ cover:
 priority: 14
 moment: "[2020-2022]"
 legend: |
-  Triptyque de rayonnements électromagnétiques, impression numérique en PLA.  
+  Triptych of electromagnetic radiation pattern, digital print in PLA.  
 
-  Dimensions des pièces:\
+  Dimensions of parts:\
   n°1, 2, 3: 21x21x22cm / 16x16x26cm / 23x23x20cm.\
   n°4, 5, 6: 25x22x22cm / 24x22x27cm / 26x18x22cm.
 description: |
-  Ces pièces ont été modélisées selon le rayonnement électromagnétique de trois antennes Wi-Fi. Les formes tridimensionnelles, font apparaître les principaux lobes d’émissions caractéristiques à chaque antenne. Ces empreintes prennent la contreforme du champ électromagnétique qui émane des antennes. Elles permettent de percevoir la géométrie des flux de nos communications sans-fil.
+  These pieces have been modelized according to the electromagnetic radiation of three Wi-Fi antennas. The three-dimensional shapes reveal the main emission lobes characteristic of each antenna. These impressions take on the counter-form of the electromagnetic field emanating from the antennas. They allow us to perceive the geometry of our wireless communications flows.
 
-  _Projet développé dans le cadre du programme doctoral SACRe-PSL / EnsAD._
+  _Project developed within the SACRe-PSL /EnsAD doctoral program._
 ---
 
 ![](/images/projects/wireless-2.jpg)

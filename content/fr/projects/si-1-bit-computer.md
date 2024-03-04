@@ -9,9 +9,11 @@ cover:
   alt: ""
 moment: "[2021]"
 legend: |
-  Vitrine : Silicium, nitinol, cuivre, laiton, bois, plexiglas, métal,  dispositif électronique. 50x100x100cm.  
+  Vitrine: Silicium, nitinol, cuivre, laiton, bois, plexiglas, métal,  dispositif électronique.\
+  50x100x100cm.  
 
-  Dessin : Schéma semi-logique, tirage sur papier Fine art Rag. 80 x 200 cm.
+  Dessin: Schéma semi-logique, tirage sur papier Fine art Rag.\ 
+  80 x 200 cm.
 description: |
   Le projet _Si (1-bit computer)_ repose sur la décomposition physique d’un système logique. Le dispositif dévoile le fonctionnement de nos appareils numériques, d’une manière à la fois archaïque et poétique. Une infime partie d’un système binaire est prélevé pour réaliser des opérations 1-bit. Le dispositif procède par agrandissement d’échelles physiques et temporelles, en étirant une opération logique sur plusieurs secondes et en amplifiant la taille des composants.
 
@@ -28,5 +30,16 @@ description: |
 <lite-vimeo videoid="560871758">
 </lite-vimeo>
 
+![](/images/projects/si-9.jpg)
+
 ![](/images/projects/si-3.jpg)
+![](/images/projects/si-5.jpg)
+
 ![](/images/projects/si-4.jpg)
+
+![](/images/projects/si-6.jpg)
+![](/images/projects/si-7.jpg)
+
+![](/images/projects/si-10.jpg)
+
+![](/images/projects/si-8.jpg)

@@ -9,13 +9,13 @@ cover:
 priority: 12
 moment: "[2020]"
 legend: |
-  Série de prises de vues numériques fixes et en mouvement. 
+  Series of static and moving digital images. 
   
-  Dimensions variables.
+  Variable dimensions.
 description: |
-  Macrophotographies de silicium à échelle 15:1. La structure du semi-conducteur, rendue visible par le grossissement de l’objectif et le mouvement des réflexions lumineuses, se transforme en paysage cristallin.
-  
-  _Projet développé dans le cadre du programme doctoral SACRe-PSL / EnsAD._
+  Macrophotographs of silicon on a 15:1 scale. The structure of the semiconductor, made visible by the lens magnification and the movement of light reflections, is transformed into a crystalline landscape.
+
+  _Project developed within the SACRe-PSL /EnsAD doctoral program._
 ---
 
 ![](/images/projects/siliconlandscape-1.jpg)

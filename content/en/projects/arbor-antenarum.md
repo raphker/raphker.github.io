@@ -7,20 +7,30 @@ cover:
   src: "/images/projects/arbor-0.jpg"
   alt: ""
 priority: 13
-moment: "2021"
+moment: "[2021]"
 legend: |
-  Antennes métalliques, dispositif électronique, moteurs, cuivre.
-
-  Dimension variables - Installation : environ 300 cm x 160 cm.
+  Metallic antennas, electronics, motors, copper.
+  Variable dimensions [Installation: approx. 300 cm x 160 cm].
 
 description: |
-  I speak english very well
+  For several years now, large metal columns clad in plant-like plastic have been discreetly popping up in our towns and cities: antenna trees. These 4G-5G relay antennas are designed to disappear into the landscape.
+
+  In this installation, the thin metal structures act as antennae, capturing the electromagnetic environment around them. The moving needles indicate the signal strength perceived by the antennas. They reflect the instability and constant fluctuations of the radio landscape.
+
+  The structures of the metallic branches were generated using a DLA (Diffusion-Limited Agregation) algorithmic process, by implementing the data obtained from the previous antenna's capture to generate the next, giving a certain orientation to the inflorescence of its branches. Determined by each of the structures, the movement of the needles varies slightly according to the geometry of the antennae.
+
+  _Project Project developed within the SACRe-PSL /EnsAD doctoral program._
 ---
 
 ![](/images/projects/arbor-1.jpg)
+
 ![](/images/projects/arbor-2.jpg)
 
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/538379979?h=2900fce5da&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<lite-vimeo videoid="538379979">
+</lite-vimeo>
 
 ![](/images/projects/arbor-3.jpg)
+
 ![](/images/projects/arbor-4.jpg)
+
+![](/images/projects/arbor-5.jpg)
