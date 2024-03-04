@@ -10,6 +10,7 @@ priority: 13
 moment: "[2021]"
 legend: |
   Metallic antennas, electronics, motors, copper.
+  
   Variable dimensions [Installation: approx. 300 cm x 160 cm].
 
 description: |

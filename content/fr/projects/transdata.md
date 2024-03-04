@@ -16,7 +16,5 @@ description: |
   L’installation retransmet de manière sonore l’activité des flux de données qui traversent le lieu d’exposition. Les variations de fréquences contenues dans les câbles sont traduites en temps réel et se déploient dans l’espace comme le bruissement continu des données qui nous entourent.
 ---
 
-![](/images/projects/transdata-0.jpg)
 ![](/images/projects/transdata-1.jpg)
-
 ![](/images/projects/transdata-2.jpg)

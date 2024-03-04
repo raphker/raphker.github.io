@@ -9,11 +9,11 @@ cover:
   alt: ""
 moment: "[2016]"
 legend: |
-  Double édition, 85 pages. 
+  Double edition, 85 pages. 
   
   21 x 21 cm.
 description: |
-  Deux éditions répertoriant les types de connecteurs informatiques et télécoms par ordre alphabétique. L’une énumérant les mâles, l’autre les femelles.
+  Two editions listing computer and telecom connector types in alphabetical order. One lists males, the other females.
 ---
 
 ![](/images/projects/male-femelle-3.jpg)

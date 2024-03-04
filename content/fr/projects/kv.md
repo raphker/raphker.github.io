@@ -9,11 +9,11 @@ cover:
   alt: ""
 moment: "[2016]"
 legend: |
-  Héliogravures sur cuivre.
+  Héliogravures sur cuivre.\
   30 x 30 cm.
 
 
-  Gravures sur papier, oxyde de cuivre réalisée à partir de câbles électrique. 
+  Gravures sur papier, oxyde de cuivre réalisée à partir de câbles électrique.\
   50 x 50 cm.
 description: |
   Omniprésent dans notre environnement, le fil de cuivre est le premier outil de transport d’énergie et de conductibilité électrique. Il est à l’image de l’objet technique dans son plus simple appareil. 
@@ -24,6 +24,6 @@ description: |
 ![](/images/projects/kv-1.jpg)
 
 ![](/images/projects/kv-2.jpg)
-
 ![](/images/projects/kv-3.jpg)
-![](/images/projects/kv-1.jpg)
+
+![](/images/projects/kv-4.jpg)
