@@ -1,7 +1,7 @@
 ---
 title: "Fait Machine"
 priority: 14
-place: "MIAM - Musée International des Arts Modestes, Sète "
+place: "Musée International des Arts Modestes, Sète "
 moment: "[17.02.2023 - 12.11.2023]"
 type: "Exposition collective"
 legend: "Code_____sur le fil"
@@ -16,4 +16,4 @@ Le MIAM présente _Fait Machine_, une exposition consacrée aux formes du digita
 
 [[lien]](https://miam.org/exposition-fait-machine/)
 
-Commissaires d'expositions: Margherita Balzerani & Noëlig Le Roux
+Commissaires d'exposition: Margherita Balzerani & Noëlig Le Roux

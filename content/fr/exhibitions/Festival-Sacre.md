@@ -4,7 +4,7 @@ priority: 15
 place: "Gaîté Lyrique, Paris"
 moment: "[16.11.2023 - 19.11.2023]"
 type: "Exposition collective"
-legend: "Etat des lieux, 10 ans d'expérimentations entre recherche et création"
+legend: "Etat des lieux: 10 ans d'expérimentations entre recherche et création"
 gallery:
   - src: /images/exhibitions/festival-sacre-0.jpg
   - src: /images/exhibitions/festival-sacre-1.jpg

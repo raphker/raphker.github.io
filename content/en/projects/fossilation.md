@@ -35,7 +35,7 @@ _The project, co-directed by Alice Jarry (Concordia University), Marie-Pier Bouc
 
 _The project was put together for the “Matières d'image” exhibit as part of the 2021 Hors Pistes Festival, curated by Géraldine Gomez._
 
-_Photo credits : © Samuel Bianchini_
+_Photo credits: © Samuel Bianchini_
 
 ![](/images/projects/fossilation-5.jpg)
 ![](/images/projects/fossilation-6.jpg)

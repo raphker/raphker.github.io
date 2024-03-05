@@ -2,8 +2,8 @@
 title: "Paysages (Im)matériels"
 priority: 12
 place: "A.N.A.S, Évry-Courcouronnes"
-moment: "[18.11.2021 - 17.12.2021]"
-type: "Exposition personnelle"
+moment: "[11.18.2021 - 12.17.2021]"
+type: "Solo show"
 legend: "SIANA, l'immaginaire des technologies"
 gallery:
   - src: /images/exhibitions/paysages-immateriels-0.jpg
@@ -17,12 +17,12 @@ gallery:
   - src: /images/exhibitions/paysages-immateriels-8.jpg
   - src: /images/exhibitions/paysages-immateriels-9.jpg
 ---
-Une exposition de Raphaëlle Kerbrat organisée par SIANA, dans le cadre de l’événement « Explorer l’invisible », conçu par le réseau francilien Exoplanète Terre comme la séquence arts-sciences de la Biennale Némo.
+An exhibition of Raphaelle Kerbrat's work organized by SIANA, as part of the "Exploring the Invisible" event, conceived by the Exoplanète Terre network as the arts-sciences sequence of the Némo Biennial.
 
-[[lien]](https://www.siana.eu/exposition-paysages-immateriels/)
+[[link]](https://www.siana.eu/exposition-paysages-immateriels/)
 
-Commissaire d'exposition: Filipe Pais\
-Éclairagiste: Annie Leuridan\
-Design graphique: Arp is Arp
+Curator: Filipe Pais\
+Light design: Annie Leuridan\
+Graphic design: Arp is Arp
 
 

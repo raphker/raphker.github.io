@@ -23,12 +23,12 @@ description: |
 
 Réalisation :
 
-- Expérimentation et fabrication de la membrane en bioplastique : Alexandra Bachmayer, Maria Chekhanovich, Vanessa Mardirossian avec la collaboration de Brice Ammar-Khodja
-- Captation de l’énergie résiduelle : Brice Ammar-Khodja, Didier Bouchon, Matthew Halpenny, Raphaëlle Kerbrat, Asa Perlman, Philippe Vandal
-- Design lumière : Annie Leuridan avec la collaboration de Louise Rustan
-- Développement informatique : Didier Bouchon
-- Suivi de la production de l’œuvre et de sa mise en espace : Lucile Vareilles
-- Soutien technique à la production et / ou au montage : Théo Chauvirey, Corentin Loubet, Joséphine Mas, Laurent Melloul, Simon Paugoy
+- Expérimentation et fabrication de la membrane en bioplastique: Alexandra Bachmayer, Maria Chekhanovich, Vanessa Mardirossian avec la collaboration de Brice Ammar-Khodja
+- Captation de l’énergie résiduelle: Brice Ammar-Khodja, Didier Bouchon, Matthew Halpenny, Raphaëlle Kerbrat, Asa Perlman, Philippe Vandal
+- Design lumière: Annie Leuridan avec la collaboration de Louise Rustan
+- Développement informatique: Didier Bouchon
+- Suivi de la production de l’œuvre et de sa mise en espace: Lucile Vareilles
+- Soutien technique à la production et / ou au montage: Théo Chauvirey, Corentin Loubet, Joséphine Mas, Laurent Melloul, Simon Paugoy
 
 _Ce projet à la croisée du design, de l’art, des techno-sciences et des études médiatiques, a été co-développé dans le cadre d’une collaboration internationale entre trois équipes de recherche-création (Le Speculative life Biolab de l’Institut Milieux, Université Concordia, Montréal ; Le groupe de recherche Reflective Interaction d’EnsadLab – laboratoire de l’École nationale supérieure des Arts Décoratifs – Université PSL ; Université de Toronto Mississauga)._
 
@@ -36,7 +36,7 @@ _Ce projet co-dirigé par Alice Jarry (Université Concordia, Speculative life B
 
 _Ce projet a été élaboré pour l’exposition “Matières d’image” du Festival Hors Pistes 2021, commissariat de Géraldine Gomez._
 
-_Crédits photo : © Samuel Bianchini_
+_Crédits photo: © Samuel Bianchini_
 
 ![](/images/projects/fossilation-5.jpg)
 ![](/images/projects/fossilation-6.jpg)

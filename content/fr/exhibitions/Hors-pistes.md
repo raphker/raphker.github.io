@@ -16,4 +16,5 @@ Peut-on imaginer et pratiquer une écologie des images ? Peut-on, aux images co
 [[lien]](https://www.centrepompidou.fr/fr/programme/agenda/evenement/A7V4hcm)
 
 Commissaire d'exposition: Gèraldine Gomez\
+Projet collectif réalisé avec l'équique Fossilation\
 _Crédits photos: Samuel Bianchini_

@@ -16,5 +16,5 @@ Désormais inscrit au cœur de la saison de l'art contemporain dans la Capitale,
 
 [[lien]](http://www.salondemontrouge.com/actualite/55/2-la-selection-du-64e-salon-de-montrouge.htm)
 
-Commissaire d'exposition: Ami Barak et Marie Gautier\
+Commissaires d'exposition: Ami Barak et Marie Gautier\
 _Crédits photos: Matthieu Camille Colin_
