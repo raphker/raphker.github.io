@@ -4,7 +4,7 @@ priority: 15
 place: "SACRe-PSL / École des Arts Décoratifs"
 moment: "[2020 - 2023]"
 type: "Thèse de doctorat"
-legend: "Exposition et soutenance publique au Centre Pompidou le 26 octobre 2023."
+legend: "Exposition et soutenance publique au Centre Pompidou le 26 octobre 2023"
 cover:
   src: "/images/research/le-poids-des-donnees.jpg"
   alt: ""
