@@ -8,6 +8,7 @@ module.exports = function (config) {
     outputFileExtension: "ts",
     outputFileExtension: "js",
     compile: async (_, path) => {
+      if (path !== "./content/scripts/index.ts") return;
       return async () => {
         let output = await esbuild.build({
           target: "es2020",
