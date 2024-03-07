@@ -25,5 +25,4 @@ jobs:
           remote_path: ${{ secrets.dir }}
           password: ${{ secrets.password }}
           server: ${{ secrets.server }}
-          sftp_only: true
           port: 22
