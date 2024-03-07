@@ -24,3 +24,4 @@ jobs:
           username: ${{ secrets.username }}
           remote_path: ${{ secrets.dir }}
           password: ${{ secrets.password }}
+          server-dir: ${{secrets.dir}}
