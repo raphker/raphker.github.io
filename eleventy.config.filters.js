@@ -12,7 +12,11 @@ module.exports = function (config) {
   });
 
   config.addFilter("i18n", function (content) {
-    return this.ctx.i18n[content.trim()]?.[this.ctx.lang] ?? content;
+    return (
+      this.ctx.i18n[content.trim()]?.[
+        this.ctx.lang ?? this.ctx.config.defaultLanguage
+      ] ?? content
+    );
   });
 
   config.addFilter("distribute", (items, columns) => {
