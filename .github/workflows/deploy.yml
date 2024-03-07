@@ -19,12 +19,13 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: "Deploy"
-        uses: milanmk/actions-file-deployer@master
+      - name: deploy file to server
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          remote-protocol: "sftp"
-          remote-host: ${{ secrets.server }}
-          remote-user: ${{ secrets.username }}
-          remote-password: ${{ secrets.password }}
+          username: ${{secrets.username}}
+          server: "${{ secrets.server }}"
+          password: ${{ secrets.password }}
+          local_path: "./_site/*"
           remote-path: ${{ secrets.dir }}
-          remote-port: 22
+          sftpArgs: "-o ConnectTimeout=5"
+          port: 22
