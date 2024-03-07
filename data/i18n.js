@@ -1,4 +1,8 @@
 module.exports = {
+  metadescription: {
+    en: "the saïte of Raph",
+    fr: "le site à Raph",
+  },
   menu: {
     en: "Menu",
     fr: "Menu",

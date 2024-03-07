@@ -4,6 +4,5 @@ module.exports = {
   title: "Raphaëlle Kerbrat",
   copyright: "©2024 Raphaëlle Kerbrat",
   favicon: "favicon.gif",
-  metaDescription:
-    "Portfolio de Raphaëlle Kerbrat, artiste plasticienne et docteure SACRe",
+  ogImage: "ogimage.jpg",
 };
