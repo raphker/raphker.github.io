@@ -27,6 +27,6 @@ jobs:
           server: "${{ secrets.server }}"
           password: ${{ secrets.password }}
           local_path: "./_site/*"
-          remote_path: "/vhost/lepoidsdesdonnees.fr/htdocs/"
+          remote_path: ${{ secrets.dir }}
           sftpArgs: "-o ConnectTimeout=5"
           port: 22
