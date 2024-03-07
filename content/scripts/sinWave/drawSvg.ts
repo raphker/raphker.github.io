@@ -51,10 +51,10 @@ export const drawSvg = ({
 
   svgGroup.append(
     ...aroundInter.elements,
+    ...sinWave.elements,
     ...inter.elements,
     createCircle(interLeft, centerY, circleRadius, "currentColor"),
     createCircle(interLeft + interWidth, centerY, circleRadius, "currentColor"),
-    ...sinWave.elements
   );
 
   svg.append(svgGroup);
