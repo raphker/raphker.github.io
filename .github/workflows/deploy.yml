@@ -29,6 +29,5 @@ jobs:
           local_path: "./_site/*"
           remote_path: "${{ secrets.dir }}"
           sftpArgs: "-o ConnectTimeout=5"
-          sftp_only: true
           delete_remote_files: true
           port: 22
