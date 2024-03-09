@@ -19,6 +19,8 @@ jobs:
         run: |
           npm install
           npm run build
+          mkdir -p dist/htdocs
+          mv _site/* dist/htdocs
 
       - name: deploy file to server
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
@@ -26,7 +28,7 @@ jobs:
           username: ${{secrets.username}}
           server: "${{ secrets.server }}"
           password: ${{ secrets.password }}
-          local_path: "./_site/*"
-          remote_path: "${{ secrets.dir }}"
+          local_path: "./dist/*"
+          remote_path: "/lamp0/web/vhosts/lepoidsdesdonnees.fr"
           sftp_only: true
           port: 22
