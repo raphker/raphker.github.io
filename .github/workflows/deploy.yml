@@ -29,6 +29,6 @@ jobs:
           server: "${{ secrets.server }}"
           password: ${{ secrets.password }}
           local_path: "./dist/*"
-          remote_path: "/lamp0/web/vhosts/lepoidsdesdonnees.fr"
+          remote_path: "${{ secrets.dir }}"
           sftp_only: true
           port: 22
