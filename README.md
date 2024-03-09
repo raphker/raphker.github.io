@@ -1,5 +1,9 @@
 # le site à Raph
 
+- [Général](#général)
+  - [Configuration](#configuration)
+  - [Fichiers statiques](#fichiers-statiques)
+  - [Internationalisation](#internationalisation)
 - [Création de contenu](#création-de-contenu)
   - [Frontmatter](#frontmatter)
   - [Images](#images)
@@ -10,6 +14,30 @@
   - [Recherche](#recherche)
 - [Développement](#développement)
   - [Installation](#installation)
+
+## Général
+
+### Configuration
+
+Le fichier [/data/config.js](/data/config.js) permet de configurer des éléments fixes du site.
+
+| entrée          | fonction                                  | example                      |
+| --------------- | ----------------------------------------- | ---------------------------- |
+| url             | url de la base du site                    | https://raphaellekerbrat.com |
+| defaultLanguage | Langue par défaut du site                 | fr                           |
+| title           | titre du site                             | Raphaëlle Kerbrat            |
+| copyright       | copyright affiché à gauche dans le footer | ©2024 Raphaëlle Kerbrat      |
+| favicon         | url du fichier favicon                    | /favicon.gif                 |
+| ogImage         | url du fichier ogImage                    | /ogimage.jpg                 |
+
+### Fichiers statiques
+
+Les fichiers qui ont pour fonctions d'êtres servis sans transformations sur le site (fichiers pdf, fonts, favicon...) sont à placer dans le dossier public.
+
+### Internationalisation
+
+Les textes utilisés sur le site qui ne sont pas liés aux contenus sont renseignés dans le fichier [/data/i18n.js](/data/config.js).
+La plupart des entrées sont liées au référencements, ou à l'accessibilité.
 
 ## Création de contenu
 
