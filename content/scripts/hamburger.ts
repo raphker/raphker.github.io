@@ -118,7 +118,7 @@ export class Hamburger extends HTMLElement {
     document.body.setAttribute("data-menu-open", "false");
     this.openLabel?.setAttribute("aria-hidden", "true");
     this.closeLabel?.setAttribute("aria-hidden", "false");
-    this.openingTl.reverse().then(() => {
+    return this.openingTl.reverse().then(() => {
       this.list?.style.setProperty("display", "none");
     });
   }

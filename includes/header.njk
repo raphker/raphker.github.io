@@ -24,7 +24,7 @@
                 <ul role="list">
                     {% for item in collections.page | favor_lang | sort_by_priority%}
                         <li style="--index:{{ loop.index }};">
-                            <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url else "false" }}>{{ macros.splitLetters(item.data.title) }}</a>
+                            <a href="{{ item.url }}" aria-current={{"page" if page.url == item.url else "false" }} data-hamburger>{{ macros.splitLetters(item.data.title) }}</a>
                         </li>
                     {% endfor %}
                 </ul>
