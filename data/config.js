@@ -4,5 +4,5 @@ module.exports = {
   title: "Raphaëlle Kerbrat",
   copyright: "©2024 Raphaëlle Kerbrat",
   favicon: "/favicon.gif",
-  ogImage: "ogimage.jpg",
+  ogImage: "/ogimage.jpg",
 };
