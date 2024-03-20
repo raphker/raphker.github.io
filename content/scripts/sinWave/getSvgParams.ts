@@ -11,7 +11,7 @@ export const getSvgParams = (background: string): Params => {
     interLeft,
     interWidth,
     circleRadius: Math.max(0.3, width / 600),
-    sinWaveLeft: interLeft + interWidth,
+    sinWaveLeft: interLeft + interWidth + interLeft,
     strokeWidth: 0.25,
     numberOfWaves: 15,
     background,
