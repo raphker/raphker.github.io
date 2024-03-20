@@ -1,6 +1,6 @@
 ---
 title: "Si (1-bit computer)"
-priority: 15
+priority: 16
 thumbnail:
   src: "/images/projects/si-thumbnail.png"
   alt: ""
