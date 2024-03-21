@@ -1,6 +1,6 @@
 .aboutSection {
   display: flex;
-  gap: var(--space-xl);
+  gap: var(--space-3xl);
   align-items: center;
   justify-content: center;
   @media (width < 65rem) {
@@ -9,8 +9,8 @@
 }
 
 .aboutSection_image {
-  flex-basis: 20rem;
-  max-inline-size: 25rem;
+  flex-basis: 25rem;
+  max-inline-size: 30rem;
 }
 
 .aboutSection_content {
