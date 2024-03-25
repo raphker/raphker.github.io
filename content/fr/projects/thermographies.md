@@ -11,7 +11,7 @@ moment: "[2021-2023]"
 legend: |
   Thermographies d'un processeur.
 
-  Duratrance: Impressions sur duratrance, contrecollées sur plexiglas.\
+  Tirages transparents: Support acétate gélatino-argentique contrecollé sur plexiglass.\
   12 pièces, 9x9cm.
 
   Lithophanies: Impressions 3D des modèles d'analyses.\

@@ -11,7 +11,7 @@ moment: "[2021-2023]"
 legend: |
   Thermography of a processor.
 
-  Duratrance: Prints on duratrance, laminated on Plexiglas.\
+  Transparent prints: Gelatin silver acetate support laminated on plexiglass.\
   12 pieces, 9x9cm.
 
   Lithophany: 3D prints of analysis models.\
